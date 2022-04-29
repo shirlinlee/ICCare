@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>ICCare</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="plugins/js/slick.min.js"></script>
+    <script src="plugins/js/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="/" class="logo"
+            ><img src="images/logo.png" alt="ICCare"
+          /></a>
+          <div class="func d_flex">
+            <!-- <a class="func_item" data-item="member"
+              ><img src="images/icon-member.png" alt=""
+            /></a>
+            <a class="func_item" data-item="search"
+              ><img src="images/icon-search.png" alt=""
+            /></a>
+            <label class="func_item menu-open-button" for="menu-open">
+              <span class="hamburger hamburger-1"></span>
+              <span class="hamburger hamburger-2"></span>
+              <span class="hamburger hamburger-3"></span>
+            </label> -->
+          </div>
+          <ul class="nav d_flex">
+            <li class="redirect">
+              <a href="/">
+                <p>服務方案</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>商品方案</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>合作單位</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>關於我們</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>最新消息</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>與我聯繫</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>登入/註冊</p>
+              </a>
+            </li>
+            <!-- <li class="sub_nav_btn">
+              <p>關於我們</p>
+              <img src="images/ic-arrow-01.png" class="poA" alt="" />
+            </li>
+            <div class="sub_nav d_flex">
+              <li class="redirect">
+                <a href="/about/">
+                  <p>黑秀介紹</p>
+                </a>
+              </li>
+              <li class="redirect">
+                <a href="/register-policy/">
+                  <p>隱私權政策</p>
+                </a>
+              </li>
+              <li class="redirect">
+                <a href="/apply-seniorshow/">
+                  <p>畢業展贊助</p>
+                </a>
+              </li>
+              <li class="redirect">
+                <a href="/faq/">
+                  <p>Q＆A</p>
+                </a>
+              </li>
+            </div> -->
+          </ul>
+        </div>
+        <!-- <div class="menu_bg"></div> -->
+      </div>
+
+      <div class="wrapper contract pd130 W1280">
+        <h3 class="title">建立您的IC Care帳戶</h3>
+        <form action="plan.html" class="W300" id="contract">
+          <div class="d_flex" class="f18">
+            <input type="checkbox" name="" id="term1" class="terms" required />
+            <label for="term1">條款與細則 >></label>
+            <a href="contract_01.html" class="f_blue"> 詳細資料</a>
+          </div>
+          <div class="d_flex" class="f18">
+            <input type="checkbox" name="" id="term2" class="terms" required />
+            <label for="term2">特殊條款 >></label>
+            <a href="contract_02.html" class="f_blue"> 詳細資料</a>
+          </div>
+          <div class="d_flex" class="f18">
+            <input type="checkbox" name="" id="term3" class="terms" required />
+            <label for="term3">IC CARE帳號隱私權設定 >></label>
+            <a href="contract_03.html" class="f_blue"> 詳細資料</a>
+          </div>
+
+          <hr />
+
+          <div class="d_flex" class="f18">
+            <input type="checkbox" name="" id="all" disabled required />
+            <label for="all">我已閱讀並同意上方的所有內容</label>
+          </div>
+          <button type="submit"><span>下一步</span></button>
+        </form>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="images/logo_black.png" alt="" />
+          <p>
+            IntelliCentrics introduces trust into organizational
+            decision-making, enabling our customers to make more informed
+            decisions, reduce risk, and improve operational efficiencies.
+          </p>
+          <a href="javascript:;">隱私權條款</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首頁only -->
+  </body>
+</html>
+<script type="text/javascript" src="js/init.js"></script>
+
+<script>
+  $(function () {
+    initCheckboxStatus();
+    checkboxChangeHandler();
+
+    $("#contract").submit(function (event) {
+      eraseCookie();
+      $("#contract").submit();
+      event.preventDefault();
+    });
+  });
+
+  function eraseCookie(name) {
+    document.cookie = "term1 =; Max-Age=-99999999;";
+    document.cookie = "term2 =; Max-Age=-99999999;";
+    document.cookie = "term3 =; Max-Age=-99999999;";
+  }
+
+  function checkboxChangeHandler() {
+    $(".terms").on("change", function () {
+      var id = $(this).attr("id");
+      var isChecked = $(this).prop("checked");
+      if (isChecked) {
+        document.cookie = `${id}=1`;
+      } else {
+        document.cookie = `${id}=0`;
+      }
+      checkAllTermStatus();
+    });
+  }
+
+  function checkAllTermStatus() {
+    var agreeTerms = [];
+    $(".terms").each(function () {
+      var isChecked = $(this).prop("checked");
+      if (isChecked) agreeTerms.push($(this).attr("id"));
+    });
+    if (agreeTerms.length === 3) {
+      $("input#all").prop("disabled", false);
+    } else {
+      $("input#all").prop("disabled", true);
+      $("input#all").prop("checked", false);
+      console.log($("input#all").prop("checked"));
+    }
+  }
+
+  function initCheckboxStatus() {
+    $(".terms").each(function () {
+      var id = $(this).attr("id");
+      if (init.getCookie(id) === "1") {
+        $(this).prop("checked", true);
+      }
+    });
+    checkAllTermStatus();
+  }
+</script>

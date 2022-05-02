@@ -33,80 +33,39 @@
             ><img src="images/logo.png" alt="ICCare"
           /></a>
           <div class="func d_flex">
-            <!-- <a class="func_item" data-item="member"
-              ><img src="images/icon-member.png" alt=""
-            /></a>
-            <a class="func_item" data-item="search"
-              ><img src="images/icon-search.png" alt=""
-            /></a>
             <label class="func_item menu-open-button" for="menu-open">
               <span class="hamburger hamburger-1"></span>
               <span class="hamburger hamburger-2"></span>
               <span class="hamburger hamburger-3"></span>
-            </label> -->
+            </label>
           </div>
           <ul class="nav d_flex">
             <li class="redirect">
               <a href="/">
-                <p>服務方案</p>
+                <p>24小時醫療諮詢</p>
               </a>
             </li>
             <li class="redirect">
               <a href="/">
-                <p>商品方案</p>
+                <p>健康數據管理</p>
               </a>
             </li>
             <li class="redirect">
               <a href="/">
-                <p>合作單位</p>
+                <p>周邊商品</p>
               </a>
             </li>
             <li class="redirect">
               <a href="/">
-                <p>關於我們</p>
+                <p>訂單記錄</p>
               </a>
             </li>
+
             <li class="redirect">
               <a href="/">
-                <p>最新消息</p>
+                <p>會員專區</p>
               </a>
             </li>
-            <li class="redirect">
-              <a href="/">
-                <p>與我聯繫</p>
-              </a>
-            </li>
-            <li class="redirect">
-              <a href="/">
-                <p>登入/註冊</p>
-              </a>
-            </li>
-            <!-- <li class="sub_nav_btn">
-              <p>關於我們</p>
-              <img src="images/ic-arrow-01.png" class="poA" alt="" />
-            </li>
-            <div class="sub_nav d_flex">
-              <li class="redirect">
-                <a href="/about/">
-                  <p>黑秀介紹</p>
-                </a>
-              </li>
-              <li class="redirect">
-                <a href="/register-policy/">
-                  <p>隱私權政策</p>
-                </a>
-              </li>
-              <li class="redirect">
-                <a href="/apply-seniorshow/">
-                  <p>畢業展贊助</p>
-                </a>
-              </li>
-              <li class="redirect">
-                <a href="/faq/">
-                  <p>Q＆A</p>
-                </a>
-              </li>
-            </div> -->
           </ul>
         </div>
         <!-- <div class="menu_bg"></div> -->
@@ -129,9 +88,10 @@
                 <option value="a">A</option>
                 <option value="b">B</option>
               </select>
+              <div class="ps_mb">贈品由專人接洽無誤後寄出</div>
             </div>
             <div class="W14">1</div>
-            <div class="W22"></div>
+            <div class="W22 ps_pc">贈品由專人接洽無誤後寄出</div>
             <div class="W19"><font class="price">2700</font></div>
           </div>
           <div class="t_right">
@@ -155,7 +115,8 @@
             </div>
             <div class="d_flex">
               <div class="W50">
-                <span class="filled">出生年月日</span><input type="text" />
+                <span class="filled">出生年月日</span
+                ><input type="text" id="datepicker" />
               </div>
               <div class="W50"></div>
             </div>
@@ -191,9 +152,68 @@
               </div>
             </div>
           </div>
+          <div class="bill_info">
+            <div class="title must_filled">發票資訊</div>
+            <div class="W100 t_left bill_area">
+              <input
+                type="radio"
+                name="bill"
+                id="bill1"
+                value="bill1"
+                required
+              />
+              <label for="bill1">個人電子發票 </label>
+            </div>
+            <div class="W100 t_left bill_area">
+              <input
+                type="radio"
+                name="bill"
+                id="bill2"
+                value="bill2"
+                required
+              />
+              <label for="bill2">公司戶電子發票 </label>
+            </div>
+            <div class="d_flex bill_detail">
+              <div class="W50">
+                <span class="filled">公司抬頭</span><input type="text" />
+              </div>
+              <div class="W50">
+                <span class="filled">統一編號</span><input type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="health_card">
+            <div class="title must_filled">健保卡號</div>
+            <div class="d_flex">
+              <input type="tel" maxlength="4" name="card" id="number1" />
+              <font></font>
+              <input type="tel" maxlength="4" name="card" id="number2" />
+              <font></font>
+              <input type="tel" maxlength="4" name="card" id="number3" />
+            </div>
+          </div>
         </div>
         <div class="cost">
           <h4 class="title">結帳資訊</h4>
+          <div class="d_flex">
+            <span>商品小計</span><span class="price">2700</span>
+          </div>
+          <div class="d_flex">
+            <span>本島物流</span><span class="price">0</span>
+          </div>
+          <div class="d_flex">
+            <span>離島物流</span><span class="price">0</span>
+          </div>
+          <div class="total">
+            <p>
+              總計 (含運費/手續費)
+              <span class="price"><font class="f30">2,700</font></span>
+            </p>
+          </div>
+          <a href="#" class="btn">
+            <span>下一步</span>
+          </a>
         </div>
       </div>
       <div id="footer">
@@ -212,3 +232,23 @@
     <!-- 首頁only -->
   </body>
 </html>
+<script type="text/javascript" src="js/init.js"></script>
+
+<script>
+  $(function () {
+    $('input[name="bill"]').on("change", function () {
+      if (this.value === "bill1") {
+        $(".bill_detail").removeClass("show");
+      } else {
+        $(".bill_detail").addClass("show");
+      }
+    });
+
+    $("#number1, #number2").on("keyup", function () {
+      if (4 === $(this).val().length) {
+        var index = Number($(this).attr("id").replace("number", ""));
+        $(`#number${index + 1}`).focus();
+      }
+    });
+  });
+</script>

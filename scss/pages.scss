@@ -3,8 +3,10 @@ button,
 input[type="submit"] {
   border: none;
   background-color: #49c4e5;
+  border: 1px solid #49c4e5;
   line-height: 42px;
   height: 44px;
+  border-radius: 22px;
   font-size: 18px;
   display: block;
   color: #fff;
@@ -20,6 +22,16 @@ input[type="submit"] {
     background-position: right center;
     background-image: url(../images/ic-arrow-02.png);
   }
+  &.light {
+    background-color: #fff;
+    color: #49c4e5;
+    span {
+      padding-right: 0;
+      padding-left: 25px;
+      background-position: left center;
+      background-image: url(../images/ic-arrow-02.png);
+    }
+  }
 }
 
 input,
@@ -30,10 +42,15 @@ textarea {
   border: 1px solid #959595;
   color: #959595;
   line-height: 20px;
+  border-radius: 22px;
   font-size: 16px;
   width: 100%;
   margin-bottom: 17px;
-  &[type="checkbox"] {
+  @media screen and (max-width: 767px) {
+    padding: 8px 12px 10px;
+  }
+  &[type="checkbox"],
+  &[type="radio"] {
     padding: 0;
     width: 20px;
     height: 20px;
@@ -72,6 +89,12 @@ textarea {
       background-position: left 13px center;
     }
   }
+  &#datepicker {
+    background-repeat: no-repeat;
+    background-image: url(../images/ic_calender.png);
+    background-size: 21px;
+    background-position: right 17px center;
+  }
 }
 
 select {
@@ -101,9 +124,14 @@ select {
 .login,
 .forget_pw,
 .contract,
-.contract_detail {
+.contract_detail,
+.reserved {
   margin-top: 110px;
   margin-bottom: 110px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 .login {
@@ -195,12 +223,19 @@ select {
   margin-top: 190px;
   margin-bottom: 190px;
   justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
   > * {
     background-color: #fff;
     box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
   }
   .free {
     width: calc(33% - 10px);
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
     a {
       background-color: #41dac5;
       margin-top: 60px;
@@ -213,6 +248,9 @@ select {
 
   .vip {
     width: calc(67% - 10px);
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
     .upper {
       position: relative;
       overflow: visible;
@@ -293,6 +331,9 @@ select {
           &:last-child {
             width: calc(32% - 10px);
           }
+          @media screen and (max-width: 767px) {
+            width: 100% !important;
+          }
         }
       }
     }
@@ -324,6 +365,9 @@ select {
         font-family: "Futura";
         letter-spacing: 4px;
         padding: 0 5px 0 0;
+        @media screen and (max-width: 767px) {
+          font-size: 60px;
+        }
       }
     }
   }
@@ -366,6 +410,7 @@ select {
 
   .btn {
     max-width: 337px;
+    width: calc(100% - 40px);
   }
 }
 
@@ -373,20 +418,21 @@ select {
   margin-top: 110px;
   justify-content: space-between;
   padding: 38px;
+  margin-bottom: 110px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 38px 20px;
+  }
   .title {
     text-align: left;
-    &.must_filled {
-      &:after {
-        content: "*必填";
-        color: #49c4e5;
-        font-size: 11px;
-        padding-left: 10px;
-      }
-    }
   }
   .info {
     width: calc(100% - 425px);
     font-size: 16px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
     > div {
       width: 100%;
       text-align: center;
@@ -398,18 +444,57 @@ select {
     .th {
       background-color: rgba(73, 196, 229, 0.3);
       line-height: 42px;
+      @media screen and (max-width: 767px) {
+        display: none !important;
+      }
     }
     .td {
-      padding: 16px 10px;
-      border-bottom: solid 2px #49c4e5;
+      padding: 18px 0;
+      border-bottom: solid 1px #49c4e5;
+      @media screen and (max-width: 767px) {
+        border-top: solid 1px #49c4e5;
+      }
       select {
         margin-bottom: 0 !important;
       }
       div {
         line-height: 44px;
+        &.ps_pc {
+          display: block;
+          color: #959595;
+        }
+        &.ps_mb {
+          display: none;
+          color: #959595;
+        }
+        @media screen and (max-width: 767px) {
+          &.W23,
+          &.W22 {
+            width: 100%;
+            text-align: left;
+          }
+          &.W14 {
+            width: 50%;
+            text-align: left;
+          }
+          &.W19 {
+            width: 50%;
+            text-align: right;
+          }
+          select {
+            width: 200px;
+          }
+          &.ps_pc {
+            display: none;
+          }
+          &.ps_mb {
+            display: block;
+          }
+        }
       }
     }
-    .personal_info {
+    .personal_info,
+    .bill_info {
       margin-top: 38px;
       border-bottom: solid 1px #c9c9c9;
       padding-bottom: 20px;
@@ -417,20 +502,26 @@ select {
         justify-content: space-between;
         .W50 {
           width: calc(50% - 20px);
+          @media screen and (max-width: 767px) {
+            width: 100%;
+          }
           span {
             width: 90px;
             display: inline-block;
             text-align: left;
           }
           input {
-            width: calc(100% - 110px);
-            margin-left: 20px;
+            width: calc(100% - 90px);
+            // margin-left: 10px;
           }
         }
         .W33,
         .W67 {
           width: calc(33.33% - 10px);
           align-items: baseline;
+          @media screen and (max-width: 767px) {
+            width: 100%;
+          }
           span {
             width: 90px;
             display: inline-block;
@@ -439,29 +530,230 @@ select {
           select,
           input {
             width: calc(100% - 110px);
+            @media screen and (max-width: 767px) {
+              width: calc(100% - 90px);
+            }
           }
         }
         .W67 {
           width: calc(67.5% - 10px);
+          @media screen and (max-width: 767px) {
+            width: 100%;
+          }
+        }
+      }
+      .bill_area {
+        margin-bottom: 17px;
+        * {
+          display: inline-block;
+          line-height: 30px;
+          vertical-align: middle;
+        }
+      }
+      .bill_detail {
+        display: none !important;
+        &.show {
+          display: flex !important;
         }
       }
     }
 
-    * {
-      &.filled {
-        &:after {
-          content: "*";
-          color: #49c4e5;
-          font-size: 15px;
-          padding-left: 3px;
-          vertical-align: middle;
-        }
+    .health_card {
+      margin-top: 38px;
+      margin-bottom: 28px;
+      .d_flex {
+        align-items: center;
+      }
+      input {
+        width: 28%;
+        margin-bottom: 0;
+        text-align: center;
+      }
+      font {
+        width: 3%;
+        margin: 0 2.33%;
+        height: 1px;
+        background-color: #959595;
       }
     }
   }
   .cost {
-    width: 370px;
+    width: 100%;
     background-color: #e6e6e6;
-    padding: 30px;
+    padding: 30px 30px 20px;
+    height: fit-content;
+    .d_flex {
+      justify-content: space-between;
+      margin-bottom: 17px;
+    }
+    .total {
+      margin: 30px 0;
+      padding: 20px 0;
+      border-top: 1px #959595 solid;
+      p {
+        text-align: right;
+      }
+      font {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.reserved {
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    .W630 {
+      width: 100%;
+    }
+  }
+  .wait_line {
+    padding: 48px 30px;
+    margin: 24px auto;
+    background-color: rgba(73, 196, 229, 0.1);
+    .line2 {
+      padding-top: 12px;
+      .f100 {
+        font-weight: bold;
+        padding-right: 10px;
+      }
+    }
+  }
+  .d_flex {
+    justify-content: space-between;
+  }
+  .btn_area {
+    margin-top: 60px;
+  }
+  button {
+    width: calc(50% - 10px);
+    @media screen and (max-width: 767px) {
+      width: calc(50% - 8px);
+    }
+  }
+}
+
+.member {
+  margin-top: 110px;
+  justify-content: space-between;
+  padding: 38px;
+  margin-bottom: 110px;
+  @media screen and (max-width: 767px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px 20px;
+  }
+  .basic_info {
+    max-width: 410px;
+    width: calc(100 - 60px);
+    margin-left: auto;
+    margin-right: auto;
+    .d_flex {
+      justify-content: space-between;
+      margin-bottom: 17px;
+      align-items: center;
+      span {
+        width: 80px;
+        text-align: right;
+        .f_blue {
+          font-size: 11px;
+          white-space: nowrap;
+          display: block;
+          margin-left: -40px;
+          margin-top: 6px;
+          margin-bottom: -10px;
+        }
+      }
+      > input,
+      select,
+      .multi_input {
+        width: calc(100% - 100px);
+        justify-content: space-between;
+        margin-bottom: 0;
+
+        .m1 {
+          width: 70px;
+        }
+        .m2 {
+          width: calc(100% - 80px);
+        }
+      }
+    }
+  }
+  .sub_account {
+    max-width: 680px;
+    width: calc(100% - 60px);
+    margin-left: auto;
+    margin-right: auto;
+    .d_flex {
+      justify-content: space-between;
+      margin-bottom: 17px;
+      align-items: center;
+      @media screen and (max-width: 767px) {
+        // flex-direction: column;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+      }
+      span {
+        width: 54px;
+        &.sm {
+          width: 43px;
+        }
+        @media screen and (max-width: 767px) {
+          width: 54px;
+          margin-bottom: 20px;
+        }
+      }
+      input {
+        width: calc(45% - 120px);
+        justify-content: space-between;
+        margin-bottom: 0;
+        &.sm {
+          width: calc(33% - 120px);
+        }
+        @media screen and (max-width: 767px) {
+          width: calc(100% - 65px) !important;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .social_binding {
+    p {
+      text-align: center;
+      margin: -13px 0 37px;
+      color: #737373;
+    }
+    .d_flex {
+      justify-content: space-around;
+      margin-bottom: 52px;
+      a {
+        width: calc(25% - 15px);
+      }
+    }
+  }
+
+  .title {
+    &.must_filled {
+      text-indent: 30px;
+    }
+  }
+
+  .btn {
+    margin: 34px auto 52px;
+    max-width: 300px;
+    @media screen and (max-width: 767px) {
+      margin: 30px auto 30px;
+    }
+  }
+  hr {
+    border: none;
+    border-bottom: 1px solid #959595;
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 43px;
   }
 }

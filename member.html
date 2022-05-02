@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>ICCare</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="plugins/js/slick.min.js"></script>
+    <script src="plugins/js/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="/" class="logo"
+            ><img src="images/logo.png" alt="ICCare"
+          /></a>
+          <ul class="nav d_flex">
+            <li class="redirect">
+              <a href="/">
+                <p>24小時醫療諮詢</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>健康數據管理</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>周邊商品</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="/">
+                <p>訂單記錄</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="/">
+                <p>會員專區</p>
+              </a>
+            </li>
+          </ul>
+          <label class="func_item menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+        </div>
+        <!-- <div class="menu_bg"></div> -->
+      </div>
+
+      <div class="member W1280 d_flex bg_white">
+        <div class="basic_info">
+          <h4 class="title must_filled">基本資訊</h4>
+          <div class="d_flex">
+            <span class="filled">帳號</span
+            ><input type="text" value=" arthur@pace.com.tw" />
+          </div>
+          <div class="d_flex">
+            <span class="filled">密碼</span
+            ><input type="text" value="Pace*****" />
+          </div>
+          <div class="d_flex">
+            <span class="filled">姓名</span><input type="text" value="陳*明" />
+          </div>
+          <div class="d_flex">
+            <span class="filled">性別</span
+            ><select name="" id="">
+              <option value="男">男</option>
+              <option value="女">女</option>
+            </select>
+          </div>
+          <div class="d_flex">
+            <span class="filled">手機</span>
+            <div class="multi_input d_flex">
+              <input type="number" value="886" class="m1" /><input
+                type="number"
+                value="901234567"
+                class="m2"
+              />
+            </div>
+          </div>
+          <div class="d_flex">
+            <span class="filled">生日</span
+            ><input type="text" id="datepicker" value="1980/01/01" />
+          </div>
+          <div class="d_flex">
+            <span>電子信箱</span
+            ><input type="text" value=" arthur@pace.com.tw" />
+          </div>
+          <div class="d_flex">
+            <span>健保卡號 <font class="f_blue">※非臺灣地區民眾免填</font></span
+            ><input type="text" id="card" value="4439-2228-1234" />
+            <!-- pattern="{4}\-?\d{4}\-?\d{4}" -->
+          </div>
+          <a href="#" class="btn">
+            <span>確認儲存</span>
+          </a>
+        </div>
+
+        <hr />
+
+        <div class="social_binding W300">
+          <h4 class="title">基本資訊</h4>
+          <p>定期提供優惠訊息</p>
+          <div class="d_flex">
+            <a href=""><img src="images/ic-line-color.png" alt="" /></a>
+            <a href=""><img src="images/ic-google-color.png" alt="" /></a>
+            <a href=""><img src="images/ic-fb-color.png" alt="" /></a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="sub_account">
+          <h4 class="title must_filled">子帳號設定</h4>
+          <div class="d_flex">
+            <span class="filled sm">姓名</span
+            ><input type="text" value="王*華" class="sm" />
+            <span class="filled">帳號1</span>
+            <input type="text" value="arthur@pace.com.tw" />
+            <span class="filled sm">密碼</span
+            ><input type="text" value="Pac*******" />
+          </div>
+          <div class="d_flex">
+            <span class="filled sm">姓名</span
+            ><input type="text" value="王*華" class="sm" />
+            <span class="filled">帳號2</span>
+            <input type="text" value="arthur@pace.com.tw" />
+            <span class="filled sm">密碼</span
+            ><input type="text" value="Pac*******" />
+          </div>
+          <div class="d_flex">
+            <span class="filled sm">姓名</span
+            ><input type="text" value="王*華" class="sm" />
+            <span class="filled">帳號3</span>
+            <input type="text" value="arthur@pace.com.tw" />
+            <span class="filled sm">密碼</span
+            ><input type="text" value="Pac*******" />
+          </div>
+          <div class="d_flex">
+            <span class="filled sm">姓名</span
+            ><input type="text" value="王*華" class="sm" />
+            <span class="filled">帳號4</span>
+            <input type="text" value="arthur@pace.com.tw" />
+            <span class="filled sm">密碼</span
+            ><input type="text" value="Pac*******" />
+          </div>
+          <div class="d_flex">
+            <span class="filled sm">姓名</span
+            ><input type="text" value="王*華" class="sm" />
+            <span class="filled">帳號5</span>
+            <input type="text" value="arthur@pace.com.tw" />
+            <span class="filled sm">密碼</span
+            ><input type="text" value="Pac*******" />
+          </div>
+
+          <a href="#" class="btn">
+            <span>確認儲存</span>
+          </a>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="images/logo_black.png" alt="" />
+          <p>
+            IntelliCentrics introduces trust into organizational
+            decision-making, enabling our customers to make more informed
+            decisions, reduce risk, and improve operational efficiencies.
+          </p>
+          <a href="javascript:;">隱私權條款</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首頁only -->
+  </body>
+</html>
+<script type="text/javascript" src="js/init.js"></script>
+
+<script>
+  $(function () {
+    $("#datepicker").datepicker({ dateFormat: "yy/mm/dd" });
+
+    document.getElementById("card").oninput = function () {
+      this.value = cc_format(this.value);
+    };
+
+    function cc_format(value) {
+      var v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
+      var matches = v.match(/\d{4,12}/g);
+      var match = (matches && matches[0]) || "";
+      var parts = [];
+      for (i = 0, len = match.length; i < len; i += 4) {
+        parts.push(match.substring(i, i + 4));
+      }
+      if (parts.length) {
+        return parts.join("-");
+      } else {
+        return value;
+      }
+    }
+  });
+</script>

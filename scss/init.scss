@@ -19,6 +19,9 @@ html {
 #app {
   padding-top: 100px;
   min-height: 100vh;
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+  }
 }
 
 a {
@@ -36,6 +39,9 @@ a {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 40px);
+  }
 }
 
 .W1060 {
@@ -43,6 +49,19 @@ a {
   max-width: 1060px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 40px);
+  }
+}
+
+.W630 {
+  width: calc(100% - 60px);
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 40px);
+  }
 }
 
 .W300 {
@@ -50,6 +69,9 @@ a {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 40px);
+  }
 }
 
 .W20 {
@@ -122,8 +144,8 @@ a {
   font-size: 45px;
 }
 
-.f50 {
-  font-size: 50px;
+.f100 {
+  font-size: 90px;
 }
 
 .t_left {
@@ -218,61 +240,61 @@ a {
   font-size: 36px;
   color: #49c4e5;
   text-align: center;
-  @media screen and (max-width: 599px) {
-    border-bottom: none;
+  @media screen and (max-width: 767px) {
+    font-size: 36px;
+  }
+  &.must_filled {
+    &:after {
+      content: "*必填";
+      color: #49c4e5;
+      font-size: 11px;
+      padding-left: 10px;
+    }
   }
 }
 
-.ad_close {
-  background-color: #fff;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 5;
-
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 20px;
-    background-color: #44bbc0;
-    position: absolute;
-    top: 5px;
-    left: 50%;
-  }
-
-  &:before {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    // transform-origin: ;
-  }
-
-  &:after {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
+* {
+  &.filled {
+    &:after {
+      content: "*";
+      color: #49c4e5;
+      font-size: 11px;
+      padding-left: 4px;
+    }
   }
 }
 
+.price {
+  &::before {
+    content: "NT$";
+    padding-right: 3px;
+  }
+}
 .wrapper {
   padding: 40px 30px;
   background-color: #fff;
+  box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
+
+  @media screen and (max-width: 767px) {
+    padding: 30px 20px;
+  }
+
   &.pd130 {
     padding-top: 130px;
     padding-bottom: 130px;
+    @media screen and (max-width: 767px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &.pd150 {
     padding-top: 150px;
     padding-bottom: 150px;
+    @media screen and (max-width: 767px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
 }
 
@@ -287,8 +309,8 @@ a {
   left: 0;
   z-index: 10;
 
-  @media screen and (max-width: 599px) {
-    height: 70px;
+  @media screen and (max-width: 767px) {
+    height: 60px;
   }
 
   .W1280 {
@@ -299,8 +321,8 @@ a {
     position: relative;
     width: calc(100% - 30px);
 
-    @media screen and (max-width: 599px) {
-      padding: 14px 0;
+    @media screen and (max-width: 767px) {
+      padding: 16px 0;
     }
 
     .logo {
@@ -309,49 +331,25 @@ a {
       z-index: 50;
 
       @media screen and (max-width: 599px) {
-        margin-left: 45px;
         width: 120px;
       }
     }
 
-    .func {
-      align-items: center;
-      width: 120px;
-      justify-content: space-between;
-
-      @media screen and (max-width: 599px) {
-        width: 70px;
-      }
-
-      a {
-        height: 32px;
-        padding: 5px;
-        cursor: pointer;
-
-        img {
-          height: 100%;
-        }
-      }
-
-      label {
-        cursor: pointer;
-        position: relative;
-        width: 35px;
-        height: 35px;
-
-        @media screen and (max-width: 599px) {
-          position: absolute;
-          left: 0px;
-          top: 10px;
-        }
-      }
-    }
-
     .menu-open-button {
+      display: none;
+      position: absolute;
+      right: 0px;
+      top: 5px;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
       .hamburger {
         width: 25px;
         height: 1px;
-        background: white;
+        background: #49c4e5;
         display: block;
         position: absolute;
         top: 50%;
@@ -379,23 +377,37 @@ a {
       }
 
       &.active {
-        .hamburger-1 {
-          transform: translate3d(0, 0, 0) rotate(45deg);
-        }
+        .hamburger {
+          background: #959595;
+          &.hamburger-1 {
+            transform: translate3d(0, 0, 0) rotate(45deg);
+          }
+          &.hamburger-2 {
+            transform: translate3d(0, 0, 0) scale(0.1, 1);
+          }
 
-        .hamburger-2 {
-          transform: translate3d(0, 0, 0) scale(0.1, 1);
-        }
-
-        .hamburger-3 {
-          transform: translate3d(0, 0, 0) rotate(-45deg);
+          &.hamburger-3 {
+            transform: translate3d(0, 0, 0) rotate(-45deg);
+          }
         }
       }
     }
   }
 
   .nav {
-    @media screen and (max-width: 599px) {
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 60px);
+      background-color: #fff;
+      transition: all 0.3s;
+      transform: translate(-100%, 0);
+      &.active {
+        transform: translate(0, 0);
+      }
     }
 
     li {
@@ -413,7 +425,16 @@ a {
         }
       }
 
-      &:hover {
+      @media screen and (max-width: 999px) {
+        padding: 0 8px;
+        margin: 0 8px;
+      }
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+        margin: 0 30px;
+        border-bottom: 1px solid #ccc;
+        line-height: 60px;
       }
 
       p {
@@ -494,8 +515,8 @@ a {
   background-position: center;
   padding: 100px 20px;
 
-  @media screen and (max-width: 599px) {
-    padding: 90px 30px 30px;
+  @media screen and (max-width: 767px) {
+    padding: 60px 30px 30px;
   }
 
   .footer_detail {
@@ -509,11 +530,17 @@ a {
   img {
     width: 170px;
     margin: 0 auto;
+    @media screen and (max-width: 767px) {
+      width: 140px;
+    }
   }
 
   p {
     line-height: 1.5;
     margin: 40px auto 30px;
+    @media screen and (max-width: 767px) {
+      margin: 30px auto 20px;
+    }
   }
 
   a {
@@ -531,7 +558,7 @@ a {
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 767px) {
   .f12 {
     font-size: 11px !important;
   }
@@ -565,11 +592,11 @@ a {
   }
 
   .f32 {
-    font-size: 25px !important;
+    font-size: 23px !important;
   }
 
   .f36 {
-    font-size: 27px;
+    font-size: 26px;
   }
 
   .f45 {
@@ -578,5 +605,8 @@ a {
 
   .f50 {
     font-size: 33px;
+  }
+  .f100 {
+    font-size: 70px;
   }
 }

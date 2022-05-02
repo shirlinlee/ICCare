@@ -2,16 +2,9 @@ const init = {
   $body: $("body"),
   $lb: $(".lb"),
   navHandler: function () {
+    console.log(22);
     init.$body.on("click", ".menu-open-button", function () {
       $(".menu-open-button,.nav").toggleClass("active");
-    });
-
-    init.$body.on("click", ".sub_nav_btn", function () {
-      $(".sub_nav_btn,.sub_nav").toggleClass("active");
-    });
-
-    init.$body.on("click", ".redirect", function () {
-      $(".menu-open-button,.nav,.sub_nav_btn,.sub_nav").removeClass("active");
     });
   },
 
@@ -40,5 +33,6 @@ const init = {
 };
 
 $(function () {
+  console.log(11);
   init.navHandler();
 });

@@ -5,6 +5,24 @@
   src: url("../fonts/Futura_Heavy.otf");
 }
 
+@font-face {
+  font-family: "NotoSansCJKtc";
+  src: url("../fonts/NotoSansCJKtc-DemiLight.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "NotoSansCJKtc M";
+  src: url("../fonts/NotoSansCJKtc-Medium.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "NotoSansCJKtc";
+  src: url("../fonts/NotoSansCJKtc-Bold.otf");
+  font-weight: bold;
+}
+
 body,
 html {
   width: 100%;
@@ -37,7 +55,11 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-weight: normal;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "NotoSansCJKtc";
+}
+
+b {
+  font-weight: bold;
 }
 
 .W1280 {
@@ -79,6 +101,19 @@ a {
   }
 }
 
+.W520 {
+  width: calc(100% - 60px);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .W520 {
+    width: calc(100% - 40px);
+  }
+}
+
 .W300 {
   width: calc(100% - 60px);
   max-width: 300px;
@@ -90,6 +125,34 @@ a {
   .W300 {
     width: calc(100% - 40px);
   }
+}
+
+.W11 {
+  width: 11%;
+}
+
+.W12 {
+  width: 12%;
+}
+
+.W13 {
+  width: 13%;
+}
+
+.W14 {
+  width: 14%;
+}
+
+.W15 {
+  width: 15%;
+}
+
+.W18 {
+  width: 18%;
+}
+
+.W19 {
+  width: 19%;
 }
 
 .W20 {
@@ -130,6 +193,10 @@ a {
   line-height: 1.5;
 }
 
+.f18 {
+  font-size: 18px;
+}
+
 .f19 {
   font-size: 19px !important;
 }
@@ -158,8 +225,8 @@ a {
   font-size: 36px;
 }
 
-.f45 {
-  font-size: 45px;
+.f40 {
+  font-size: 40px;
 }
 
 .f100 {
@@ -261,11 +328,14 @@ a {
   font-size: 36px;
   color: #49c4e5;
   text-align: center;
+  line-height: 1.4;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
   .title {
-    font-size: 36px;
+    font-size: 27px;
+    margin-bottom: 20px;
   }
 }
 
@@ -497,7 +567,6 @@ a {
 #header .nav li p {
   color: #656565;
   font-size: 16px;
-  font-family: "Noto Serif TC", serif;
 }
 
 #header .nav li font {
@@ -645,7 +714,7 @@ a {
   .f36 {
     font-size: 26px;
   }
-  .f45 {
+  .f40 {
     font-size: 30px;
   }
   .f50 {
@@ -653,6 +722,9 @@ a {
   }
   .f100 {
     font-size: 70px;
+  }
+  .W50 {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=init.css.map */

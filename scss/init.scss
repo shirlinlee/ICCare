@@ -5,6 +5,25 @@
   src: url("../fonts/Futura_Heavy.otf");
 }
 
+@font-face {
+  font-family: "NotoSansCJKtc";
+  src: url("../fonts/NotoSansCJKtc-DemiLight.otf");
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "NotoSansCJKtc M";
+  src: url("../fonts/NotoSansCJKtc-Medium.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "NotoSansCJKtc";
+  src: url("../fonts/NotoSansCJKtc-Bold.otf");
+  font-weight: bold;
+}
+
 body,
 html {
   width: 100%;
@@ -19,6 +38,7 @@ html {
 #app {
   padding-top: 100px;
   min-height: 100vh;
+
   @media screen and (max-width: 767px) {
     padding-top: 60px;
   }
@@ -31,7 +51,12 @@ a {
 * {
   box-sizing: border-box;
   font-weight: normal;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "NotoSansCJKtc";
+}
+
+b {
+  font-weight: bold;
+
 }
 
 .W1280 {
@@ -39,6 +64,7 @@ a {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+
   @media screen and (max-width: 767px) {
     width: calc(100% - 40px);
   }
@@ -49,6 +75,7 @@ a {
   max-width: 1060px;
   margin-left: auto;
   margin-right: auto;
+
   @media screen and (max-width: 767px) {
     width: calc(100% - 40px);
   }
@@ -59,6 +86,18 @@ a {
   max-width: 630px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 40px);
+  }
+}
+
+.W520 {
+  width: calc(100% - 60px);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+
   @media screen and (max-width: 767px) {
     width: calc(100% - 40px);
   }
@@ -69,9 +108,39 @@ a {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+
   @media screen and (max-width: 767px) {
     width: calc(100% - 40px);
   }
+}
+
+.W11 {
+  width: 11%;
+}
+
+.W12 {
+  width: 12%;
+}
+
+.W13 {
+  width: 13%;
+}
+
+.W14 {
+  width: 14%;
+}
+
+.W15 {
+  width: 15%;
+}
+
+.W18 {
+  width: 18%;
+}
+
+
+.W19 {
+  width: 19%;
 }
 
 .W20 {
@@ -112,6 +181,10 @@ a {
   line-height: 1.5;
 }
 
+.f18 {
+  font-size: 18px;
+}
+
 .f19 {
   font-size: 19px !important;
 }
@@ -140,8 +213,8 @@ a {
   font-size: 36px;
 }
 
-.f45 {
-  font-size: 45px;
+.f40 {
+  font-size: 40px;
 }
 
 .f100 {
@@ -240,9 +313,15 @@ a {
   font-size: 36px;
   color: #49c4e5;
   text-align: center;
+  line-height: 1.4;
+  font-weight: bold;
+
   @media screen and (max-width: 767px) {
-    font-size: 36px;
+    font-size: 27px;
+    margin-bottom: 20px;
+
   }
+
   &.must_filled {
     &:after {
       content: "*必填";
@@ -270,6 +349,7 @@ a {
     padding-right: 3px;
   }
 }
+
 .wrapper {
   padding: 40px 30px;
   background-color: #fff;
@@ -282,6 +362,7 @@ a {
   &.pd130 {
     padding-top: 130px;
     padding-bottom: 130px;
+
     @media screen and (max-width: 767px) {
       padding-top: 40px;
       padding-bottom: 40px;
@@ -291,6 +372,7 @@ a {
   &.pd150 {
     padding-top: 150px;
     padding-bottom: 150px;
+
     @media screen and (max-width: 767px) {
       padding-top: 60px;
       padding-bottom: 60px;
@@ -343,9 +425,11 @@ a {
       z-index: 2;
       width: 50px;
       height: 50px;
+
       @media screen and (max-width: 767px) {
         display: block;
       }
+
       .hamburger {
         width: 25px;
         height: 1px;
@@ -379,9 +463,11 @@ a {
       &.active {
         .hamburger {
           background: #959595;
+
           &.hamburger-1 {
             transform: translate3d(0, 0, 0) rotate(45deg);
           }
+
           &.hamburger-2 {
             transform: translate3d(0, 0, 0) scale(0.1, 1);
           }
@@ -405,6 +491,7 @@ a {
       background-color: #fff;
       transition: all 0.3s;
       transform: translate(-100%, 0);
+
       &.active {
         transform: translate(0, 0);
       }
@@ -440,7 +527,6 @@ a {
       p {
         color: #656565;
         font-size: 16px;
-        font-family: "Noto Serif TC", serif;
       }
 
       font {
@@ -530,6 +616,7 @@ a {
   img {
     width: 170px;
     margin: 0 auto;
+
     @media screen and (max-width: 767px) {
       width: 140px;
     }
@@ -538,6 +625,7 @@ a {
   p {
     line-height: 1.5;
     margin: 40px auto 30px;
+
     @media screen and (max-width: 767px) {
       margin: 30px auto 20px;
     }
@@ -599,14 +687,19 @@ a {
     font-size: 26px;
   }
 
-  .f45 {
+  .f40 {
     font-size: 30px;
   }
 
   .f50 {
     font-size: 33px;
   }
+
   .f100 {
     font-size: 70px;
+  }
+
+  .W50 {
+    width: 100%;
   }
 }

@@ -10,7 +10,10 @@
 
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
-
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/init.css" />
     <link rel="stylesheet" type="text/css" href="css/pages.css" />
@@ -21,6 +24,7 @@
     <![endif]-->
 
     <script src="plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="plugins/js/slick.min.js"></script>
     <script src="plugins/js/babel.min.js"></script>
   </head>
@@ -41,28 +45,28 @@
           </div>
           <ul class="nav d_flex">
             <li class="redirect">
-              <a href="/">
+              <a href="index.html">
                 <p>24小時醫療諮詢</p>
               </a>
             </li>
             <li class="redirect">
-              <a href="/">
+              <a href="#" target="_blank">
                 <p>健康數據管理</p>
               </a>
             </li>
             <li class="redirect">
-              <a href="/">
+              <a href="product_list.html">
                 <p>周邊商品</p>
               </a>
             </li>
             <li class="redirect">
-              <a href="/">
+              <a href="booking_list.html">
                 <p>訂單記錄</p>
               </a>
             </li>
 
             <li class="redirect">
-              <a href="/">
+              <a href="member.html">
                 <p>會員專區</p>
               </a>
             </li>
@@ -236,6 +240,8 @@
 
 <script>
   $(function () {
+    $("#datepicker").datepicker({ dateFormat: "yy/mm/dd" });
+
     $('input[name="bill"]').on("change", function () {
       if (this.value === "bill1") {
         $(".bill_detail").removeClass("show");

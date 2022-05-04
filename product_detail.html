@@ -71,43 +71,70 @@
         <!-- <div class="menu_bg"></div> -->
       </div>
 
-      <div class="wrapper index">
-        <div class="W1280 d_flex">
-          <div class="W50 left d_flex">
-            <div class="W100">
-              <img src="images/home1.png" class="icon" alt="" />
-              <h1 class="f_blue f40">24小時醫療諮詢</h1>
-              <p class="f24 f_grey">
-                台灣急診室醫師(全科醫師)24小時線上服務，提供您最專業的線上健康諮詢解答。
+      <div class="p_detail W1280">
+        <p class="bread d_flex">
+          <a class="f16" href="product_list.html">所有商品</a>><a
+            class="f16"
+            href="product_list.html"
+            >防疫專區</a
+          >><a class="f16" href="">旺北脈搏血氧濃度計</a>
+        </p>
+
+        <div class="W100 d_flex upper">
+          <div
+            class="img W50"
+            style="background-image: url('images/u-10.png')"
+          ></div>
+          <div class="detail W50">
+            <h1 class="f36">旺北脈搏血氧濃度計</h1>
+            <h2 class="f22">含IC Care 平台會員(一年)</h2>
+            <p class="f22">市價$3,600</p>
+            <h3 class="f30">優惠價$2,700</h3>
+            <ul class="f16">
+              <li>此商品依規定網路不販售，請來電/Line 洽詢</li>
+              <li>客服專線:02-8789-0957</li>
+              <li>線上客服LINE ID: @hk6819</li>
+            </ul>
+            <div class="d_flex f16">
+              <div class="W40">
+                <span>數量:</span>
+                <select name="" id="">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <a href="" class="btn W60"><span>線上詢問</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="W100 info">
+          <ul class="tab">
+            <li data-tab="tab1" class="active"><h6>商品介紹</h6></li>
+            <li data-tab="tab2"><h6>規格說明</h6></li>
+            <li data-tab="tab3"><h6>售後服務</h6></li>
+          </ul>
+          <div class="tab1 content" style="display: block">
+            <div class="W630">
+              <p class="f16">
+                滿5000免運，僅限於台灣本島。外島、其它地方運費另計
               </p>
-            </div>
-            <div class="W100">
-              <p class="f24 f_blue">可用次數：<font>2</font></p>
-              <a href="reserved.html" class="btn f26">進入診間</a>
+              <br />
+              <h6 class="f_blue f22">- 產品特點</h6>
+              <ul class="f18 d_flex">
+                <li>測量脈搏血氧濃度值和脈率值</li>
+                <li>體積小</li>
+                <li>重量輕</li>
+                <li>具有聲光警示功能</li>
+                <li>操作簡單</li>
+                <li>LCD彩色螢幕</li>
+                <li>台灣製</li>
+              </ul>
             </div>
           </div>
-          <div class="W50 right d_flex">
-            <a class="W50" href="#" target="_blank">
-              <img src="images/home2.png" class="icon" alt="" />
-              <h4 class="f_blue f32">健康數據管理</h4>
-              <img src="images/ic-arrow-03.png" alt="" class="arrow" />
-            </a>
-            <a class="W50" href="product_list.html">
-              <img src="images/home3.png" class="icon" alt="" />
-              <h4 class="f_blue f32">周邊商品</h4>
-              <img src="images/ic-arrow-03.png" alt="" class="arrow" />
-            </a>
-            <a class="W50" href="booking_list.html">
-              <img src="images/home4.png" class="icon" alt="" />
-              <h4 class="f_blue f32">訂單紀錄</h4>
-              <img src="images/ic-arrow-03.png" alt="" class="arrow" />
-            </a>
-            <a class="W50" href="member.html">
-              <img src="images/home5.png" class="icon" alt="" />
-              <h4 class="f_blue f32">會員中心</h4>
-              <img src="images/ic-arrow-03.png" alt="" class="arrow" />
-            </a>
-          </div>
+          <div class="tab2 content"></div>
+          <div class="tab3 content"></div>
         </div>
       </div>
       <div id="footer">
@@ -118,10 +145,23 @@
             decision-making, enabling our customers to make more informed
             decisions, reduce risk, and improve operational efficiencies.
           </p>
-          <a href="">隱私權條款</a>
+          <a href="javascript:;">隱私權條款</a>
         </div>
       </div>
     </div>
+
+    <!-- 首頁only -->
   </body>
 </html>
 <script type="text/javascript" src="js/init.js"></script>
+
+<script>
+  $(function () {
+    $(".tab").on("click", "li", function () {
+      $(".tab li").removeClass("active");
+      $(this).addClass("active");
+      $(".content").hide();
+      $(`.${$(this).attr("data-tab")}`).show();
+    });
+  });
+</script>

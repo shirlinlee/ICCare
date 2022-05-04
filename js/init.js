@@ -2,7 +2,6 @@ const init = {
   $body: $("body"),
   $lb: $(".lb"),
   navHandler: function () {
-    console.log(22);
     init.$body.on("click", ".menu-open-button", function () {
       $(".menu-open-button,.nav").toggleClass("active");
     });
@@ -29,6 +28,36 @@ const init = {
       }
     }
     return "";
+  },
+  currentPage: 1,
+  pagesHandler: function () {
+    const pages_length = $(".pages li").length - 2;
+    init.$body.on("click", ".pages li", function () {
+      $(".pages li").removeClass("active");
+      if ($(this).hasClass("arrow")) {
+        if ($(this).hasClass("prev")) {
+          $(
+            `.page${init.currentPage === 1 ? 1 : init.currentPage - 1}`,
+          ).addClass("active");
+          init.currentPage = init.currentPage === 1 ? 1 : init.currentPage - 1;
+        } else {
+          $(
+            `.page${
+              init.currentPage === pages_length
+                ? pages_length
+                : init.currentPage + 1
+            }`,
+          ).addClass("active");
+          init.currentPage =
+            init.currentPage === pages_length
+              ? pages_length
+              : init.currentPage + 1;
+        }
+      } else {
+        init.currentPage = Number($(this).attr("class").replace("page", ""));
+        $(this).addClass("active");
+      }
+    });
   },
 };
 

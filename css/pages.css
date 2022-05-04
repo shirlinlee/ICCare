@@ -25,6 +25,7 @@ input[type="submit"] span {
   background-repeat: no-repeat;
   background-position: right center;
   background-image: url(../images/ic-arrow-02.png);
+  color: #fff;
 }
 
 button.light,
@@ -37,6 +38,7 @@ input[type="submit"].light {
 button.light span,
 .btn.light span,
 input[type="submit"].light span {
+  color: #49c4e5;
   padding-right: 0;
   padding-left: 25px;
   background-position: left center;
@@ -209,8 +211,8 @@ select {
   .contract_detail,
   .reserved,
   .booking_list {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -306,6 +308,26 @@ select {
   padding: 0 10px;
 }
 
+.bread {
+  color: #999999;
+  line-height: 25px;
+  vertical-align: text-top;
+  margin-bottom: 30px;
+  margin-left: -10px;
+}
+
+.bread a {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .bread a {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
 .login .d_flex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -397,8 +419,8 @@ select {
 
 @media screen and (max-width: 767px) {
   .plan {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -412,9 +434,12 @@ select {
   width: calc(33% - 10px);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 999px) {
   .plan .free {
     width: 100%;
+  }
+  .plan .free .detail {
+    padding-bottom: 20px;
   }
 }
 
@@ -445,7 +470,7 @@ select {
   width: calc(67% - 10px);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 999px) {
   .plan .vip {
     width: 100%;
   }
@@ -841,6 +866,7 @@ select {
   .subscription .info .td div.W23, .subscription .info .td div.W22 {
     width: 100%;
     text-align: left;
+    margin-bottom: 10px;
   }
   .subscription .info .td div.W14 {
     width: 50%;
@@ -1085,6 +1111,12 @@ select {
   margin-top: 60px;
 }
 
+@media screen and (max-width: 599px) {
+  .reserved .btn_area {
+    margin-top: 30px;
+  }
+}
+
 .reserved button {
   width: calc(50% - 10px);
 }
@@ -1106,9 +1138,9 @@ select {
 
 @media screen and (max-width: 767px) {
   .member {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 30px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px 20px 0;
   }
 }
 
@@ -1389,6 +1421,12 @@ select {
   }
 }
 
+@media screen and (max-width: 599px) {
+  .index > .d_flex .left a {
+    max-width: 100%;
+  }
+}
+
 .index > .d_flex .right {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1527,6 +1565,13 @@ select {
   margin-bottom: 60px;
 }
 
+@media screen and (max-width: 999px) {
+  .booking_list .product,
+  .booking_list .consult {
+    margin-bottom: 0;
+  }
+}
+
 .booking_list .th {
   background-color: rgba(73, 196, 229, 0.3);
   line-height: 42px;
@@ -1624,7 +1669,7 @@ select {
 
 @media screen and (max-width: 599px) {
   .product_list {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 }
 
@@ -1817,5 +1862,205 @@ select {
 
 .product_list .products .W25 a {
   margin-top: 20px;
+}
+
+.p_detail {
+  margin-top: 130px;
+}
+
+@media screen and (max-width: 767px) {
+  .p_detail {
+    margin-top: 30px;
+  }
+}
+
+.p_detail .upper {
+  padding-bottom: 40px;
+}
+
+.p_detail .upper .img {
+  margin: 30px 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  .p_detail .upper .img {
+    height: 200px;
+  }
+}
+
+.p_detail .upper .detail h1 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: .3px;
+}
+
+.p_detail .upper .detail h2 {
+  margin-bottom: 30px;
+  color: #434343;
+}
+
+.p_detail .upper .detail p {
+  color: #434343;
+  margin-bottom: 15px;
+}
+
+.p_detail .upper .detail h3 {
+  color: #ec64a3;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.p_detail .upper .detail ul {
+  margin-bottom: 50px;
+}
+
+.p_detail .upper .detail ul li {
+  line-height: 1.4;
+  margin-bottom: 8px;
+  padding-left: 15px;
+}
+
+.p_detail .upper .detail ul li::before {
+  content: '※';
+  margin-left: -15px;
+}
+
+.p_detail .upper .detail > div {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 599px) {
+  .p_detail .upper .detail > div {
+    padding-right: 0;
+  }
+}
+
+.p_detail .upper .detail > div .W40 {
+  width: calc(40% - 10px);
+}
+
+@media screen and (max-width: 767px) {
+  .p_detail .upper .detail > div .W40 {
+    width: 100%;
+  }
+}
+
+.p_detail .upper .detail > div .W40 span {
+  width: 45px;
+}
+
+.p_detail .upper .detail > div .W40 select {
+  margin-left: 20px;
+  width: calc(100% - 65px);
+  background-color: transparent;
+}
+
+.p_detail .upper .detail > div .W60 {
+  width: calc(60% - 10px);
+}
+
+@media screen and (max-width: 767px) {
+  .p_detail .upper .detail > div .W60 {
+    width: 100%;
+  }
+}
+
+.p_detail .info {
+  padding-top: 40px;
+  border-top: solid 1px #ccc;
+}
+
+.p_detail .info .tab {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .p_detail .info .tab {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.p_detail .info .tab li {
+  color: #b1b1b1;
+  border-bottom: 2px solid transparent;
+  padding: 0;
+  margin: 0 30px;
+  line-height: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .p_detail .info .tab li {
+    width: 33.32%;
+    margin: 0;
+    float: left;
+  }
+}
+
+.p_detail .info .tab li h6 {
+  font-family: "NotoSansCJKtc M";
+}
+
+.p_detail .info .tab li.active {
+  border-bottom: 2px solid #34b6e0;
+  color: #34b6e0;
+}
+
+.p_detail .info .tab li.active h6 {
+  font-family: "NotoSansCJKtc";
+  font-weight: bold;
+}
+
+.p_detail .info .content {
+  display: none;
+  min-height: 300px;
+}
+
+.p_detail .info .content h6 {
+  margin-bottom: 20px;
+}
+
+.p_detail .info .content ul {
+  margin-bottom: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 30px;
+}
+
+.p_detail .info .content ul li {
+  position: relative;
+  padding: 5px;
+  line-height: 1.4;
+  width: calc(50% - 10px);
+}
+
+@media screen and (max-width: 767px) {
+  .p_detail .info .content ul li {
+    width: 100%;
+  }
+}
+
+.p_detail .info .content ul li:before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -25px;
+  top: 11px;
+  -webkit-box-shadow: 0 0 6px #49c3e5;
+  box-shadow: 0 0 6px #49c3e5;
 }
 /*# sourceMappingURL=pages.css.map */

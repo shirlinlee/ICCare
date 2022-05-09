@@ -5,6 +5,14 @@ const init = {
     init.$body.on("click", ".menu-open-button", function () {
       $(".menu-open-button,.nav").toggleClass("active");
     });
+
+    init.$body.on("mouseenter", ".has_sub", function (e) {
+      $(".dropdown").fadeIn(200);
+    });
+
+    init.$body.on("mouseleave", ".has_sub", function (e) {
+      $(".dropdown").hide();
+    });
   },
 
   agreeTerm(number) {

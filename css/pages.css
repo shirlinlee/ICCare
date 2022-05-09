@@ -471,6 +471,7 @@ select {
 
 .plan .free a {
   background-color: #41dac5;
+  border: 1px solid #41dac5;
   margin-top: 60px;
 }
 
@@ -1187,6 +1188,11 @@ select {
           justify-content: space-between;
   padding: 38px;
   margin-bottom: 110px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  -ms-border-radius: 22px;
+  -o-border-radius: 22px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -1600,6 +1606,11 @@ select {
   -webkit-box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
           box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
   padding: 37px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  -ms-border-radius: 22px;
+  -o-border-radius: 22px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {

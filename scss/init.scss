@@ -431,7 +431,7 @@ b {
 
   .W1280 {
     margin: 0 auto;
-    padding: 23px 0;
+    padding: 23px 0 0;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -445,9 +445,11 @@ b {
       width: 134px;
       position: relative;
       z-index: 50;
+      margin-top: -18px;
 
       @media screen and (max-width: 599px) {
         width: 120px;
+        margin-top: 0;
       }
     }
 
@@ -531,16 +533,121 @@ b {
       }
     }
 
-    li {
+    >li {
       line-height: 50px;
       cursor: pointer;
       display: inline-block;
-      padding: 0 25px 0 5px;
+      padding: 0 25px 27px 5px;
       margin: 0 15px;
+
+      .dropdown {
+        display: none;
+        width: 100vw;
+        left: 0;
+        top: auto;
+        background: #49c4e5;
+        // opacity: 0;
+        top: 100px;
+        z-index: 5;
+        position: fixed;
+        text-align: left;
+        // -webkit-box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .1);
+        // box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .1);
+        padding: 20px 0 30px;
+        // transform: translate(0, 100%);
+        // -webkit-transform: translate(0, 100%);
+        // -moz-transform: translate(0, 100%);
+        // -ms-transform: translate(0, 100%);
+        // -o-transform: translate(0, 100%);
+        // -webkit-transition: opacity 0.2s;
+        // -moz-transition: opacity 0.2s;
+        // -ms-transition: opacity 0.2s;
+        // -o-transition: opacity 0.2s;
+
+        // &.open {
+        //   visibility: visible;
+        //   opacity: 1;
+        //   z-index: 20;
+        //   transform: translate(0, 0);
+        //   -webkit-transform: translate(0, 0);
+        //   -moz-transform: translate(0, 0);
+        //   -ms-transform: translate(0, 0);
+        //   -o-transform: translate(0, 0);
+        // }
+
+        .d_flex {
+          justify-content: center;
+
+          li {
+            margin-right: 64px;
+            list-style: disc;
+            color: #fff;
+            padding: 0 5px;
+
+            a {
+              color: #fff;
+              line-height: 1.6;
+              margin-bottom: 10px;
+              padding-bottom: 5px;
+
+              &.hover {
+                display: table;
+                border-bottom: 1.5px solid transparent;
+
+                &:hover {
+                  border-bottom: 1.5px solid #fff;
+                }
+              }
+            }
+          }
+        }
+
+
+        @media screen and (max-width: 767px) {
+          position: relative;
+          display: block;
+          width: auto;
+          background-color: #fff;
+          top: 0;
+          padding: 10px 0 10px 20px;
+
+
+          .d_flex {
+            // flex-direction: column;
+            justify-content: space-evenly;
+
+            li {
+              list-style: none;
+              line-height: 30px;
+              width: calc(50% - 10px);
+              margin-right: 0;
+
+              h5 {
+                display: none;
+              }
+
+              a {
+                color: #999;
+
+                &::before {
+                  content: '';
+                  display: inline-block;
+                  background-color: #999;
+                  height: 10px;
+                  width: 10px;
+                  margin-right: 5px;
+
+                }
+              }
+            }
+          }
+        }
+
+      }
 
       @media screen and (min-width: 769px) {
         &:hover {
-          * {
+          a {
             color: #47c3e4;
           }
         }
@@ -556,6 +663,7 @@ b {
         margin: 0 30px;
         border-bottom: 1px solid #ccc;
         line-height: 60px;
+        width: calc(100% - 60px);
 
         &:last-child {
           border-color: transparent;
@@ -565,7 +673,7 @@ b {
       &.has_sub {
         background-repeat: no-repeat;
         background-size: 13px;
-        background-position: right center;
+        background-position: right top 22px;
         background-image: url(../images/ic-arrow-01.png);
 
         @media screen and (max-width: 767px) {
@@ -574,7 +682,7 @@ b {
         }
       }
 
-      p {
+      a {
         color: #656565;
         font-size: 16px;
       }
@@ -639,9 +747,6 @@ b {
     }
   }
 
-  .menu_bg {
-    // position: fixed;
-  }
 }
 
 #footer {

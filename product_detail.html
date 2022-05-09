@@ -105,7 +105,9 @@
                   <option value="4">4</option>
                 </select>
               </div>
-              <a href="" class="btn W60"><span>線上詢問</span></a>
+              <a href="javascript:;" class="btn W60 inquiry"
+                ><span>線上詢問</span></a
+              >
             </div>
           </div>
         </div>
@@ -133,8 +135,59 @@
               </ul>
             </div>
           </div>
-          <div class="tab2 content"></div>
-          <div class="tab3 content"></div>
+          <div class="tab2 content">
+            <div class="W630">
+              許可證字號：衛署醫器製字第003374號 <br />
+              顯示面板：LCD彩色螢幕顯示 <br />
+              <table>
+                <tr>
+                  <td align="right" width="145" style="vertical-align: top">
+                    血氧濃度測量範圍：
+                  </td>
+                  <td>70%~99% <br />80%~99%；±2%<br />70%~79%；±3%</td>
+                </tr>
+                <tr>
+                  <td align="right" width="145" style="vertical-align: top">
+                    測量精度：
+                  </td>
+                  <td>±2%或2bpm</td>
+                </tr>
+                <tr>
+                  <td align="right" width="145" style="vertical-align: top">
+                    脈搏警示預設值：
+                  </td>
+                  <td>↑120bpm <br />↓ 50bpm</td>
+                </tr>
+              </table>
+
+              使用方式：測量時只要將手指插入指套式光電感測器中，顯示幕就會直接顯示脈搏血氧濃度值和脈率值。
+              <br />
+              製造商名稱：旺北科技股份有限公司 <br />
+              製造商地址：新竹市科學工業園區工業東二路15號1樓 <br />
+              <br />
+              以上資訊由原廠提供，使用前請務必閱讀原廠之使用說明書，並遵照指示使用。
+            </div>
+          </div>
+          <div class="tab3 content">
+            <div class="W630">
+              若商品發生新品瑕疵，可申請更換新品，請參照常見問題。<br />
+              若您在鑑賞期間內欲退貨，請參照常見問題。<br /><br />
+
+              依消保法之規定提供該商品七天免費鑑賞期(含例假日)的服務，原則上若商品未經使用或被汙損(
+              除商品瑕疵)，一般皆可申請退換貨。<br /><br />
+
+              不適用七天鑑賞期商品：<br />
+              以數位或電磁紀錄形式儲存之商品、易於變質或損壞之商品、以及性質上無法或不適合退換之商品：如CD、VCD、DVD、電腦軟體，若產品瑕疵無法讀取僅接受原片換新。<br /><br />
+
+              衣飾鞋類-如泳裝、T恤，如於送達後水洗或污損者。<br /><br />
+
+              健康食品、美容保養用品、內衣褲、等私人消耗性產品，一經拆封使用，恕無法退貨。<br /><br />
+
+              有標示不接受退貨的特賣商品，不接受退換，但若為商品本身或運送過程中所造成的瑕疵，則不在此限。<br /><br />
+
+              票券類商品:未在優惠期限內使用完畢,可向旅行社補差價延期或補差價更換其他旅遊商品。
+            </div>
+          </div>
         </div>
       </div>
       <div id="footer">
@@ -146,6 +199,49 @@
             decisions, reduce risk, and improve operational efficiencies.
           </p>
           <a href="javascript:;">隱私權條款</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb">
+      <div class="lb_content W1060">
+        <div class="t_center"><h4 class="title">訂購人資訊</h4></div>
+        <div class="d_flex">
+          <div class="W50">
+            <input type="text" placeholder="姓名 *" />
+          </div>
+          <div class="W50">
+            <input type="email" placeholder="電子信箱 *" />
+          </div>
+        </div>
+        <div class="d_flex">
+          <div class="W50">
+            <select name="" id="">
+              <option value="訂購數量*" disabled selected="selected">
+                訂購數量*
+              </option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="W50">
+            <input type="tel" placeholder="電話 *" />
+          </div>
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="4"
+          placeholder="備註說明*"
+        ></textarea>
+
+        <div class="d_flex btn_area">
+          <button class="light W50">
+            <span>取消</span>
+          </button>
+          <button class="W50">
+            <span>確認送出</span>
+          </button>
         </div>
       </div>
     </div>
@@ -162,6 +258,14 @@
       $(this).addClass("active");
       $(".content").hide();
       $(`.${$(this).attr("data-tab")}`).show();
+    });
+
+    $("body").on("click", ".inquiry", function () {
+      $(".lb").addClass("open");
+    });
+
+    $("body").on("click", ".btn_area button", function () {
+      $(".lb").removeClass("open");
     });
   });
 </script>

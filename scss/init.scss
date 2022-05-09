@@ -88,7 +88,7 @@ b {
   margin-right: auto;
 
   @media screen and (max-width: 767px) {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
   }
 }
 
@@ -387,6 +387,7 @@ b {
   padding: 40px 30px;
   background-color: #fff;
   box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
+  border-radius: 22px;
 
   @media screen and (max-width: 767px) {
     padding: 30px 20px;
@@ -534,7 +535,7 @@ b {
       line-height: 50px;
       cursor: pointer;
       display: inline-block;
-      padding: 0 15px;
+      padding: 0 25px 0 5px;
       margin: 0 15px;
 
       @media screen and (min-width: 769px) {
@@ -555,6 +556,22 @@ b {
         margin: 0 30px;
         border-bottom: 1px solid #ccc;
         line-height: 60px;
+
+        &:last-child {
+          border-color: transparent;
+        }
+      }
+
+      &.has_sub {
+        background-repeat: no-repeat;
+        background-size: 13px;
+        background-position: right center;
+        background-image: url(../images/ic-arrow-01.png);
+
+        @media screen and (max-width: 767px) {
+          background-position: right 30px center;
+
+        }
       }
 
       p {

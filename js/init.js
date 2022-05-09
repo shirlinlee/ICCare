@@ -62,6 +62,5 @@ const init = {
 };
 
 $(function () {
-  console.log(11);
   init.navHandler();
 });

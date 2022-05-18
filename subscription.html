@@ -139,7 +139,14 @@
             <div class="d_flex">
               <div class="W50"><span>Email</span><input type="text" /></div>
               <div class="W50">
-                <span class="filled">電話</span><input type="text" />
+                <span class="filled">電話</span>
+                <div class="multi_input d_flex">
+                  <select name="" id="" class="m1">
+                    <option selected disabled hidden>國碼</option>
+                    <option value="886">886</option>
+                  </select>
+                  <input type="tel" class="m2" />
+                </div>
               </div>
             </div>
             <div class="d_flex">
@@ -213,7 +220,7 @@
             </div>
           </div>
           <div class="health_card">
-            <div class="title must_filled">健保卡號</div>
+            <div class="title">健保卡號</div>
             <div class="d_flex">
               <input type="tel" maxlength="4" name="card" id="number1" />
               <font></font>

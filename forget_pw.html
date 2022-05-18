@@ -100,7 +100,13 @@
         <div class="W300">
           <h3 class="title">忘記密碼</h3>
           <p class="f18">請填寫您註冊的手機號碼</p>
-          <input type="tel" class="ico phone" placeholder="手機號碼" />
+          <div class="multi_input d_flex">
+            <select name="" id="" class="m1">
+              <option selected disabled hidden>國碼</option>
+              <option value="886">886</option>
+            </select>
+            <input type="tel" value="901234567" class="m2" />
+          </div>
           <button onclick="reset()">
             <span>確認重設密碼</span>
           </button>

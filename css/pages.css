@@ -14,6 +14,7 @@ input[type="submit"] {
   width: 100%;
   margin-bottom: 17px;
   text-align: center;
+  cursor: pointer;
 }
 
 button span,
@@ -164,9 +165,10 @@ textarea#datepicker {
 select {
   background-color: #fff;
   background-image: url(../images/ic-arrow-01.png);
-  background-size: 21px;
+  background-size: 16px;
   background-position: right 13px center;
   background-repeat: no-repeat;
+  padding: 10px 25px 12px 20px;
 }
 
 ::-webkit-input-placeholder {
@@ -342,7 +344,7 @@ select {
 }
 
 .forget_pw p {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   font-family: "NotoSansCJKtc M";
 }
 
@@ -449,52 +451,59 @@ select {
           box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
 }
 
-.plan .free {
+.plan .free,
+.plan .enterprise {
   border-radius: 22px;
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
   -ms-border-radius: 22px;
   -o-border-radius: 22px;
   overflow: hidden;
-  width: calc(33% - 10px);
+  width: calc(25% - 10px);
 }
 
 @media screen and (max-width: 999px) {
-  .plan .free {
+  .plan .free,
+  .plan .enterprise {
     width: 100%;
     margin-bottom: 30px;
   }
-  .plan .free .detail {
+  .plan .free .detail,
+  .plan .enterprise .detail {
     padding-bottom: 20px;
   }
 }
 
-.plan .free a {
+.plan .free a,
+.plan .enterprise a {
   background-color: #41dac5;
   border: 1px solid #41dac5;
   margin-top: 60px;
 }
 
 @media screen and (max-width: 767px) {
-  .plan .free a {
+  .plan .free a,
+  .plan .enterprise a {
     margin-top: 30px;
   }
 }
 
-.plan .free ul {
+.plan .free ul,
+.plan .enterprise ul {
   padding: 0 40px;
   margin-top: 60px;
 }
 
 @media screen and (max-width: 767px) {
-  .plan .free ul {
+  .plan .free ul,
+  .plan .enterprise ul {
     margin-top: 30px;
     padding: 0 30px 0 20px;
   }
 }
 
 .plan .vip {
-  width: calc(67% - 10px);
+  width: calc(50% - 10px);
   border-radius: 22px;
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
@@ -506,6 +515,7 @@ select {
 @media screen and (max-width: 999px) {
   .plan .vip {
     width: 100%;
+    margin-bottom: 30px;
   }
 }
 
@@ -577,13 +587,13 @@ select {
 }
 
 .plan .vip .detail .W100 .W50 p.f19 {
-  height: 60px;
+  min-height: 60px;
   margin-bottom: 20px;
 }
 
 @media screen and (max-width: 767px) {
   .plan .vip .detail .W100 .W50 p.f19 {
-    height: auto;
+    min-height: auto;
   }
 }
 
@@ -657,7 +667,7 @@ select {
 }
 
 .plan .vip .detail ul {
-  padding: 50px 40px;
+  padding: 40px 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -737,7 +747,7 @@ select {
   line-height: 1;
   font-family: "Futura";
   letter-spacing: 4px;
-  padding: 0 5px 0 0;
+  padding: 0 3px 0 5px;
 }
 
 @media screen and (max-width: 767px) {
@@ -946,6 +956,12 @@ select {
 .subscription .info .personal_info .d_flex .W50,
 .subscription .info .bill_info .d_flex .W50 {
   width: calc(50% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 @media screen and (max-width: 767px) {
@@ -963,7 +979,9 @@ select {
 }
 
 .subscription .info .personal_info .d_flex .W50 input,
-.subscription .info .bill_info .d_flex .W50 input {
+.subscription .info .personal_info .d_flex .W50 .multi_input,
+.subscription .info .bill_info .d_flex .W50 input,
+.subscription .info .bill_info .d_flex .W50 .multi_input {
   width: calc(100% - 90px);
 }
 
@@ -1124,6 +1142,58 @@ select {
   font-weight: bold;
 }
 
+.multi_input {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.multi_input .m1 {
+  width: 90px;
+  text-align: left;
+}
+
+.multi_input .m2 {
+  width: calc(100% - 100px) !important;
+}
+
+.lb .lb_content .close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.lb .lb_content .close .hamburger {
+  width: 25px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12px;
+  background: #959595;
+}
+
+.lb .lb_content .close .hamburger.hamburger-1 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+          transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+.lb .lb_content .close .hamburger.hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+          transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.lb .lb_content .close .hamburger.hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
 .reserved {
   text-align: center;
 }
@@ -1210,7 +1280,7 @@ select {
   margin-right: auto;
 }
 
-.member .basic_info .d_flex {
+.member .basic_info > .d_flex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1220,18 +1290,18 @@ select {
           align-items: center;
 }
 
-.member .basic_info .d_flex span {
+.member .basic_info > .d_flex span {
   width: 80px;
   text-align: right;
 }
 
 @media screen and (max-width: 767px) {
-  .member .basic_info .d_flex span {
+  .member .basic_info > .d_flex span {
     width: 65px;
   }
 }
 
-.member .basic_info .d_flex span .f_blue {
+.member .basic_info > .d_flex span .f_blue {
   font-size: 11px;
   white-space: nowrap;
   display: block;
@@ -1241,16 +1311,15 @@ select {
 }
 
 @media screen and (max-width: 767px) {
-  .member .basic_info .d_flex span .f_blue {
+  .member .basic_info > .d_flex span .f_blue {
     white-space: normal;
     margin-left: 0;
     margin-top: 6px;
   }
 }
 
-.member .basic_info .d_flex > input,
-.member .basic_info .d_flex select,
-.member .basic_info .d_flex .multi_input {
+.member .basic_info > .d_flex > input,
+.member .basic_info > .d_flex select {
   width: calc(100% - 100px);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1259,40 +1328,30 @@ select {
 }
 
 @media screen and (max-width: 767px) {
-  .member .basic_info .d_flex > input,
-  .member .basic_info .d_flex select,
-  .member .basic_info .d_flex .multi_input {
+  .member .basic_info > .d_flex > input,
+  .member .basic_info > .d_flex select {
     width: calc(100% - 75px);
   }
 }
 
-.member .basic_info .d_flex > input .m1,
-.member .basic_info .d_flex select .m1,
-.member .basic_info .d_flex .multi_input .m1 {
-  width: 70px;
-  text-align: center;
+.member .basic_info > .d_flex .multi_input {
+  width: calc(100% - 100px);
 }
 
 @media screen and (max-width: 767px) {
-  .member .basic_info .d_flex > input .m1,
-  .member .basic_info .d_flex select .m1,
-  .member .basic_info .d_flex .multi_input .m1 {
-    width: 60px;
+  .member .basic_info > .d_flex .multi_input {
+    width: calc(100% - 75px);
   }
 }
 
-.member .basic_info .d_flex > input .m2,
-.member .basic_info .d_flex select .m2,
-.member .basic_info .d_flex .multi_input .m2 {
-  width: calc(100% - 80px);
+.member .basic_info > .d_flex .multi_input .m1 {
+  width: 90px;
+  margin-bottom: 0;
 }
 
-@media screen and (max-width: 767px) {
-  .member .basic_info .d_flex > input .m2,
-  .member .basic_info .d_flex select .m2,
-  .member .basic_info .d_flex .multi_input .m2 {
-    width: calc(100% - 72px);
-  }
+.member .basic_info > .d_flex .multi_input .m2 {
+  width: calc(100% - 100px);
+  margin-bottom: 0;
 }
 
 .member .sub_account {
@@ -2261,6 +2320,12 @@ select {
 @media screen and (max-width: 767px) {
   .lb .lb_content .btn_area {
     margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lb .lb_content .W520 {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=pages.css.map */

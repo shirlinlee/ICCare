@@ -346,6 +346,12 @@ b {
   padding-left: 10px;
 }
 
+.title.underline {
+  border-bottom: #49c4e5 solid 1px;
+  padding-bottom: 18px;
+  display: inline-block;
+}
+
 *.filled:after {
   content: "*";
   color: #49c4e5;

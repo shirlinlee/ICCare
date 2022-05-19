@@ -431,8 +431,8 @@ select {
 }
 
 .plan {
-  margin-top: 190px;
-  margin-bottom: 190px;
+  margin-top: 80px;
+  margin-bottom: 80px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

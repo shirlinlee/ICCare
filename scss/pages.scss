@@ -705,6 +705,23 @@ select {
   }
 }
 
+.plan_once {
+  .free {
+    @media screen and(min-width: 1000px) {
+      width: calc(33% - 10px);
+    }
+  }
+
+  .vip {
+    @media screen and(min-width: 1000px) {
+      width: calc(67% - 10px);
+    }
+
+  }
+}
+
+
+
 .subscription {
   margin-top: 110px;
   justify-content: space-between;

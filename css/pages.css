@@ -818,6 +818,18 @@ select {
   width: calc(100% - 40px);
 }
 
+@media screen and (min-width: 1000px) {
+  .plan_once .free {
+    width: calc(33% - 10px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .plan_once .vip {
+    width: calc(67% - 10px);
+  }
+}
+
 .subscription {
   margin-top: 110px;
   -webkit-box-pack: justify;

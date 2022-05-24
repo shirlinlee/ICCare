@@ -75,7 +75,8 @@ textarea {
   }
 }
 
-input[type="checkbox"], input[type="radio"],
+input[type="checkbox"],
+input[type="radio"],
 select[type="checkbox"],
 select[type="radio"],
 textarea[type="checkbox"],
@@ -87,7 +88,8 @@ textarea[type="radio"] {
   margin: 0 10px 0 0;
 }
 
-input[type="checkbox"]:checked, input[type="radio"]:checked,
+input[type="checkbox"]:checked,
+input[type="radio"]:checked,
 select[type="checkbox"]:checked,
 select[type="radio"]:checked,
 textarea[type="checkbox"]:checked,
@@ -96,7 +98,8 @@ textarea[type="radio"]:checked {
   background-color: #49c4e5;
 }
 
-input[type="checkbox"]:disabled, input[type="radio"]:disabled,
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled,
 select[type="checkbox"]:disabled,
 select[type="radio"]:disabled,
 textarea[type="checkbox"]:disabled,
@@ -105,7 +108,8 @@ textarea[type="radio"]:disabled {
   background-color: #ddd;
 }
 
-input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label,
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label,
 select[type="checkbox"]:disabled + label,
 select[type="radio"]:disabled + label,
 textarea[type="checkbox"]:disabled + label,
@@ -234,13 +238,13 @@ select {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 17px;
 }
 
@@ -263,8 +267,8 @@ select {
 
 .login_area_sm {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .login_area_sm a {
@@ -339,8 +343,8 @@ select {
 
 .login .d_flex {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .forget_pw p {
@@ -434,8 +438,8 @@ select {
   margin-top: 80px;
   margin-bottom: 80px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -448,7 +452,7 @@ select {
 .plan > * {
   background-color: #fff;
   -webkit-box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
-          box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
+  box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
 }
 
 .plan .free,
@@ -532,7 +536,7 @@ select {
   bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
   line-height: 53px;
   border-radius: 27px;
   color: #49c4e5;
@@ -540,7 +544,7 @@ select {
   font-weight: bold;
   z-index: 1;
   -webkit-box-shadow: 0px 3px 10.1px 0.9px rgba(75, 143, 178, 0.25);
-          box-shadow: 0px 3px 10.1px 0.9px rgba(75, 143, 178, 0.25);
+  box-shadow: 0px 3px 10.1px 0.9px rgba(75, 143, 178, 0.25);
 }
 
 @media screen and (max-width: 767px) {
@@ -563,8 +567,8 @@ select {
   position: relative;
   padding: 60px 38px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -602,7 +606,7 @@ select {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 27px;
   height: 27px;
   line-height: 25px;
@@ -612,7 +616,8 @@ select {
   text-align: center;
 }
 
-.plan .vip .detail .W100 > span::before, .plan .vip .detail .W100 > span::after {
+.plan .vip .detail .W100 > span::before,
+.plan .vip .detail .W100 > span::after {
   content: "";
   height: 70px;
   width: 2px;
@@ -624,7 +629,8 @@ select {
 }
 
 @media screen and (max-width: 767px) {
-  .plan .vip .detail .W100 > span::before, .plan .vip .detail .W100 > span::after {
+  .plan .vip .detail .W100 > span::before,
+  .plan .vip .detail .W100 > span::after {
     height: 1px;
     width: calc(50vw - 60px);
   }
@@ -633,7 +639,7 @@ select {
 .plan .vip .detail .W100 > span::before {
   top: 0;
   -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+  transform: translate(0, -100%);
 }
 
 @media screen and (max-width: 767px) {
@@ -651,7 +657,7 @@ select {
 .plan .vip .detail .W100 > span::after {
   bottom: 0;
   -webkit-transform: translate(0, 100%);
-          transform: translate(0, 100%);
+  transform: translate(0, 100%);
 }
 
 @media screen and (max-width: 767px) {
@@ -669,8 +675,8 @@ select {
 .plan .vip .detail ul {
   padding: 40px 30px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -732,7 +738,7 @@ select {
 
 .plan .upper h4 {
   font-size: 34px;
-  font-family: "Futura";
+  font-family: "Reem Kufi", sans-serif;
   letter-spacing: 3px;
 }
 
@@ -745,7 +751,7 @@ select {
 .plan .upper h4 font {
   font-size: 80px;
   line-height: 1;
-  font-family: "Futura";
+  font-family: "Reem Kufi", sans-serif;
   letter-spacing: 4px;
   padding: 0 3px 0 5px;
 }
@@ -786,7 +792,7 @@ select {
   left: -25px;
   top: 11px;
   -webkit-box-shadow: 0 0 6px #49c3e5;
-          box-shadow: 0 0 6px #49c3e5;
+  box-shadow: 0 0 6px #49c3e5;
 }
 
 @media screen and (max-width: 767px) {
@@ -833,8 +839,8 @@ select {
 .subscription {
   margin-top: 110px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 38px;
   margin-bottom: 110px;
   border-radius: 22px;
@@ -872,8 +878,8 @@ select {
   width: 100%;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .subscription .info > div.t_right {
@@ -927,7 +933,8 @@ select {
 }
 
 @media screen and (max-width: 767px) {
-  .subscription .info .td div.W23, .subscription .info .td div.W22 {
+  .subscription .info .td div.W23,
+  .subscription .info .td div.W22 {
     width: 100%;
     text-align: left;
     margin-bottom: 10px;
@@ -961,8 +968,8 @@ select {
 .subscription .info .personal_info .d_flex,
 .subscription .info .bill_info .d_flex {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .subscription .info .personal_info .d_flex .W50,
@@ -972,8 +979,8 @@ select {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 @media screen and (max-width: 767px) {
@@ -1003,8 +1010,8 @@ select {
 .subscription .info .bill_info .d_flex .W67 {
   width: calc(33.33% - 10px);
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 @media screen and (max-width: 767px) {
@@ -1035,8 +1042,8 @@ select {
 .subscription .info .bill_info .d_flex .W67 input {
   width: calc(100% - 110px);
   -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
+  -ms-flex-positive: 3;
+  flex-grow: 3;
 }
 
 @media screen and (max-width: 767px) {
@@ -1095,8 +1102,8 @@ select {
 
 .subscription .info .health_card .d_flex {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .subscription .info .health_card input {
@@ -1135,8 +1142,8 @@ select {
 
 .subscription .cost .d_flex {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 17px;
 }
 
@@ -1156,8 +1163,8 @@ select {
 
 .multi_input {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 0;
 }
 
@@ -1193,17 +1200,17 @@ select {
 
 .lb .lb_content .close .hamburger.hamburger-1 {
   -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
-          transform: translate3d(0, 0, 0) rotate(45deg);
+  transform: translate3d(0, 0, 0) rotate(45deg);
 }
 
 .lb .lb_content .close .hamburger.hamburger-2 {
   -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
-          transform: translate3d(0, 0, 0) scale(0.1, 1);
+  transform: translate3d(0, 0, 0) scale(0.1, 1);
 }
 
 .lb .lb_content .close .hamburger.hamburger-3 {
   -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
-          transform: translate3d(0, 0, 0) rotate(-45deg);
+  transform: translate3d(0, 0, 0) rotate(-45deg);
 }
 
 .reserved {
@@ -1239,8 +1246,8 @@ select {
 
 .reserved .d_flex {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .reserved .btn_area {
@@ -1266,8 +1273,8 @@ select {
 .member {
   margin-top: 110px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 38px;
   margin-bottom: 110px;
   -webkit-border-radius: 22px;
@@ -1294,12 +1301,12 @@ select {
 
 .member .basic_info > .d_flex {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 17px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .member .basic_info > .d_flex span {
@@ -1334,8 +1341,8 @@ select {
 .member .basic_info > .d_flex select {
   width: calc(100% - 100px);
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 0;
 }
 
@@ -1381,12 +1388,12 @@ select {
 
 .member .sub_account .d_flex {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 17px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -1415,8 +1422,8 @@ select {
 .member .sub_account .d_flex input {
   width: calc(45% - 120px);
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 0;
 }
 
@@ -1439,7 +1446,7 @@ select {
 
 .member .social_binding .d_flex {
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin-bottom: 52px;
 }
 
@@ -1478,14 +1485,20 @@ select {
 }
 
 .index {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#f7faff), to(#d9f4ff));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#f7faff),
+    to(#d9f4ff)
+  );
   background-image: linear-gradient(to top, #f7faff, #d9f4ff);
 }
 
 .index > .d_flex {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -1504,11 +1517,11 @@ select {
   padding: 50px 30px 50px 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -1524,7 +1537,7 @@ select {
 }
 
 .index > .d_flex .left h1:after {
-  content: '';
+  content: "";
   display: block;
   width: 49px;
   height: 2px;
@@ -1570,8 +1583,8 @@ select {
 
 .index > .d_flex .right {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .index > .d_flex .right .W50 {
@@ -1580,7 +1593,7 @@ select {
   padding: 50px 20px;
   border-radius: 18px;
   -webkit-box-shadow: 4.2px 4.2px 17.1px 1.9px rgba(75, 143, 178, 0.25);
-          box-shadow: 4.2px 4.2px 17.1px 1.9px rgba(75, 143, 178, 0.25);
+  box-shadow: 4.2px 4.2px 17.1px 1.9px rgba(75, 143, 178, 0.25);
   margin-bottom: 20px;
 }
 
@@ -1660,7 +1673,7 @@ select {
   position: relative;
   z-index: 2;
   -webkit-box-shadow: 2.4px 6.6px 14.7px 1.3px rgba(75, 143, 178, 0.15);
-          box-shadow: 2.4px 6.6px 14.7px 1.3px rgba(75, 143, 178, 0.15);
+  box-shadow: 2.4px 6.6px 14.7px 1.3px rgba(75, 143, 178, 0.15);
 }
 
 @media screen and (max-width: 599px) {
@@ -1675,7 +1688,7 @@ select {
 
 .booking_list {
   -webkit-box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
-          box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
+  box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
   padding: 37px;
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
@@ -1703,7 +1716,7 @@ select {
 }
 
 .booking_list h5::before {
-  content: 'ㄧ';
+  content: "ㄧ";
 }
 
 .booking_list .product,
@@ -1775,28 +1788,28 @@ select {
 
 @media screen and (max-width: 999px) {
   .booking_list .td .number::before {
-    content: '訂單編號：';
+    content: "訂單編號：";
   }
   .booking_list .td .date::before {
-    content: '訂單日期：';
+    content: "訂單日期：";
   }
   .booking_list .td .price::before {
-    content: '訂單金額：';
+    content: "訂單金額：";
   }
   .booking_list .td .status::before {
-    content: '付款狀態：';
+    content: "付款狀態：";
   }
   .booking_list .td .ship::before {
-    content: '出貨狀態：';
+    content: "出貨狀態：";
   }
   .booking_list .td .verify::before {
-    content: '付款證明：';
+    content: "付款證明：";
   }
   .booking_list .td .consult_record::before {
-    content: '諮詢紀錄：';
+    content: "諮詢紀錄：";
   }
   .booking_list .td .service::before {
-    content: '線上客服：';
+    content: "線上客服：";
   }
 }
 
@@ -1819,7 +1832,7 @@ select {
 }
 
 .booking_list .td div a[download]:after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 16px;
@@ -1832,7 +1845,13 @@ select {
 
 .product_list {
   padding-top: 90px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#f7faff), to(#d9f4ff));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#f7faff),
+    to(#d9f4ff)
+  );
   background-image: linear-gradient(to top, #f7faff, #d9f4ff);
 }
 
@@ -1850,8 +1869,8 @@ select {
 
 .product_list .tab {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -1881,7 +1900,7 @@ select {
 }
 
 .product_list .tab li.multi h6::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -30px;
   display: inline-block;
@@ -1906,7 +1925,7 @@ select {
   position: absolute;
   top: 50px;
   -webkit-box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
-          box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
+  box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
   background-color: rgba(71, 195, 228, 0.8);
   border-radius: 15px;
   padding: 10px;
@@ -1947,8 +1966,8 @@ select {
 
 .product_list .products {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .product_list .products .W25 {
@@ -1957,7 +1976,7 @@ select {
   padding: 30px 20px 10px;
   border-radius: 18px;
   -webkit-box-shadow: 4.2px 4.2px 17.1px 1.9px rgba(75, 143, 178, 0.25);
-          box-shadow: 4.2px 4.2px 17.1px 1.9px rgba(75, 143, 178, 0.25);
+  box-shadow: 4.2px 4.2px 17.1px 1.9px rgba(75, 143, 178, 0.25);
   margin-bottom: 20px;
 }
 
@@ -2011,11 +2030,11 @@ select {
 
 .product_list .products .W25 > .d_flex {
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .product_list .products .W25 > .d_flex h5 {
@@ -2065,7 +2084,7 @@ select {
 .p_detail .upper .detail h1 {
   margin-bottom: 15px;
   font-weight: bold;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
 }
 
 .p_detail .upper .detail h2 {
@@ -2095,14 +2114,14 @@ select {
 }
 
 .p_detail .upper .detail ul li::before {
-  content: '※';
+  content: "※";
   margin-left: -15px;
 }
 
 .p_detail .upper .detail > div {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-right: 20px;
 }
 
@@ -2205,8 +2224,8 @@ select {
 .p_detail .info .content ul {
   margin-bottom: 50px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-left: 30px;
 }
 
@@ -2257,11 +2276,11 @@ select {
   left: 0;
   opacity: 0;
   z-index: -1;
-  transition: opacity .2s;
-  -webkit-transition: opacity .2s;
-  -moz-transition: opacity .2s;
-  -ms-transition: opacity .2s;
-  -o-transition: opacity .2s;
+  transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
 }
 
 .lb.open {
@@ -2276,7 +2295,7 @@ select {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 60px 90px;
 }
 
@@ -2302,8 +2321,8 @@ select {
 
 .lb .lb_content .d_flex {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .lb .lb_content .d_flex .W50 {

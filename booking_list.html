@@ -94,7 +94,8 @@
               <a href="#" download="">下載</a>
             </div>
             <div class="W19 service">
-              <a href="">問問題</a> / <a href="">問答紀錄</a>
+              <a href="javascript:;" class="ask">問問題</a> /
+              <a href="">問答紀錄</a>
             </div>
           </div>
           <div class="td d_flex f16">
@@ -107,7 +108,8 @@
               <a href="#" download="">下載</a>
             </div>
             <div class="W19 service">
-              <a href="">問問題</a> / <a href="">問答紀錄</a>
+              <a href="javascript:;" class="ask">問問題</a> /
+              <a href="">問答紀錄</a>
             </div>
           </div>
           <div class="td d_flex f16">
@@ -120,7 +122,8 @@
               <a href="#" download="">下載</a>
             </div>
             <div class="W19 service">
-              <a href="">問問題</a> / <a href="">問答紀錄</a>
+              <a href="javascript:;" class="ask">問問題</a> /
+              <a href="">問答紀錄</a>
             </div>
           </div>
           <div class="td d_flex f16">
@@ -133,7 +136,8 @@
               <a href="#" download="">下載</a>
             </div>
             <div class="W19 service">
-              <a href="">問問題</a> / <a href="">問答紀錄</a>
+              <a href="javascript:;" class="ask">問問題</a> /
+              <a href="">問答紀錄</a>
             </div>
           </div>
         </div>
@@ -160,7 +164,8 @@
               <a href="#" download="">下載</a>
             </div>
             <div class="W18 service">
-              <a href="">問問題</a> / <a href="">問答紀錄</a>
+              <a href="javascript:;" class="ask">問問題</a> /
+              <a href="">問答紀錄</a>
             </div>
           </div>
           <div class="td d_flex f16">
@@ -174,7 +179,8 @@
               <a href="#" download="">下載</a>
             </div>
             <div class="W18 service">
-              <a href="">問問題</a> / <a href="">問答紀錄</a>
+              <a href="javascript:;" class="ask">問問題</a> /
+              <a href="">問答紀錄</a>
             </div>
           </div>
           <div class="td d_flex f16">
@@ -188,7 +194,8 @@
               <a href="#" download="">下載</a>
             </div>
             <div class="W18 service">
-              <a href="">問問題</a> / <a href="">問答紀錄</a>
+              <a href="javascript:;" class="ask">問問題</a> /
+              <a href="">問答紀錄</a>
             </div>
           </div>
         </div>
@@ -203,6 +210,44 @@
           </p>
           <a href="javascript:;">隱私權條款</a>
         </div>
+      </div>
+    </div>
+
+    <div class="online_service" style="display: none">
+      <div class="bg_blue f_white">
+        <div class="f20">客服問答</div>
+        <p class="f12">訂單編號：220204180003</p>
+        <label class="close">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+      </div>
+      <div class="conversation">
+        <div class="user">
+          <p>哈囉，請問價錢是多少？</p>
+          <span>下午4:56</span>
+        </div>
+        <div class="service">
+          <p>您好，價錢3000元喔！</p>
+          <span>下午4:57</span>
+        </div>
+      </div>
+      <div class="text_area d_flex">
+        <div class="upload">
+          <input type="file" id="myfile" name="myfile" hidden />
+          <label for="myfile"><img src="images/ic-upload.png" alt="" /></label>
+        </div>
+        <textarea
+          name=""
+          id="online_textarea"
+          rows="1"
+          placeholder="輸入文字"
+          class="blank"
+        ></textarea>
+        <a href="javascript:;" class="send"
+          ><img src="images/ic-send.png" alt=""
+        /></a>
       </div>
     </div>
 
@@ -226,6 +271,23 @@
         var index = Number($(this).attr("id").replace("number", ""));
         $(`#number${index + 1}`).focus();
       }
+    });
+
+    $("#online_textarea").on("keyup", function () {
+      if (this.value.trim() === "" && !$(this).hasClass("blank")) {
+        $(this).addClass("blank");
+      }
+      if (this.value.trim() !== "" && $(this).hasClass("blank")) {
+        $(this).removeClass("blank");
+      }
+    });
+
+    $("body").on("click", ".close", function () {
+      $(".online_service").hide();
+    });
+
+    $(".booking_list").on("click", ".ask", function () {
+      $(".online_service").show();
     });
   });
 </script>

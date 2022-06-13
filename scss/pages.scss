@@ -2089,19 +2089,28 @@ select {
     height: 370px;
 
     >div {
-      position: relative;
       margin-bottom: 17px;
-      padding: 6px 16px;
-      line-height: 1.4;
       display: inline-block;
-      border-radius: 15px;
-      -webkit-border-radius: 15px;
-      -moz-border-radius: 15px;
-      -ms-border-radius: 15px;
-      -o-border-radius: 15px;
+      line-height: 1.4;
+      width: 100%;
+
+      .bg {
+        position: relative;
+        padding: 6px 16px;
+        display: inline-block;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        max-width: calc(100% - 75px);
+      }
 
       &.service {
-        background-color: #eceded;
+        .bg {
+          background-color: #eceded;
+        }
+
 
         span {
           right: -5px;
@@ -2116,8 +2125,11 @@ select {
       }
 
       &.user {
-        background-color: #b0e5f4;
-        float: right;
+        .bg {
+          background-color: #b0e5f4;
+          float: right;
+        }
+
 
         span {
           left: -5px;
@@ -2146,6 +2158,7 @@ select {
     }
 
   }
+
 
   .text_area {
     border-top: solid 0.3px #959596;

@@ -1673,6 +1673,11 @@ select {
   }
 }
 
+.register .W520 .iti.iti--allow-dropdown {
+  width: 100%;
+  margin-bottom: 17px;
+}
+
 .booking_list {
   -webkit-box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
           box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
@@ -2383,19 +2388,25 @@ select {
 }
 
 .online_service .conversation > div {
-  position: relative;
   margin-bottom: 17px;
-  padding: 6px 16px;
+  display: inline-block;
   line-height: 1.4;
+  width: 100%;
+}
+
+.online_service .conversation > div .bg {
+  position: relative;
+  padding: 6px 16px;
   display: inline-block;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+  max-width: calc(100% - 75px);
 }
 
-.online_service .conversation > div.service {
+.online_service .conversation > div.service .bg {
   background-color: #eceded;
 }
 
@@ -2411,7 +2422,7 @@ select {
           transform-origin: left center;
 }
 
-.online_service .conversation > div.user {
+.online_service .conversation > div.user .bg {
   background-color: #b0e5f4;
   float: right;
 }

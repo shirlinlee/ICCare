@@ -79,7 +79,7 @@ textarea {
       border-color: #ddd;
       background-color: #ddd;
 
-      +label {
+      + label {
         opacity: 0.4;
       }
     }
@@ -293,7 +293,7 @@ select {
       width: 100%;
     }
 
-    >.d_flex {
+    > .d_flex {
       margin-bottom: 17px;
       padding-left: 35px;
       position: relative;
@@ -374,7 +374,7 @@ select {
     margin-bottom: 40px;
   }
 
-  >* {
+  > * {
     background-color: #fff;
     box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
   }
@@ -516,7 +516,7 @@ select {
           }
         }
 
-        >span {
+        > span {
           position: absolute;
           left: 50%;
           top: 50%;
@@ -739,7 +739,7 @@ select {
       width: 100%;
     }
 
-    >div {
+    > div {
       width: 100%;
       text-align: center;
       align-items: center;
@@ -790,7 +790,6 @@ select {
         }
 
         @media screen and (max-width: 767px) {
-
           &.W23,
           &.W22 {
             width: 100%;
@@ -1201,7 +1200,8 @@ select {
     width: 90px;
     text-align: left;
 
-    @media screen and (max-width: 767px) {}
+    @media screen and (max-width: 767px) {
+    }
   }
 
   .m2 {
@@ -1247,7 +1247,6 @@ select {
     }
   }
 }
-
 
 .reserved {
   text-align: center;
@@ -1323,7 +1322,7 @@ select {
     margin-left: auto;
     margin-right: auto;
 
-    >.d_flex {
+    > .d_flex {
       justify-content: space-between;
       margin-bottom: 17px;
       align-items: center;
@@ -1352,7 +1351,7 @@ select {
         }
       }
 
-      >input,
+      > input,
       select {
         width: calc(100% - 100px);
         justify-content: space-between;
@@ -1484,7 +1483,7 @@ select {
 .index {
   background-image: linear-gradient(to top, #f7faff, #d9f4ff);
 
-  >.d_flex {
+  > .d_flex {
     justify-content: space-between;
 
     @media screen and (max-width: 767px) {
@@ -1647,6 +1646,20 @@ select {
       width: 100%;
       margin-bottom: 17px;
     }
+
+    .t_left {
+      line-height: 20px;
+      margin-bottom: 17px;
+      align-items: flex-start;
+
+      label {
+        width: calc(100% - 30px);
+        a {
+          display: initial;
+          padding: 0 2px;
+        }
+      }
+    }
   }
 }
 
@@ -1716,7 +1729,7 @@ select {
     @media screen and (max-width: 999px) {
       padding: 0 20px 10px;
 
-      >div {
+      > div {
         width: 100%;
         text-align: left;
 
@@ -1975,7 +1988,7 @@ select {
         }
       }
 
-      >.d_flex {
+      > .d_flex {
         justify-content: flex-start;
         align-items: baseline;
 
@@ -2059,7 +2072,7 @@ select {
         }
       }
 
-      >div {
+      > div {
         justify-content: space-between;
         padding-right: 20px;
 
@@ -2295,11 +2308,11 @@ select {
     text-align: center;
 
     .close {
-      transform: scale(.65);
-      -webkit-transform: scale(.65);
-      -moz-transform: scale(.65);
-      -ms-transform: scale(.65);
-      -o-transform: scale(.65);
+      transform: scale(0.65);
+      -webkit-transform: scale(0.65);
+      -moz-transform: scale(0.65);
+      -ms-transform: scale(0.65);
+      -o-transform: scale(0.65);
       transform-origin: right top;
 
       span {
@@ -2318,7 +2331,7 @@ select {
     overflow-x: hidden;
     vertical-align: bottom;
 
-    >div {
+    > div {
       margin-bottom: 17px;
       display: inline-block;
       line-height: 1.4;
@@ -2341,15 +2354,14 @@ select {
           background-color: #eceded;
         }
 
-
         span {
           right: -5px;
           bottom: 0;
-          transform: translate(100%, 0) scale(.7);
-          -webkit-transform: translate(100%, 0) scale(.7);
-          -moz-transform: translate(100%, 0) scale(.7);
-          -ms-transform: translate(100%, 0) scale(.7);
-          -o-transform: translate(100%, 0) scale(.7);
+          transform: translate(100%, 0) scale(0.7);
+          -webkit-transform: translate(100%, 0) scale(0.7);
+          -moz-transform: translate(100%, 0) scale(0.7);
+          -ms-transform: translate(100%, 0) scale(0.7);
+          -o-transform: translate(100%, 0) scale(0.7);
           transform-origin: left center;
         }
       }
@@ -2360,17 +2372,15 @@ select {
           float: right;
         }
 
-
         span {
           left: -5px;
           bottom: 0;
-          transform: translate(-100%, 0) scale(.7);
-          -webkit-transform: translate(-100%, 0) scale(.7);
-          -moz-transform: translate(-100%, 0) scale(.7);
-          -ms-transform: translate(-100%, 0) scale(.7);
-          -o-transform: translate(-100%, 0) scale(.7);
+          transform: translate(-100%, 0) scale(0.7);
+          -webkit-transform: translate(-100%, 0) scale(0.7);
+          -moz-transform: translate(-100%, 0) scale(0.7);
+          -ms-transform: translate(-100%, 0) scale(0.7);
+          -o-transform: translate(-100%, 0) scale(0.7);
           transform-origin: right center;
-
         }
       }
 
@@ -2386,13 +2396,10 @@ select {
         font-size: 11px;
       }
     }
-
   }
-
 
   .text_area {
     border-top: solid 0.3px #959596;
-    ;
     background-color: #fff;
     padding: 10px 16px;
     justify-content: space-between;

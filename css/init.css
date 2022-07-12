@@ -314,6 +314,12 @@ b {
   display: inline-block !important;
 }
 
+@media screen and (max-width: 599px) {
+  .pc {
+    display: none !important;
+  }
+}
+
 .ham {
   display: none;
 }

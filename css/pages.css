@@ -775,35 +775,12 @@ select {
   font-family: "NotoSansCJKtc M";
 }
 
-.plan .detail b.f24:before {
-  content: "";
-  display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: absolute;
-  left: -25px;
-  top: 11px;
-  -webkit-box-shadow: 0 0 6px #49c3e5;
-          box-shadow: 0 0 6px #49c3e5;
-}
-
-@media screen and (max-width: 767px) {
-  .plan .detail b.f24:before {
-    width: 11px;
-    height: 11px;
-    top: 7px;
-  }
-}
-
 .plan .detail p.f19 {
   color: #535353;
 }
 
 .plan .detail li {
   position: relative;
-  padding-left: 30px;
   margin-bottom: 30px;
 }
 
@@ -862,7 +839,7 @@ select {
   font-size: 16px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 999px) {
   .subscription .info {
     width: 100%;
   }
@@ -1064,6 +1041,26 @@ select {
   }
 }
 
+.subscription .info .personal_info .d_flex input#cellphone,
+.subscription .info .bill_info .d_flex input#cellphone {
+  margin-left: 48px;
+  width: calc(100% - 49px) !important;
+  padding-left: 15px;
+}
+
+.subscription .info .personal_info .d_flex .iti.iti--allow-dropdown,
+.subscription .info .bill_info .d_flex .iti.iti--allow-dropdown {
+  width: calc(100% - 90px);
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .subscription .info .personal_info .d_flex .iti.iti--allow-dropdown,
+  .subscription .info .bill_info .d_flex .iti.iti--allow-dropdown {
+    margin-bottom: 17px;
+  }
+}
+
 .subscription .info .personal_info .bill_area,
 .subscription .info .bill_info .bill_area {
   margin-bottom: 17px;
@@ -1127,7 +1124,7 @@ select {
   overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 999px) {
   .subscription .cost {
     width: 100%;
   }
@@ -2385,6 +2382,9 @@ select {
   display: inline-block;
   width: 100%;
   height: 370px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  vertical-align: bottom;
 }
 
 .online_service .conversation > div {

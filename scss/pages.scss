@@ -13,6 +13,7 @@ input[type="submit"] {
   width: 100%;
   margin-bottom: 17px;
   text-align: center;
+  
   cursor: pointer;
 
   span {
@@ -1318,7 +1319,7 @@ select {
 
   .basic_info {
     max-width: 410px;
-    width: calc(100 - 60px);
+    width: calc(100% - 60px);
     margin-left: auto;
     margin-right: auto;
 

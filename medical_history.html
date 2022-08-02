@@ -78,10 +78,10 @@
 
       <div class="wrapper medialForm_detail pd80 W1280">
         <h3 class="title">健康問卷</h3>
-        <div class="W1060">
+        <div class="W630">
             <div class="d_flex W100">
-                <div class="W50 d_flex"><span>身高:</span><input type="tel"></div>
-                <div class="W50 d_flex"><span>體重:</span><input type="tel"></div>
+                <div class="W50 d_flex"><span class="sub_tilte">身高:</span><input type="tel"></div>
+                <div class="W50 d_flex"><span class="sub_tilte">體重:</span><input type="tel"></div>
             </div>
 
             <div class="d_flex W100">
@@ -103,23 +103,23 @@
                 <div class="W33 d_flex"><input type="checkbox" name="" id="d15"><label for="d15">其他神經疾病</label></div>
             </div>
             <div class="d_flex W100">
-                <span>惡性腫瘤:</span><div class="d_flex"><input type="checkbox" name="" id="no_cancer"><label for="no_cancer">無</label></div>
-                <div class="d_flex d_f_g2"><input type="checkbox" name="" id="yes_cancer"><label for="yes_cancer">有，腫瘤名稱:</label><input type="text" class="ml10"></div>
+                <span class="sub_tilte">惡性腫瘤:</span><div class="d_flex"><input type="radio" name="cancer" id="no_cancer"><label for="no_cancer">無</label></div>
+                <div class="d_flex d_f_g2"><input type="radio" name="cancer" id="yes_cancer"><label for="yes_cancer">有，腫瘤名稱:</label><input type="text" class="ml10 d_f_g2"></div>
             </div>
 
             <div class="d_flex W100">
-                <span>手 術:</span><div class="d_flex"><input type="checkbox" name="" id="no_cancer"><label for="no_cancer">無</label></div>
-                <div class="d_flex d_f_g2"><input type="checkbox" name="" id="yes_cancer"><label for="yes_cancer">有，手術名稱:</label><input type="text" class="ml10"></div>
+                <span class="sub_tilte">手 術:</span><div class="d_flex"><input type="radio" name="surgery" id="no_surgery"><label for="no_surgery">無</label></div>
+                <div class="d_flex d_f_g2"><input type="radio" name="surgery" id="yes_surgery"><label for="yes_surgery">有，手術名稱:</label><input type="text" class="ml10 d_f_g2"></div>
             </div>
 
             <div class="d_flex W100">
-                <span>食物過敏:</span><div class="d_flex"><input type="checkbox" name="" id="no_cancer"><label for="no_cancer">無</label></div>
-                <div class="d_flex d_f_g2"><input type="checkbox" name="" id="yes_cancer"><label for="yes_cancer">有，食物名稱:</label><input type="text" class="ml10"></div>
+                <span class="sub_tilte">食物過敏:</span><div class="d_flex"><input type="radio" name="food" id="no_food"><label for="no_food">無</label></div>
+                <div class="d_flex d_f_g2"><input type="radio" name="food" id="yes_food"><label for="yes_food">有，食物名稱:</label><input type="text" class="ml10 d_f_g2"></div>
             </div>
 
             <div class="d_flex W100">
-                <span>藥物過敏:</span><div class="d_flex"><input type="checkbox" name="" id="no_cancer"><label for="no_cancer">無</label></div>
-                <div class="d_flex d_f_g2"><input type="checkbox" name="" id="yes_cancer"><label for="yes_cancer">有，藥物名稱:</label><input type="text" class="ml10"></div>
+                <span class="sub_tilte">藥物過敏:</span><div class="d_flex"><input type="radio" name="medicine" id="no_medicine"><label for="no_medicine">無</label></div>
+                <div class="d_flex d_f_g2"><input type="radio" name="medicine" id="yes_medicine"><label for="yes_medicine">有，藥物名稱:</label><input type="text" class="ml10 d_f_g2"></div>
             </div>
 
             <div class="d_flex W100">
@@ -128,22 +128,22 @@
             </div>
 
             <div class="d_flex W100">
-                <span>其他:</span><input type="text">
+                <span class="sub_tilte">其他:</span><input type="text" class="d_f_g2">
             </div>
 
             <div class="d_flex W100">
-                <span>家族病史 (請問您的直系血親中，是否曾罹患重大疾病?) :</span><input type="text">
+                <span class="sub_tilte">家族病史 (請問您的直系血親中，是否曾罹患重大疾病?) :</span><input type="text"  class="d_f_g2">
             </div>
 
             <div class="d_flex W100">
-                <span>運動習慣:</span>
+                <span class="sub_tilte">運動習慣:</span>
                 <div class="d_flex"><input type="checkbox" name="" id="no_sports"><label for="no_sports">不運動</label></div>
                 <div class="d_flex"><input type="checkbox" name="" id="sometimes_sports"><label for="sometimes_sports">偶爾運動</label></div>
                 <div class="d_flex"><input type="checkbox" name="" id="regular_sports"><label for="regular_sports">規律運動</label></div>
             </div>
 
                 
-            <div class="d_flex W100"><span>睡眠習慣: 每日平均睡眠時間</span><input type="tel" name="" id=""><span>小時</span></div>
+            <div class="d_flex W100"><span>睡眠習慣: 每日平均睡眠時間</span><input type="tel" name="" id="" class="sm_input"><span>小時</span></div>
 
             <div class="d_flex W100">
                 <p class="W100">抽菸習慣:</p>
@@ -151,10 +151,10 @@
                     <input type="checkbox" name="" id="no_cigarette"><label for="no_cigarette">無</label>
                 </div>
                 <div class="d_flex W100">
-                    <input type="checkbox" name="" id="sometimes_cigarette"><sapn>有(含電子菸)，每天吸</sapn><input type="tel" name="" id=""><span> 支，已吸菸</span> <input type="tel" name="" id=""><span>年</span>
+                    <input type="checkbox" name="" id="sometimes_cigarette"><sapn>有(含電子菸)，每天吸</sapn><input type="tel" name="" id="" class="sm_input"><span> 支，已吸菸</span> <input type="tel" name="" id="" class="sm_input"><span>年</span>
                 </div>
                 <div class="d_flex W100">
-                    <input type="checkbox" name="" id="quit_cigarette"><sapn>已戒(含電子菸)，每天吸</sapn><input type="tel" name="" id=""><span> 支，已吸菸</span> <input type="tel" name="" id=""><span>年</span>
+                    <input type="checkbox" name="" id="quit_cigarette"><sapn>已戒(含電子菸)，每天吸</sapn><input type="tel" name="" id="" class="sm_input"><span> 支，已吸菸</span> <input type="tel" name="" id="" class="sm_input"><span>年</span>
                 </div>
             </div>
             <div class="d_flex W100">
@@ -163,10 +163,10 @@
                     <input type="checkbox" name="" id="no_drinking"><label for="no_drinking">無</label>
                 </div>
                 <div class="d_flex W100">
-                    <input type="checkbox" name="" id="sometimes_drinking"><sapn>有，平均每週喝</sapn><input type="tel" name="" id=""><span>次，每次</span> <input type="tel" name="" id=""><span>毫升，喝酒</span><input type="tel" name="" id=""> <span>年</span>
+                    <input type="checkbox" name="" id="sometimes_drinking"><sapn>有，平均每週喝</sapn><input type="tel" name="" id="" class="sm_input"><span>次，每次</span> <input type="tel" name="" id="" class="sm_input"><span>毫升，喝酒</span><input type="tel" name="" id="" class="sm_input"> <span>年</span>
                 </div>
                 <div class="d_flex W100">
-                    <input type="checkbox" name="" id="quit_drinking"><sapn>已戒，平均每週喝</sapn><input type="tel" name="" id=""><span>次，每次</span> <input type="tel" name="" id=""><span>毫升，喝酒</span><input type="tel" name="" id=""> <span>年</span>
+                    <input type="checkbox" name="" id="quit_drinking"><sapn>已戒，平均每週喝</sapn><input type="tel" name="" id="" class="sm_input"><span>次，每次</span> <input type="tel" name="" id="" class="sm_input"><span>毫升，喝酒</span><input type="tel" name="" id="" class="sm_input"> <span>年</span>
                 </div>
             </div>
 
@@ -176,7 +176,7 @@
                     <input type="checkbox" name="" id="no_betelnut"><label for="no_betelnut">無</label>
                 </div>
                 <div class="d_flex W100">
-                    <input type="checkbox" name="" id="sometimes_betelnut"><sapn>有，平均每天嚼</sapn><input type="tel" name="" id=""><span>顆 ，已嚼食</span><input type="tel" name="" id=""><span>年</span>
+                    <input type="checkbox" name="" id="sometimes_betelnut"><sapn>有，平均每天嚼</sapn><input type="tel" name="" id="" class="sm_input"><span>顆 ，已嚼食</span><input type="tel" name="" id="" class="sm_input"><span>年</span>
                 </div>
                 <div class="d_flex W100">
                     <input type="checkbox" name="" id="quit_betelnut"><sapn>已戒</span>

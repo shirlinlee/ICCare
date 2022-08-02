@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>ICCare</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="images/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="plugins/js/slick.min.js"></script>
+    <script src="plugins/js/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="/" class="logo"
+            ><img src="images/logo.png" alt="ICCare"
+          /></a>
+          <div class="func d_flex">
+            <label class="func_item menu-open-button" for="menu-open">
+              <span class="hamburger hamburger-1"></span>
+              <span class="hamburger hamburger-2"></span>
+              <span class="hamburger hamburger-3"></span>
+            </label>
+          </div>
+          <ul class="nav d_flex">
+            <li class="redirect">
+              <a href="index.html">
+                <p>24小時醫療諮詢</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="#">
+                <p>我的健康存摺</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="#" target="_blank">
+                <p>健康數據管理</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="product_list.html">
+                <p>周邊商品</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="booking_list.html">
+                <p>訂單記錄</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="member.html">
+                <p>會員專區</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="menu_bg"></div> -->
+      </div>
+
+      <div class="wrapper medialForm_detail pd80 W1280">
+        <h3 class="title">健康問卷</h3>
+        <div class="W1060">
+            <div class="d_flex W100">
+                <div class="W50 d_flex"><span>身高:</span><input type="tel"></div>
+                <div class="W50 d_flex"><span>體重:</span><input type="tel"></div>
+            </div>
+
+            <div class="d_flex W100">
+                <p class="W100">您過去/現在是否有下列醫療史及習慣?</p>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d1"><label for="d1">高血壓</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d2"><label for="d2">心臟病</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d3"><label for="d3">糖尿病</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d4"><label for="d4">腎臟病</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d5"><label for="d5">高血脂</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d6"><label for="d6">中風</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d7"><label for="d7">B 型肝炎</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d8"><label for="d8">C 型肝炎</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d9"><label for="d9">肝硬化</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d10"><label for="d10">氣喘</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d11"><label for="d11">痛風</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d12"><label for="d12">肺結核</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d13"><label for="d13">血友病</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d14"><label for="d14">免疫類疾病</label></div>
+                <div class="W33 d_flex"><input type="checkbox" name="" id="d15"><label for="d15">其他神經疾病</label></div>
+            </div>
+            <div class="d_flex W100">
+                <span>惡性腫瘤:</span><div class="d_flex"><input type="checkbox" name="" id="no_cancer"><label for="no_cancer">無</label></div>
+                <div class="d_flex d_f_g2"><input type="checkbox" name="" id="yes_cancer"><label for="yes_cancer">有，腫瘤名稱:</label><input type="text" class="ml10"></div>
+            </div>
+
+            <div class="d_flex W100">
+                <span>手 術:</span><div class="d_flex"><input type="checkbox" name="" id="no_cancer"><label for="no_cancer">無</label></div>
+                <div class="d_flex d_f_g2"><input type="checkbox" name="" id="yes_cancer"><label for="yes_cancer">有，手術名稱:</label><input type="text" class="ml10"></div>
+            </div>
+
+            <div class="d_flex W100">
+                <span>食物過敏:</span><div class="d_flex"><input type="checkbox" name="" id="no_cancer"><label for="no_cancer">無</label></div>
+                <div class="d_flex d_f_g2"><input type="checkbox" name="" id="yes_cancer"><label for="yes_cancer">有，食物名稱:</label><input type="text" class="ml10"></div>
+            </div>
+
+            <div class="d_flex W100">
+                <span>藥物過敏:</span><div class="d_flex"><input type="checkbox" name="" id="no_cancer"><label for="no_cancer">無</label></div>
+                <div class="d_flex d_f_g2"><input type="checkbox" name="" id="yes_cancer"><label for="yes_cancer">有，藥物名稱:</label><input type="text" class="ml10"></div>
+            </div>
+
+            <div class="d_flex W100">
+                <p class="W100">固定服用藥品(血壓藥、胃藥、中藥、睡眠藥、成藥等/藥品名稱):</p>
+                <textarea class="W100" name="" id="" cols="30" rows="1"></textarea>
+            </div>
+
+            <div class="d_flex W100">
+                <span>其他:</span><input type="text">
+            </div>
+
+            <div class="d_flex W100">
+                <span>家族病史 (請問您的直系血親中，是否曾罹患重大疾病?) :</span><input type="text">
+            </div>
+
+            <div class="d_flex W100">
+                <span>運動習慣:</span>
+                <div class="d_flex"><input type="checkbox" name="" id="no_sports"><label for="no_sports">不運動</label></div>
+                <div class="d_flex"><input type="checkbox" name="" id="sometimes_sports"><label for="sometimes_sports">偶爾運動</label></div>
+                <div class="d_flex"><input type="checkbox" name="" id="regular_sports"><label for="regular_sports">規律運動</label></div>
+            </div>
+
+                
+            <div class="d_flex W100"><span>睡眠習慣: 每日平均睡眠時間</span><input type="tel" name="" id=""><span>小時</span></div>
+
+            <div class="d_flex W100">
+                <p class="W100">抽菸習慣:</p>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="no_cigarette"><label for="no_cigarette">無</label>
+                </div>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="sometimes_cigarette"><sapn>有(含電子菸)，每天吸</sapn><input type="tel" name="" id=""><span> 支，已吸菸</span> <input type="tel" name="" id=""><span>年</span>
+                </div>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="quit_cigarette"><sapn>已戒(含電子菸)，每天吸</sapn><input type="tel" name="" id=""><span> 支，已吸菸</span> <input type="tel" name="" id=""><span>年</span>
+                </div>
+            </div>
+            <div class="d_flex W100">
+                <p class="W100">飲酒習慣:</p>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="no_drinking"><label for="no_drinking">無</label>
+                </div>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="sometimes_drinking"><sapn>有，平均每週喝</sapn><input type="tel" name="" id=""><span>次，每次</span> <input type="tel" name="" id=""><span>毫升，喝酒</span><input type="tel" name="" id=""> <span>年</span>
+                </div>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="quit_drinking"><sapn>已戒，平均每週喝</sapn><input type="tel" name="" id=""><span>次，每次</span> <input type="tel" name="" id=""><span>毫升，喝酒</span><input type="tel" name="" id=""> <span>年</span>
+                </div>
+            </div>
+
+            <div class="d_flex W100">
+                <p class="W100">檳榔習慣:</p>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="no_betelnut"><label for="no_betelnut">無</label>
+                </div>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="sometimes_betelnut"><sapn>有，平均每天嚼</sapn><input type="tel" name="" id=""><span>顆 ，已嚼食</span><input type="tel" name="" id=""><span>年</span>
+                </div>
+                <div class="d_flex W100">
+                    <input type="checkbox" name="" id="quit_betelnut"><sapn>已戒</span>
+                </div>
+            </div>
+            
+        </div>
+        <button onclick="init.getMedicalForm(true)" class="W300">
+          <span>送出</span>
+        </button>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="images/logo_black.png" alt="" />
+          <p>
+            IntelliCentrics introduces trust into organizational
+            decision-making, enabling our customers to make more informed
+            decisions, reduce risk, and improve operational efficiencies.
+          </p>
+          <a href="javascript:;">隱私權條款</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首頁only -->
+  </body>
+</html>
+<script type="text/javascript" src="js/init.js"></script>

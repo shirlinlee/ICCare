@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/init.css" />
     <link rel="stylesheet" type="text/css" href="css/pages.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -46,6 +48,11 @@
               </a>
             </li>
             <li class="redirect">
+              <a href="#">
+                <p>我的健康存摺</p>
+              </a>
+            </li>
+            <li class="redirect">
               <a href="#" target="_blank">
                 <p>健康數據管理</p>
               </a>
@@ -75,7 +82,7 @@
         <div class="W1280 d_flex">
           <div class="W50 left d_flex">
             <div class="W100">
-              <img src="images/home1.png" class="icon" alt="" />
+              <img src="images/home-24.png" class="icon" alt="" />
               <h1 class="f_blue f40">24小時醫療諮詢</h1>
               <p class="f24 f_grey">
                 台灣急診室醫師(全科醫師)24小時線上服務，提供您最專業的線上健康諮詢解答。
@@ -89,26 +96,36 @@
             </div>
           </div>
           <div class="W50 right d_flex">
-            <a class="W50" href="#" target="_blank">
-              <img src="images/home2.png" class="icon" alt="" />
+            <a class="item" href="#" target="_blank">
+              <img src="images/home-1.png" class="icon" alt="" />
+              <h4 class="f_blue f32">專科看診</h4>
+              <img src="images/ic-arrow-03.png" alt="" class="arrow" />
+            </a>
+            <a class="item" href="#" target="_blank">
+              <img src="images/home-2.png" class="icon" alt="" />
               <h4 class="f_blue f32">健康數據管理</h4>
               <img src="images/ic-arrow-03.png" alt="" class="arrow" />
             </a>
-            <a class="W50" href="product_list.html">
-              <img src="images/home3.png" class="icon" alt="" />
+            <a class="item" href="#">
+              <img src="images/home-3.png" class="icon" alt="" />
+              <h4 class="f_blue f32">我的健康存摺</h4>
+              <img src="images/ic-arrow-03.png" alt="" class="arrow" />
+            </a>
+            <a class="item" href="booking_list.html">
+              <img src="images/home-4.png" class="icon" alt="" />
+              <h4 class="f_blue f32">諮詢紀錄</h4>
+              <img src="images/ic-arrow-03.png" alt="" class="arrow" />
+            </a>
+            <!-- <a class="item" href="product_list.html">
+              <img src="images/home-5.png" class="icon" alt="" />
               <h4 class="f_blue f32">周邊商品</h4>
               <img src="images/ic-arrow-03.png" alt="" class="arrow" />
             </a>
-            <a class="W50" href="booking_list.html">
-              <img src="images/home4.png" class="icon" alt="" />
-              <h4 class="f_blue f32">訂單紀錄</h4>
+            <a class="item" href="member.html">
+              <img src="images/home-6.png" class="icon" alt="" />
+              <h4 class="f_blue f32">會員專區</h4>
               <img src="images/ic-arrow-03.png" alt="" class="arrow" />
-            </a>
-            <a class="W50" href="member.html">
-              <img src="images/home5.png" class="icon" alt="" />
-              <h4 class="f_blue f32">會員中心</h4>
-              <img src="images/ic-arrow-03.png" alt="" class="arrow" />
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -127,3 +144,15 @@
   </body>
 </html>
 <script type="text/javascript" src="js/init.js"></script>
+<script>
+  $(function(){
+    var itemLength = $('.right').find('.item').length;
+    console.log(itemLength)
+    if(itemLength === 6) {
+      $('.item').addClass('W33')
+    } else {
+      $('.item').addClass('W50')
+    }
+
+  });
+</script>

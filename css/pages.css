@@ -392,6 +392,111 @@ select {
   }
 }
 
+.healthForm_detail {
+  width: calc(100% - 60px);
+  max-width: 880px;
+  margin: 40px auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media screen and (max-width: 767px) {
+  .healthForm_detail {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.healthForm_detail .form {
+  max-width: 720px;
+}
+.healthForm_detail .sub_tilte {
+  min-width: 75px;
+}
+.healthForm_detail input {
+  padding: 10px 10px 12px;
+  margin-bottom: 0;
+}
+.healthForm_detail input[type=tel], .healthForm_detail input[type=text] {
+  width: auto;
+  border-radius: 0;
+  border-top: none;
+  border-left: 0;
+  border-right: 0;
+}
+.healthForm_detail input.sm_input {
+  width: 80px;
+}
+@media screen and (max-width: 767px) {
+  .healthForm_detail input.sm_input {
+    width: 50px;
+  }
+}
+.healthForm_detail textarea {
+  border-radius: 0;
+  border-top: none;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 0;
+}
+.healthForm_detail .d_flex {
+  flex-direction: row;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .healthForm_detail .d_flex.wrap33 {
+    justify-content: space-between;
+  }
+}
+.healthForm_detail .d_flex.Q {
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 767px) {
+  .healthForm_detail .d_flex.Q > .d_flex {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+.healthForm_detail .d_flex.W100 {
+  line-height: 1.5;
+}
+.healthForm_detail .d_flex.W100 span {
+  padding-right: 5px;
+}
+.healthForm_detail .d_flex.W100 input[type=checkbox], .healthForm_detail .d_flex.W100 input[type=radio] {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 767px) {
+  .healthForm_detail .d_flex.W100 input[type=checkbox], .healthForm_detail .d_flex.W100 input[type=radio] {
+    margin-left: 0;
+  }
+}
+.healthForm_detail .d_flex .W50 input {
+  width: calc(100% - 80px);
+}
+.healthForm_detail .d_flex .W33 {
+  margin-top: 10px;
+}
+@media screen and (max-width: 999px) {
+  .healthForm_detail .d_flex .W33 {
+    width: calc(50% - 15px) !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .healthForm_detail .d_flex .W33 {
+    width: 100% !important;
+  }
+}
+.healthForm_detail .d_flex textarea {
+  margin-top: 10px;
+}
+.healthForm_detail .d_flex .ml10 {
+  margin-left: 10px;
+}
+.healthForm_detail .d_flex .d_f_g2 {
+  flex-grow: 2;
+}
+
 .plan {
   margin-top: 80px;
   margin-bottom: 80px;
@@ -430,6 +535,11 @@ select {
 .plan .enterprise .detail {
     padding-bottom: 20px;
   }
+}
+.plan .free .input_area,
+.plan .enterprise .input_area {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .plan .free a,
 .plan .enterprise a {

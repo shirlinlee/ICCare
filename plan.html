@@ -46,6 +46,11 @@
               </a>
             </li>
             <li class="redirect">
+              <a href="#">
+                <p>我的健康存摺</p>
+              </a>
+            </li>
+            <li class="redirect">
               <a href="#" target="_blank">
                 <p>健康數據管理</p>
               </a>
@@ -134,8 +139,16 @@
             class="upper"
             style="background-image: url(images/bg_enterprise.jpg)"
           >
-            <h2>企業會員</h2>
-            <h4>NT$<font>0</font>/ 年</h4>
+            <h2>特約會員</h2>
+            <div class="input_area">
+              <input type="text" placeholder="請輸入企業識別碼" />
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="請輸入電子信箱(驗證用)"
+              />
+            </div>
           </div>
           <div class="detail">
             <a
@@ -176,24 +189,39 @@
 
     <div class="lb">
       <div class="lb_content W1060">
-        <label class="close">
+        <label class="close close_lb">
           <span class="hamburger hamburger-1"></span>
           <span class="hamburger hamburger-2"></span>
           <span class="hamburger hamburger-3"></span>
         </label>
         <div class="W520">
-          <div class="t_center">
-            <h3 class="title underline">驗證碼填寫</h3>
+          <div class="status_otp">
+            <div class="t_center">
+              <h3 class="title underline">驗證碼填寫</h3>
+            </div>
+            <input type="text" placeholder="請輸入企業驗證碼*" />
+            <div class="d_flex btn_area">
+              <button class="light W50 close_lb">
+                <span>取消</span>
+              </button>
+              <button class="W50 goCheckMail">
+                <span>確認送出</span>
+              </button>
+            </div>
           </div>
+          <div class="status_checkMail">
+            <div class="t_center">
+              <h3 class="title underline">特約會員資格驗證</h3>
+            </div>
+            <p class="f16 f_grey t_center">
+              請至您企業信箱收取驗證信函，<br />並點選驗證連結後啟用特約會員資格
+            </p>
 
-          <input type="text" placeholder="請輸入企業驗證碼*" />
-          <div class="d_flex btn_area">
-            <button class="light W50">
-              <span>取消</span>
-            </button>
-            <button class="W50">
-              <span>確認送出</span>
-            </button>
+            <div style="width: 200px; margin: 60px auto 10px">
+              <button class="W100 close_lb">
+                <span>確認</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -205,9 +233,16 @@
 <script type="text/javascript" src="js/init.js"></script>
 <script>
   function openLb() {
+    $(".status_otp").css({ display: "block" });
+    $(".status_checkMail").css({ display: "none" });
     $(".lb").addClass("open");
   }
-  $("body").on("click", ".btn_area button, .close", function () {
+  $("body").on("click", ".close_lb", function () {
     $(".lb").removeClass("open");
+  });
+
+  $("body").on("click", ".goCheckMail", function () {
+    $(".status_otp").css({ display: "none" });
+    $(".status_checkMail").css({ display: "block" });
   });
 </script>

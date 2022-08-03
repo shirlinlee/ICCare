@@ -21,6 +21,10 @@ const init = {
     window.location = "contract.html";
   },
 
+  getHealthForm(boolean) {
+    document.cookie = `getHealthForm=boolean`;
+  },
+
   getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);

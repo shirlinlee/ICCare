@@ -155,7 +155,6 @@ select {
 .forget_pw,
 .contract,
 .contract_detail,
-.medialForm_detail,
 .reserved,
 .booking_list {
   margin-top: 110px;
@@ -366,10 +365,24 @@ select {
   }
 }
 
-.medialForm_detail {
+.healthForm_detail {
+  width: calc(100% - 60px);
+  max-width: 880px;
+  margin: 40px auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form {
+    max-width: 720px;
+  }
   .sub_tilte {
     min-width: 75px;
   }
+
   input {
     padding: 10px 10px 12px;
     margin-bottom: 0;
@@ -384,6 +397,9 @@ select {
     }
     &.sm_input {
       width: 80px;
+      @media screen and (max-width: 767px) {
+        width: 50px;
+      }
     }
   }
 
@@ -392,13 +408,27 @@ select {
     border-top: none;
     border-left: 0;
     border-right: 0;
+    margin-bottom: 0;
   }
 
   .d_flex {
     flex-direction: row;
     align-items: center;
-    &.W100 {
+    @media screen and (max-width: 767px) {
+      &.wrap33 {
+        justify-content: space-between;
+      }
+    }
+    &.Q {
       margin-bottom: 25px;
+      @media screen and (max-width: 767px) {
+        > .d_flex {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+    &.W100 {
       line-height: 1.5;
 
       span {
@@ -409,6 +439,9 @@ select {
         &[type="radio"] {
           margin-left: 10px;
           margin-right: 5px;
+          @media screen and (max-width: 767px) {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -419,11 +452,12 @@ select {
     }
     .W33 {
       margin-top: 10px;
-      input {
-        &[type="checkbox"],
-        &[type="radio"] {
-          margin-left: 0;
-        }
+      @media screen and (max-width: 999px) {
+        width: calc(50% - 15px) !important;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 100% !important;
       }
     }
     textarea {

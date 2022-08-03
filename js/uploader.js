@@ -14,9 +14,7 @@ function CreateID(length) {
 function ConvertFileSize(sizeInBytes) {
   // 小數點後 1 位, 無條件進位
   return (
-    Math.ceil(
-      (sizeInBytes / (1024 * 1024) + Number.EPSILON) * Math.pow(10, 1)
-    ) / Math.pow(10, 1)
+    Math.ceil((sizeInBytes / (1024 * 1024)) * Math.pow(10, 1)) / Math.pow(10, 1)
   );
 }
 

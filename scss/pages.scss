@@ -2225,7 +2225,7 @@ select {
     padding: 60px 90px;
 
     @media screen and (max-width: 767px) {
-      padding: 20px 20px 10px;
+      padding: 20px 15px 10px;
     }
 
     h4 {
@@ -2265,7 +2265,7 @@ select {
     .btn_area {
       margin-top: 40px;
       &.MT72 {
-        margin-top: 72px;
+        margin-top: 40px;
       }
 
       @media screen and (max-width: 767px) {
@@ -2283,6 +2283,9 @@ select {
     margin-bottom: 12px;
     .W25 {
       width: calc(25% - 8px);
+      @media screen and (max-width: 767px) {
+        width: calc(50% - 5px);
+      }
     }
     p.title {
       margin: 0 0 14px 0;
@@ -2310,9 +2313,14 @@ select {
     }
   }
   .scrollbar {
-    height: 400px;
+    // height: 400px;
+    height: calc(95vh - 350px);
     padding: 0 15px 0 0;
+    margin-right: -10px;
     overflow-y: auto;
+    @media screen and (max-width: 767px) {
+      height: calc(95vh - 300px);
+    }
   }
 }
 .uploader {
@@ -2346,10 +2354,16 @@ select {
     overflow-y: auto;
     width: 100%;
     height: 237px;
-    padding: 18px 46px;
-    border-radius: 26.5px;
+    padding: 15px 30px;
+    border-radius: 25px;
     border: solid 0.5px #999;
-
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    @media screen and (max-width: 767px) {
+      padding: 10px 15px;
+    }
     .list {
       display: flex;
       flex-wrap: wrap;
@@ -2368,12 +2382,23 @@ select {
 
       &--name {
         flex-grow: 1;
+        max-width: calc(100% - 150px);
+        overflow: hidden;
+        white-space: nowrap;
+        @media screen and (max-width: 767px) {
+          max-width: calc(100% - 130px);
+          text-align: left;
+        }
       }
       &--size {
-        flex-basis: 100px;
+        flex-basis: 90px;
       }
       &--button {
-        flex-basis: 75px;
+        flex-basis: 60px;
+
+        @media screen and (max-width: 767px) {
+          flex-basis: 40px;
+        }
         img.add {
           width: 18px;
           height: 18px;

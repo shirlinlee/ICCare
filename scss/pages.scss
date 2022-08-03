@@ -13,7 +13,7 @@ input[type="submit"] {
   width: 100%;
   margin-bottom: 17px;
   text-align: center;
-  
+
   cursor: pointer;
 
   span {
@@ -902,7 +902,6 @@ select {
             margin-bottom: 17px;
           }
         }
-
       }
 
       .bill_area {
@@ -984,7 +983,6 @@ select {
   }
 }
 
-
 .prescription,
 .pres_index {
   margin-top: 20px;
@@ -996,7 +994,7 @@ select {
     margin-bottom: 40px;
   }
 
-  >p {
+  > p {
     line-height: 1.5;
     padding-bottom: 40px;
     padding-top: 60px;
@@ -1015,7 +1013,6 @@ select {
 
   .medicine,
   .trans {
-
     @media screen and (max-width: 999px) {
       width: 100% !important;
       margin-bottom: 30px;
@@ -1045,14 +1042,11 @@ select {
 
       @media screen and (max-width: 599px) {
         padding: 30px 35px 35px;
-        ;
       }
 
       h3 {
         height: 30px;
       }
-
-
     }
 
     .W50 {
@@ -1066,8 +1060,6 @@ select {
         }
       }
     }
-
-
   }
 
   .medicine {
@@ -1087,7 +1079,6 @@ select {
       color: #13b5b1;
       line-height: 1.5;
       border-bottom: 2px #13b5b1 solid;
-
     }
 
     h3 {
@@ -1129,7 +1120,7 @@ select {
 }
 
 .pres_index {
-  >.W50 {
+  > .W50 {
     width: calc(50% - 10px);
     margin-bottom: 40px;
 
@@ -1147,7 +1138,6 @@ select {
 
       @media screen and (max-width: 599px) {
         margin: 30px 0 30px;
-
       }
     }
 
@@ -1157,7 +1147,6 @@ select {
 
       @media screen and (max-width: 599px) {
         padding: 20px;
-
       }
     }
 
@@ -2278,6 +2267,9 @@ select {
 
     .btn_area {
       margin-top: 40px;
+      &.MT72 {
+        margin-top: 72px;
+      }
 
       @media screen and (max-width: 767px) {
         margin-top: 10px;
@@ -2288,6 +2280,115 @@ select {
       @media screen and (max-width: 767px) {
         width: 100%;
       }
+    }
+  }
+  .lb_row {
+    margin-bottom: 12px;
+    .W25 {
+      width: calc(25% - 8px);
+    }
+    p.title {
+      margin: 0 0 14px 0;
+      font-family: NotoSansCJKtc;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000;
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #49c4e5;
+      }
+    }
+    input {
+    }
+  }
+  .scrollbar {
+    height: 400px;
+    padding: 0 15px 0 0;
+    overflow-y: auto;
+  }
+}
+.uploader {
+  input[type="file"] {
+    visibility: hidden;
+    position: absolute;
+    height: 0;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    outline: none;
+  }
+  .empty {
+    cursor: pointer;
+    height: 160px;
+    border-radius: 26.5px;
+    background-color: #eceded;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      margin-top: 9px;
+      letter-spacing: 0.8px;
+      color: #999;
+    }
+  }
+  .box {
+    display: none;
+    overflow-y: auto;
+    width: 100%;
+    height: 237px;
+    padding: 18px 46px;
+    border-radius: 26.5px;
+    border: solid 0.5px #999;
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .list-line {
+      border-bottom: solid 1px #c3c3c3;
+    }
+    .list-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 300;
+      line-height: 2.25;
+      color: #7d7d7e;
+
+      &--name {
+        flex-grow: 1;
+      }
+      &--size {
+        flex-basis: 100px;
+      }
+      &--button {
+        flex-basis: 75px;
+        img.add {
+          width: 18px;
+          height: 18px;
+        }
+        img.remove {
+          width: 14px;
+          height: 15px;
+        }
+      }
+    }
+    .list-head {
+      color: #000;
     }
   }
 }

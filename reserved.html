@@ -23,6 +23,7 @@
     <script src="plugins/js/jquery-3.6.0.min.js"></script>
     <script src="plugins/js/slick.min.js"></script>
     <script src="plugins/js/babel.min.js"></script>
+    <script src="plugins/js/polyfill.min.js"></script>
   </head>
 
   <body>
@@ -86,7 +87,7 @@
             <button class="light">
               <span><a href="index.html">取消</a></span>
             </button>
-            <button>
+            <button onclick="switchLB(true)">
               <span>確認進入診間</span>
             </button>
           </div>
@@ -105,7 +106,117 @@
       </div>
     </div>
 
+    <!-- 燈箱 -->
+    <div class="lb">
+      <div class="lb_content W1060">
+        <label class="close" onclick="switchLB(false)">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        <div class="W520">
+          <div class="t_center">
+            <h3 class="title underline">請輸入相關資料</h3>
+          </div>
+          <div class="scrollbar">
+            <div class="lb_row">
+              <p class="title">基本數據</p>
+              <input type="text" placeholder="健保卡號" />
+              <div class="d_flex">
+                <input class="W25" type="text" placeholder="體溫" />
+                <input class="W25" type="text" placeholder="血氧" />
+                <input class="W25" type="text" placeholder="血壓" />
+                <input class="W25" type="text" placeholder="血糖" />
+              </div>
+            </div>
+            <div class="lb_row">
+              <p class="title">狀況描述</p>
+              <textarea rows="4" cols="50"></textarea>
+            </div>
+            <div class="lb_row">
+              <p class="title">目前用藥</p>
+              <input type="text" placeholder="請輸入藥物名稱，並以“，”分開" />
+            </div>
+            <div class="lb_row">
+              <p class="title">
+                檔案上傳
+                <span>
+                  (單一檔案請勿超過 10MB 、檔案大小合計不得超過 100MB)
+                </span>
+              </p>
+
+              <!-- 上傳區塊 -->
+              <div id="uploader1" class="uploader">
+                <!-- 隱藏的 Input -->
+                <input class="file" type="file" multiple />
+                <!-- 選擇上傳檔案 -->
+                <div class="empty">
+                  <div class="empty_box"></div>
+                  <img src="./images/ic-uploader.png" alt="" />
+                  <p>選擇上傳檔案</p>
+                </div>
+
+                <div class="box">
+                  <div class="list">
+                    <div class="list-head list-item list-item--name">名稱</div>
+                    <div class="list-head list-item list-item--size">
+                      檔案大小
+                    </div>
+                    <div class="list-head list-item list-item--button">
+                      <a href="javascript:void(0)">
+                        <img class="add" src="./images/ic-add.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="list-line"></div>
+                  <!-- 上傳檔案 - 列表物件 -->
+                  <!-- <div class="list">
+                    <div class="list-item list-item--name">胸腔 X 光片.pdf</div>
+                    <div class="list-item list-item--size">8.2MB</div>
+                    <div class="list-item list-item--button">
+                      <a
+                        class=".btn-remove"
+                        href="javascript:void(0)"
+                        data-file-id=""
+                      >
+                        <img class="remove" src="./images/ic-x.png" alt="" />
+                      </a>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d_flex btn_area MT72">
+            <button class="light W50" onclick="switchLB(false)">
+              <span>取消</span>
+            </button>
+            <button class="W50" onclick="submit()">
+              <span>確認送出</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- 首頁only -->
   </body>
 </html>
-<script type="text/javascript" src="js/init.js"></script>
+<script type="text/babel" src="js/init.js"></script>
+<script type="text/babel" src="js/uploader.js"></script>
+<script type="text/babel">
+  function switchLB(open) {
+    return open ? $(".lb").addClass("open") : $(".lb").removeClass("open");
+  }
+
+  var uploader1 = $("#uploader1").uploader();
+
+  function submit() {
+    var formData = new FormData();
+    var uploadFiles = uploader1.getUploads();
+    for (var i = 0, len = uploadFiles.length; i < len; i++) {
+      formData.append("files[]", uploadFiles[i].file, uploadFiles[i].file.name);
+      console.log(uploadFiles[i].file);
+    }
+  }
+</script>

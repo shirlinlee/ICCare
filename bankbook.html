@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>ICCare</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="images/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="plugins/js/slick.min.js"></script>
+    <script src="plugins/js/babel.min.js"></script>
+    <script src="plugins/js/polyfill.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="/" class="logo"
+            ><img src="images/logo.png" alt="ICCare"
+          /></a>
+          <div class="func d_flex">
+            <label class="func_item menu-open-button" for="menu-open">
+              <span class="hamburger hamburger-1"></span>
+              <span class="hamburger hamburger-2"></span>
+              <span class="hamburger hamburger-3"></span>
+            </label>
+          </div>
+          <ul class="nav d_flex">
+            <li class="redirect">
+              <a href="index.html">
+                <p>24小時醫療諮詢</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="#" target="_blank">
+                <p>健康數據管理</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="product_list.html">
+                <p>周邊商品</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="booking_list.html">
+                <p>訂單記錄</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="member.html">
+                <p>會員專區</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="menu_bg"></div> -->
+      </div>
+
+      <div class="bankbook wrapper pd80 W1280">
+        <b class="f36 title">我的健康存摺</b>
+        <div class="content W630">
+          <div class="row">
+            <p class="title">健保卡號</p>
+            <input type="text" placeholder="請輸入 12 碼健保卡號" />
+          </div>
+          <div class="row">
+            <p class="title">健康問卷</p>
+            <input class="edit" type="text" placeholder="填寫 / 編輯 ＞" />
+          </div>
+          <div class="row">
+            <p class="title">
+              檔案上傳
+              <span>
+                (單一檔案請勿超過 10MB 、檔案大小合計不得超過 100MB)
+              </span>
+            </p>
+            <!-- 上傳區塊 -->
+            <div id="uploader1" class="uploader">
+              <!-- 隱藏的 Input -->
+              <input class="file" type="file" multiple />
+              <!-- 選擇上傳檔案 -->
+              <div class="empty">
+                <div class="empty_box"></div>
+                <img src="./images/ic-uploader.png" alt="" />
+                <p>選擇上傳檔案</p>
+              </div>
+
+              <div class="box">
+                <div class="list">
+                  <div class="list-head list-item list-item--name">名稱</div>
+                  <div class="list-head list-item list-item--size">
+                    檔案大小
+                  </div>
+                  <div class="list-head list-item list-item--button">
+                    <a href="javascript:void(0)">
+                      <img class="add" src="./images/ic-add.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="list-line"></div>
+                <!-- 上傳檔案 - 列表物件 -->
+                <!-- <div class="list">
+                  <div class="list-item list-item--name">胸腔 X 光片.pdf</div>
+                  <div class="list-item list-item--size">8.2MB</div>
+                  <div class="list-item list-item--button">
+                    <a
+                      class=".btn-remove"
+                      href="javascript:void(0)"
+                      data-file-id=""
+                    >
+                      <img class="remove" src="./images/ic-x.png" alt="" />
+                    </a>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="d_flex btn_area">
+            <button class="light">
+              <span><a href="index.html">取消</a></span>
+            </button>
+            <button onclick="submit()">
+              <span>確認送出</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="images/logo_black.png" alt="" />
+          <p>
+            IntelliCentrics introduces trust into organizational
+            decision-making, enabling our customers to make more informed
+            decisions, reduce risk, and improve operational efficiencies.
+          </p>
+          <a href="javascript:;">隱私權條款</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/babel" src="js/init.js"></script>
+<script type="text/babel" src="js/uploader.js"></script>
+<script type="text/babel">
+  var uploader1 = $("#uploader1").uploader();
+
+  function submit() {
+    var formData = new FormData();
+    var uploadFiles = uploader1.getUploads();
+    for (var i = 0, len = uploadFiles.length; i < len; i++) {
+      formData.append("files[]", uploadFiles[i].file, uploadFiles[i].file.name);
+      console.log(uploadFiles[i].file);
+    }
+  }
+</script>

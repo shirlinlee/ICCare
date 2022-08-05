@@ -156,6 +156,7 @@ select {
 .contract,
 .contract_detail,
 .reserved,
+.bankbook,
 .booking_list {
   margin-top: 110px;
   margin-bottom: 110px;
@@ -2414,7 +2415,57 @@ select {
     }
   }
 }
+.bankbook {
+  text-align: center;
 
+  .content {
+    .row {
+      margin-bottom: 24px;
+      p.title {
+        margin-bottom: 14px;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000;
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #49c4e5;
+        }
+      }
+      input.edit {
+        &::placeholder {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .btn_area {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    @media screen and (max-width: 599px) {
+      margin-top: 30px;
+    }
+  }
+  button {
+    width: 200px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
 .online_service {
   position: fixed;
   right: 15px;
@@ -2532,7 +2583,6 @@ select {
     .upload,
     .send {
       width: 18px;
-
       img {
         cursor: pointer;
       }

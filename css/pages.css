@@ -197,6 +197,7 @@ select {
 .contract,
 .contract_detail,
 .reserved,
+.bankbook,
 .booking_list {
   margin-top: 110px;
   margin-bottom: 110px;
@@ -207,6 +208,7 @@ select {
 .contract,
 .contract_detail,
 .reserved,
+.bankbook,
 .booking_list {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -2467,6 +2469,69 @@ select {
 }
 .uploader .box .list-head {
   color: #000;
+}
+
+.bankbook {
+  text-align: center;
+}
+.bankbook .content .row {
+  margin-bottom: 24px;
+}
+.bankbook .content .row p.title {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.bankbook .content .row p.title span {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #49c4e5;
+}
+.bankbook .content .row input.edit::-webkit-input-placeholder {
+  text-align: center;
+}
+.bankbook .content .row input.edit::-moz-placeholder {
+  text-align: center;
+}
+.bankbook .content .row input.edit:-ms-input-placeholder {
+  text-align: center;
+}
+.bankbook .content .row input.edit::-ms-input-placeholder {
+  text-align: center;
+}
+.bankbook .content .row input.edit::placeholder {
+  text-align: center;
+}
+.bankbook .btn_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+}
+@media screen and (max-width: 599px) {
+  .bankbook .btn_area {
+    margin-top: 30px;
+  }
+}
+.bankbook button {
+  width: 200px;
+}
+.bankbook button:not(:last-child) {
+  margin-right: 20px;
 }
 
 .online_service {

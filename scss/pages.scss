@@ -2419,8 +2419,16 @@ select {
   text-align: center;
 
   .content {
+    padding-top: 40px;
+    @media screen and (max-width: 767px) {
+      padding-top: 20px;
+    }
     .row {
       margin-bottom: 24px;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 10px;
+      }
+
       p.title {
         margin-bottom: 14px;
         font-size: 18px;
@@ -2431,7 +2439,9 @@ select {
         letter-spacing: normal;
         text-align: left;
         color: #000;
-
+        @media screen and (max-width: 767px) {
+          margin-bottom: 6px;
+        }
         span {
           font-size: 14px;
           font-weight: 500;
@@ -2443,10 +2453,16 @@ select {
           color: #49c4e5;
         }
       }
-      input.edit {
-        &::placeholder {
-          text-align: center;
-        }
+      .goHealth {
+        padding: 10px 20px 12px;
+        border: 1px solid #959595;
+        color: #656565;
+        line-height: 20px;
+        border-radius: 22px;
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 17px;
+        display: inline-block;
       }
     }
   }

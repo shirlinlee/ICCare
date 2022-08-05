@@ -2474,8 +2474,21 @@ select {
 .bankbook {
   text-align: center;
 }
+.bankbook .content {
+  padding-top: 40px;
+}
+@media screen and (max-width: 767px) {
+  .bankbook .content {
+    padding-top: 20px;
+  }
+}
 .bankbook .content .row {
   margin-bottom: 24px;
+}
+@media screen and (max-width: 767px) {
+  .bankbook .content .row {
+    margin-bottom: 10px;
+  }
 }
 .bankbook .content .row p.title {
   margin-bottom: 14px;
@@ -2488,6 +2501,11 @@ select {
   text-align: left;
   color: #000;
 }
+@media screen and (max-width: 767px) {
+  .bankbook .content .row p.title {
+    margin-bottom: 6px;
+  }
+}
 .bankbook .content .row p.title span {
   font-size: 14px;
   font-weight: 500;
@@ -2498,20 +2516,16 @@ select {
   text-align: left;
   color: #49c4e5;
 }
-.bankbook .content .row input.edit::-webkit-input-placeholder {
-  text-align: center;
-}
-.bankbook .content .row input.edit::-moz-placeholder {
-  text-align: center;
-}
-.bankbook .content .row input.edit:-ms-input-placeholder {
-  text-align: center;
-}
-.bankbook .content .row input.edit::-ms-input-placeholder {
-  text-align: center;
-}
-.bankbook .content .row input.edit::placeholder {
-  text-align: center;
+.bankbook .content .row .goHealth {
+  padding: 10px 20px 12px;
+  border: 1px solid #959595;
+  color: #656565;
+  line-height: 20px;
+  border-radius: 22px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 17px;
+  display: inline-block;
 }
 .bankbook .btn_area {
   display: -webkit-box;

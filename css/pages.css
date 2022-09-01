@@ -155,6 +155,27 @@ select {
   background-repeat: no-repeat;
   padding: 10px 25px 12px 20px;
 }
+select.unit {
+  border: none;
+  width: 60px;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  background-position: right 8px center;
+  background-color: transparent;
+  text-align: right;
+  padding-right: 33px;
+}
+select.unit.xl {
+  width: 95px;
+}
 
 ::-webkit-input-placeholder {
   color: #959595;
@@ -410,9 +431,15 @@ select {
 }
 .healthForm_detail .form {
   max-width: 720px;
+  margin: 0 auto;
 }
 .healthForm_detail .sub_tilte {
   min-width: 75px;
+}
+@media screen and (max-width: 767px) {
+  .healthForm_detail .sub_tilte {
+    padding-left: 0 !important;
+  }
 }
 .healthForm_detail input {
   padding: 10px 10px 12px;
@@ -448,6 +475,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .healthForm_detail .d_flex.wrap33 {
@@ -506,6 +534,13 @@ select {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
+}
+@media screen and (max-width: 599px) {
+  .healthForm_detail .d_flex .d_f_g2 {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .plan {
@@ -2309,13 +2344,17 @@ select {
 .lb .lb_row {
   margin-bottom: 12px;
 }
-.lb .lb_row .W25 {
+.lb .lb_row .W50 {
   width: calc(25% - 8px);
+  position: relative;
 }
 @media screen and (max-width: 767px) {
-  .lb .lb_row .W25 {
+  .lb .lb_row .W50 {
     width: calc(50% - 5px);
   }
+}
+.lb .lb_row .W50 .unit {
+  top: 20px;
 }
 .lb .lb_row p.title {
   margin: 0 0 14px 0;

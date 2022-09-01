@@ -129,6 +129,27 @@ select {
   background-position: right 13px center;
   background-repeat: no-repeat;
   padding: 10px 25px 12px 20px;
+  &.unit {
+    border: none;
+    width: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    background-position: right 8px center;
+    background-color: transparent;
+    text-align: right;
+    padding-right: 33px;
+    &.xl {
+      width: 95px;
+    }
+  }
 }
 
 ::placeholder {
@@ -379,9 +400,13 @@ select {
   }
   .form {
     max-width: 720px;
+    margin: 0 auto;
   }
   .sub_tilte {
     min-width: 75px;
+    @media screen and (max-width: 767px) {
+      padding-left: 0 !important;
+    }
   }
 
   input {
@@ -404,6 +429,9 @@ select {
     }
   }
 
+  .unit {
+  }
+
   textarea {
     border-radius: 0;
     border-top: none;
@@ -415,6 +443,8 @@ select {
   .d_flex {
     flex-direction: row;
     align-items: center;
+    position: relative;
+
     @media screen and (max-width: 767px) {
       &.wrap33 {
         justify-content: space-between;
@@ -471,6 +501,11 @@ select {
 
     .d_f_g2 {
       flex-grow: 2;
+      @media screen and (max-width: 599px) {
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -2282,10 +2317,14 @@ select {
   }
   .lb_row {
     margin-bottom: 12px;
-    .W25 {
+    .W50 {
       width: calc(25% - 8px);
+      position: relative;
       @media screen and (max-width: 767px) {
         width: calc(50% - 5px);
+      }
+      .unit {
+        top: 20px;
       }
     }
     p.title {

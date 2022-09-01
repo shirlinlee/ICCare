@@ -128,10 +128,22 @@
               <p class="title">基本數據</p>
               <input type="text" placeholder="健保卡號" />
               <div class="d_flex">
-                <input class="W25" type="text" placeholder="體溫" />
-                <input class="W25" type="text" placeholder="血氧" />
-                <input class="W25" type="text" placeholder="血壓" />
-                <input class="W25" type="text" placeholder="血糖" />
+                <div class="W50 d_flex">
+                  <input class="W100" type="text" placeholder="體溫" />
+                  <select name="" id="" class="unit">
+                    <option value="°C">°C</option>
+                    <option value="°F">°F</option>
+                  </select>
+                </div>
+                <input class="W50" type="text" placeholder="血氧" />
+                <div class="W50 d_flex">
+                  <input class="W100" type="text" placeholder="血壓" />
+                  <select name="" id="" class="unit xl">
+                    <option value="mmol/L">mmol/L</option>
+                    <option value="mg/dL">mg/dL</option>
+                  </select>
+                </div>
+                <input class="W50" type="text" placeholder="血糖" />
               </div>
             </div>
             <div class="lb_row">

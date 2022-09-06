@@ -797,6 +797,20 @@ b {
   display: block;
 }
 
+#fixed_panel {
+  position: fixed;
+  width: 70px;
+  bottom: 60px;
+  right: 30px;
+}
+@media screen and (max-width: 767px) {
+  #fixed_panel {
+    width: 55px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
 @media screen and (min-width: 600px) and (max-width: 999px) {
   .pad {
     display: inline-block !important;

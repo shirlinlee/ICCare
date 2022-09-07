@@ -82,6 +82,7 @@
         box-shadow: 4.2px 4.2px 17.1px 1.9px rgba(75, 143, 178, 0.25);
         margin-bottom: 20px;
         overflow: hidden;
+        background-color: #fff;
         &:after {
           content: "";
           position: absolute;
@@ -90,7 +91,7 @@
           display: block;
           width: 100%;
           height: 100%;
-          background-image: linear-gradient(to top, #d9f4ff, #f7faff);
+          // background-image: linear-gradient(to top, #d9f4ff, #f7faff);
           opacity: 0.8;
           z-index: -1;
         }

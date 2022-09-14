@@ -48,6 +48,20 @@ input[type=submit].light span {
   background-position: left center;
   background-image: url(../images/ic-arrow-08.png);
 }
+button.light_grey,
+.btn.light_grey,
+input[type=submit].light_grey {
+  background-color: #fff;
+  border-color: #bfbfbf;
+  color: #bfbfbf;
+}
+button.grey,
+.btn.grey,
+input[type=submit].grey {
+  border-color: #bfbfbf;
+  background-color: #bfbfbf;
+  color: #fff;
+}
 
 input,
 select,
@@ -1596,7 +1610,7 @@ select.unit.xl {
   margin-bottom: 0;
 }
 .member .sub_account {
-  max-width: 680px;
+  max-width: 880px;
   width: calc(100% - 60px);
   margin-left: auto;
   margin-right: auto;
@@ -1606,21 +1620,22 @@ select.unit.xl {
     width: 100%;
   }
 }
+.member .sub_account button[name=create_new] {
+  max-width: 400px;
+  margin: 0 auto 40px;
+  background-image: url(../images/ic-add-white.png);
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 65px) center;
+}
 .member .sub_account .d_flex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 17px;
+  margin-bottom: 22px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (max-width: 767px) {
-  .member .sub_account .d_flex {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-  }
 }
 .member .sub_account .d_flex span {
   width: 54px;
@@ -1631,11 +1646,10 @@ select.unit.xl {
 @media screen and (max-width: 767px) {
   .member .sub_account .d_flex span {
     width: 54px;
-    margin-bottom: 20px;
   }
 }
 .member .sub_account .d_flex input {
-  width: calc(45% - 120px);
+  width: calc(45% - 150px);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1644,10 +1658,82 @@ select.unit.xl {
 .member .sub_account .d_flex input.sm {
   width: calc(33% - 120px);
 }
+.member .sub_account .d_flex input.name_input {
+  width: calc(100% - 65px);
+  margin-bottom: 0;
+}
 @media screen and (max-width: 767px) {
   .member .sub_account .d_flex input {
     width: calc(100% - 65px) !important;
-    margin-bottom: 20px;
+  }
+}
+.member .sub_account .d_flex button {
+  margin-bottom: 0;
+}
+.member .sub_account .d_flex button.W140 {
+  width: 140px;
+}
+.member .sub_account .d_flex button.W85 {
+  width: 85px;
+}
+@media screen and (max-width: 899px) {
+  .member .sub_account .d_flex.account_item > span {
+    padding-left: 0;
+    width: 50px;
+  }
+}
+@media screen and (max-width: 899px) and (max-width: 767px) {
+  .member .sub_account .d_flex.account_item > span {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 899px) {
+  .member .sub_account .d_flex.account_item > input {
+    width: calc(50% - 65px);
+  }
+}
+@media screen and (max-width: 899px) and (max-width: 767px) {
+  .member .sub_account .d_flex.account_item > input {
+    margin-bottom: 10px;
+    width: calc(100% - 50px) !important;
+  }
+}
+.member .sub_account .agent_btn_area {
+  width: 320px;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 899px) {
+  .member .sub_account .agent_btn_area {
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 60px;
+  }
+}
+@media screen and (max-width: 899px) and (max-width: 767px) {
+  .member .sub_account .agent_btn_area {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 899px) {
+  .member .sub_account .agent_btn_area .W140 {
+    width: calc(40% - 20px) !important;
+  }
+}
+@media screen and (max-width: 899px) and (max-width: 599px) {
+  .member .sub_account .agent_btn_area .W140 {
+    width: calc(50% - 10px) !important;
+  }
+}
+@media screen and (max-width: 899px) {
+  .member .sub_account .agent_btn_area .W85 {
+    width: 30% !important;
+  }
+}
+@media screen and (max-width: 899px) and (max-width: 599px) {
+  .member .sub_account .agent_btn_area .W85 {
+    width: 25% !important;
   }
 }
 .member .social_binding p {
@@ -2320,6 +2406,15 @@ select.unit.xl {
     width: 100%;
   }
 }
+.lb .lb_content .radio_area .d_flex {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.lb .lb_content .radio_area .d_flex input {
+  margin-right: 10px;
+}
 .lb .lb_content textarea {
   resize: none;
   padding-top: 15px;
@@ -2327,6 +2422,9 @@ select.unit.xl {
 }
 .lb .lb_content .btn_area {
   margin-top: 40px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .lb .lb_content .btn_area.MT72 {
   margin-top: 40px;

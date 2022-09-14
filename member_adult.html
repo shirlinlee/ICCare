@@ -150,44 +150,43 @@
 
         <div class="sub_account">
           <h4 class="title">家庭群組設定</h4>
-          <button name="create_new">新增子帳號</button>
-          <div class="d_flex account_item">
-            <span class="sm">姓名</span
-            ><input type="text" value="王*華" class="sm" />
-            <span class="pl5">帳號1</span>
-            <input type="text" value="arthur@pace.com.tw" />
-            <div class="agent_btn_area d_flex">
-              <button class="f16 grey W140" name="agent" onclick="openLb()">
-                代理人設定
-              </button>
-              <button class="f16 grey W85" name="edit">編輯</button>
-              <button class="f16 light_grey W85" name="delete">刪除</button>
+          <div class="W400 f_grey">
+            <b class="f_black mb20 d_block">群組管理員</b>
+            <div class="d_flex mb40">
+              <span>姓名</span
+              ><input type="text" value="陳老明" class="name_input f_black" />
             </div>
-          </div>
-          <div class="d_flex account_item">
-            <span class="sm">姓名</span
-            ><input type="text" value="王*華" class="sm" />
-            <span class="pl5">帳號2</span>
-            <input type="text" value="arthur@pace.com.tw" />
-            <div class="agent_btn_area d_flex">
-              <button class="f16 grey W140" name="agent" onclick="openLb()">
-                代理人設定
-              </button>
-              <button class="f16 grey W85" name="edit">編輯</button>
-              <button class="f16 light_grey W85" name="delete">刪除</button>
+            <b class="f_black mb20 d_block">您的代理人</b>
+            <p class="mb20 f16">
+              以下帳號為您之系統代理人，代理人可於使用緊急諮詢服務時，選擇您的看診資料，為您預約。
+            </p>
+            <div class="d_flex">
+              <span>姓名1</span
+              ><input type="text" value="陳媽媽" class="name_input f_black" />
             </div>
-          </div>
-          <div class="d_flex account_item">
-            <span class="sm">姓名</span
-            ><input type="text" value="王*華" class="sm" />
-            <span class="pl5">帳號3</span>
-            <input type="text" value="arthur@pace.com.tw" />
-            <div class="agent_btn_area d_flex">
-              <button class="f16 grey W140" name="agent" onclick="openLb()">
-                代理人設定
-              </button>
-              <button class="f16 grey W85" name="edit">編輯</button>
-              <button class="f16 light_grey W85" name="delete">刪除</button>
+            <div class="d_flex">
+              <span>姓名2</span
+              ><input type="text" value="陳一華" class="name_input f_black" />
+            </div>
+            <div class="d_flex mb40">
+              <span>姓名3</span
+              ><input type="text" value="陳二樺" class="name_input f_black" />
+            </div>
+            <b class="f_black mb20 d_block">您的被代理人</b>
+            <p class="mb20 f16">
+                以下帳號為您之系統被代理人，您使用緊急諮詢服務時，選擇該帳號看診資料，為被代理人進行預約。
+            </p>
+            <div class="d_flex">
+              <span>姓名1</span
+              ><input type="text" value="陳華華" class="name_input f_black" />
+            </div>
+            <div class="d_flex">
+              <span>姓名2</span
+              ><input type="text" value="陳百華" class="name_input f_black" />
+            </div>
+            <div class="d_flex">
+              <span>姓名3</span
+              ><input type="text" value="陳千華" class="name_input f_black" />
             </div>
           </div>
 
@@ -205,60 +204,6 @@
             decisions, reduce risk, and improve operational efficiencies.
           </p>
           <a href="javascript:;">隱私權條款</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="lb">
-      <div class="lb_content W1060">
-        <label class="close" onclick="closeLb()">
-          <span class="hamburger hamburger-1"></span>
-          <span class="hamburger hamburger-2"></span>
-          <span class="hamburger hamburger-3"></span>
-        </label>
-        <div class="W520">
-          <div class="status_checkMail">
-            <div class="t_center">
-              <h3 class="title underline">代理人設定</h3>
-            </div>
-            <p class="f16 f_grey mb40">
-              請勾選以下帳號，作為XXX 之 IC Care
-              緊急諮詢服務代理人，代理人可於緊急諮詢時切換資料身分，為 XXX
-              進行預約。
-            </p>
-
-            <div class="radio_area">
-              <div class="item d_flex">
-                <input name="agent" type="radio" id="" /><label for=""
-                  >陳大華</label
-                >
-              </div>
-              <div class="item d_flex">
-                <input name="agent" type="radio" id="" /><label for=""
-                  >陳大華</label
-                >
-              </div>
-              <div class="item d_flex">
-                <input name="agent" type="radio" id="" /><label for=""
-                  >陳大華</label
-                >
-              </div>
-              <div class="item d_flex">
-                <input name="agent" type="radio" id="" /><label for=""
-                  >陳大華</label
-                >
-              </div>
-            </div>
-
-            <div class="d_flex btn_area">
-              <button class="W50 light" onclick="closeLb()">
-                <span>取消</span>
-              </button>
-              <button class="W50" onclick="confirm()">
-                <span>確認送出</span>
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -291,13 +236,4 @@
       }
     }
   });
-  function openLb() {
-    $(".lb").addClass("open");
-  }
-  function closeLb() {
-    $(".lb").removeClass("open");
-  }
-  function confirm() {
-    closeLb();
-  }
 </script>

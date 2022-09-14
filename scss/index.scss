@@ -44,6 +44,7 @@
       p {
         margin-bottom: 20px;
         line-height: 1.4;
+        align-items: center;
       }
 
       a {
@@ -56,6 +57,7 @@
         -moz-border-radius: 32px;
         -ms-border-radius: 32px;
         -o-border-radius: 32px;
+        margin-bottom: 0;
 
         @media screen and (max-width: 767px) {
           line-height: 50px;
@@ -69,6 +71,23 @@
         span {
           background-size: 11px;
         }
+      }
+
+      b {
+        padding-right: 10px;
+      }
+
+      select {
+        width: 190px;
+        background-color: transparent;
+        margin-bottom: 0;
+        line-height: 36px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        background-position: right 20px center;
       }
     }
 

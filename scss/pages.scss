@@ -44,6 +44,18 @@ input[type="submit"] {
       background-image: url(../images/ic-arrow-08.png);
     }
   }
+
+  &.light_grey {
+    background-color: #fff;
+    border-color: #bfbfbf;
+    color: #bfbfbf;
+  }
+
+  &.grey {
+    border-color: #bfbfbf;
+    background-color: #bfbfbf;
+    color: #fff;
+  }
 }
 
 input,
@@ -1523,7 +1535,7 @@ select {
   }
 
   .sub_account {
-    max-width: 680px;
+    max-width: 880px;
     width: calc(100% - 60px);
     margin-left: auto;
     margin-right: auto;
@@ -1532,16 +1544,25 @@ select {
       width: 100%;
     }
 
+    button[name="create_new"] {
+      max-width: 400px;
+      margin: 0 auto 40px;
+      background-image: url(../images/ic-add-white.png);
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: left calc(50% + 65px) center;
+    }
+
     .d_flex {
       justify-content: space-between;
-      margin-bottom: 17px;
+      margin-bottom: 22px;
       align-items: center;
 
       @media screen and (max-width: 767px) {
         // flex-direction: column;
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 30px;
-        padding-bottom: 10px;
+        // border-bottom: 1px solid #ccc;
+        // margin-bottom: 30px;
+        // padding-bottom: 10px;
       }
 
       span {
@@ -1553,12 +1574,12 @@ select {
 
         @media screen and (max-width: 767px) {
           width: 54px;
-          margin-bottom: 20px;
+          // margin-bottom: 20px;
         }
       }
 
       input {
-        width: calc(45% - 120px);
+        width: calc(45% - 150px);
         justify-content: space-between;
         margin-bottom: 0;
 
@@ -1566,9 +1587,70 @@ select {
           width: calc(33% - 120px);
         }
 
+        &.name_input {
+          width: calc(100% - 65px);
+          margin-bottom: 0;
+        }
+
         @media screen and (max-width: 767px) {
           width: calc(100% - 65px) !important;
-          margin-bottom: 20px;
+        }
+      }
+
+      button {
+        margin-bottom: 0;
+        &.W140 {
+          width: 140px;
+        }
+
+        &.W85 {
+          width: 85px;
+        }
+      }
+
+      &.account_item {
+        @media screen and (max-width: 899px) {
+          > span {
+            padding-left: 0;
+            width: 50px;
+            @media screen and (max-width: 767px) {
+              margin-bottom: 10px;
+            }
+          }
+          > input {
+            width: calc(50% - 65px);
+            @media screen and (max-width: 767px) {
+              margin-bottom: 10px;
+              width: calc(100% - 50px) !important;
+            }
+          }
+        }
+      }
+    }
+
+    .agent_btn_area {
+      width: 320px;
+      margin-bottom: 0;
+      @media screen and (max-width: 899px) {
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 60px;
+        @media screen and (max-width: 767px) {
+          margin-top: 5px;
+          margin-bottom: 10px;
+          padding-left: 50px;
+        }
+        .W140 {
+          width: calc(40% - 20px) !important;
+          @media screen and (max-width: 599px) {
+            width: calc(50% - 10px) !important;
+          }
+        }
+        .W85 {
+          width: 30% !important;
+          @media screen and (max-width: 599px) {
+            width: 25% !important;
+          }
         }
       }
     }
@@ -2292,6 +2374,16 @@ select {
       }
     }
 
+    .radio_area {
+      .d_flex {
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        input {
+          margin-right: 10px;
+        }
+      }
+    }
+
     textarea {
       resize: none;
       padding-top: 15px;
@@ -2300,6 +2392,10 @@ select {
 
     .btn_area {
       margin-top: 40px;
+      // justify-content: center;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
       &.MT72 {
         margin-top: 40px;
       }

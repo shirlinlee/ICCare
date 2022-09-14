@@ -1551,6 +1551,9 @@ select {
       background-size: 18px;
       background-repeat: no-repeat;
       background-position: left calc(50% + 65px) center;
+      @media screen and (max-width: 767px) {
+        margin: 0 auto 30px;
+      }
     }
 
     .d_flex {

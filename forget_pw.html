@@ -77,7 +77,7 @@
       </div>
 
       <div class="wrapper forget_pw pd130 W1280">
-        <div class="W300">
+        <!-- <div class="W300">
           <h3 class="title">忘記密碼</h3>
           <p class="f18">請填寫您註冊的手機號碼</p>
           <div class="multi_input d_flex">
@@ -90,6 +90,62 @@
           <button onclick="reset()">
             <span>確認重設密碼</span>
           </button>
+        </div> -->
+        <div class="W300">
+          <h3 class="title">重設密碼</h3>
+          <form
+            action="https://demo.iccare.vip/zh-TW/password/first/reset"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_token"
+              value="J3XmNY5wrzNHzTpN96M8uCBVZWoWJNoMwT3b11cf"
+            />
+            <div class="d_flex">
+              <input
+                type="password"
+                class="password"
+                name="password"
+                id="password"
+                placeholder="密碼*(請輸入8位數以上，包含英文大小寫與數字)"
+                required=""
+              />
+            </div>
+            <div class="d_flex">
+              <input
+                type="password"
+                class="password"
+                name="password2"
+                id="password2"
+                placeholder="再次輸入密碼*"
+                required=""
+              />
+            </div>
+            <div class="d_flex">
+              <input type="checkbox" name="all" id="all" required="" />
+              <label for="all">已閱讀並接受<a
+                  href="https://demo.iccare.vip/files/使用條款.pdf"
+                  target="_blank"
+                  class="f_blue"
+                  >
+                  細則與條款</a
+                >和<a
+                  href="https://demo.iccare.vip/files/隱私權條款.pdf"
+                  target="_blank"
+                  class="f_blue"
+                  >隱私權聲明</a
+                >。</label
+              >
+            </div>
+            <div class="d_flex">
+              <input type="checkbox" name="all2" id="all2" required="" />
+              <label for="all2">確認加入家庭群組並共享線上健康諮詢次數</label>
+            </div>
+            <button type="submit">
+              <span>確認送出</span>
+            </button>
+          </form>
         </div>
       </div>
       <div id="footer">

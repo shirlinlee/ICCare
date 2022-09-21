@@ -318,6 +318,20 @@ select {
   button {
     margin-top: 23px;
   }
+
+  input {
+    &[type="checkbox"] {
+      margin-top: 3px;
+      + label {
+        width: calc(100% - 30px);
+        margin-bottom: 5px;
+        line-height: 1.5;
+        a {
+          display: initial;
+        }
+      }
+    }
+  }
 }
 
 .contract {
@@ -1846,6 +1860,11 @@ select {
           display: inline-block;
           width: 85px;
         }
+
+        .mb {
+          display: inline-block;
+          width: 105px;
+        }
       }
 
       .number {
@@ -1859,52 +1878,52 @@ select {
           color: #000;
         }
 
-        &::before {
-          content: "訂單編號：";
-        }
+        // &::before {
+        //   content: "訂單編號：";
+        // }
       }
 
-      .date {
-        &::before {
-          content: "訂單日期：";
-        }
-      }
+      // .date {
+      //   &::before {
+      //     content: "訂單日期：";
+      //   }
+      // }
 
-      .price {
-        &::before {
-          content: "訂單金額：";
-        }
-      }
+      // .price {
+      //   &::before {
+      //     content: "訂單金額：";
+      //   }
+      // }
 
-      .status {
-        &::before {
-          content: "付款狀態：";
-        }
-      }
+      // .status {
+      //   &::before {
+      //     content: "付款狀態：";
+      //   }
+      // }
 
-      .ship {
-        &::before {
-          content: "出貨狀態：";
-        }
-      }
+      // .ship {
+      //   &::before {
+      //     content: "出貨狀態：";
+      //   }
+      // }
 
-      .verify {
-        &::before {
-          content: "付款證明：";
-        }
-      }
+      // .verify {
+      //   &::before {
+      //     content: "付款證明：";
+      //   }
+      // }
 
-      .consult_record {
-        &::before {
-          content: "諮詢紀錄：";
-        }
-      }
+      // .consult_record {
+      //   &::before {
+      //     content: "諮詢紀錄：";
+      //   }
+      // }
 
-      .service {
-        &::before {
-          content: "線上客服：";
-        }
-      }
+      // .service {
+      //   &::before {
+      //     content: "線上客服：";
+      //   }
+      // }
     }
 
     &:nth-child(even) {

@@ -865,13 +865,9 @@ b {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 999px) {
-  .pad {
-    display: inline-block !important;
-  }
-
+@media screen and (max-width: 999px) {
   .mb {
-    display: none !important;
+    display: inline-block !important;
   }
 }
 

@@ -645,11 +645,11 @@ select {
       .W100 {
         background-color: #ebf9fc;
         position: relative;
-        padding: 60px 38px;
-        justify-content: space-between;
+        padding: 60px 0;
+        justify-content: space-evenly;
 
         @media screen and (max-width: 767px) {
-          padding: 30px 19px 0;
+          padding: 30px 0 0;
         }
 
         .W50 {

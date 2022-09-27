@@ -689,14 +689,14 @@ select.unit.xl {
 .plan .vip .detail .W100 {
   background-color: #ebf9fc;
   position: relative;
-  padding: 60px 38px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 60px 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 @media screen and (max-width: 767px) {
   .plan .vip .detail .W100 {
-    padding: 30px 19px 0;
+    padding: 30px 0 0;
   }
 }
 .plan .vip .detail .W100 .W50 {

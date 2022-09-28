@@ -117,10 +117,10 @@ textarea[type=checkbox]:disabled + label,
 textarea[type=radio]:disabled + label {
   opacity: 0.4;
 }
-input[type=text],
-select[type=text],
-textarea[type=text] {
-  min-height: 40px;
+input[name=birthday],
+select[name=birthday],
+textarea[name=birthday] {
+  min-height: 42px;
 }
 input.ico,
 select.ico,

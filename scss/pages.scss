@@ -96,8 +96,8 @@ textarea {
       }
     }
   }
-  &[type="text"] {
-    min-height: 40px;
+  &[name="birthday"] {
+    min-height: 42px;
   }
 
   &.ico {

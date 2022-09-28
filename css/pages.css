@@ -67,7 +67,7 @@ input,
 select,
 textarea {
   -webkit-appearance: none;
-  padding: 10px 20px 12px;
+  padding: 11px 20px;
   border: 1px solid #959595;
   color: #656565;
   line-height: 20px;
@@ -116,6 +116,11 @@ select[type=radio]:disabled + label,
 textarea[type=checkbox]:disabled + label,
 textarea[type=radio]:disabled + label {
   opacity: 0.4;
+}
+input[type=text],
+select[type=text],
+textarea[type=text] {
+  min-height: 40px;
 }
 input.ico,
 select.ico,

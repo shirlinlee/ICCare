@@ -101,14 +101,25 @@
               </select>
               <input type="tel" value="" class="m2" placeholder="手機號碼" />
             </div>
-            <input
-              type="text"
-              class=""
-              placeholder="生日*"
-              id="datepicker"
-              name="birthday"
-              required
-            />
+            <div class="birthday">
+              <input type="tel" class="b_year" placeholder="出生年份" maxlength="4" />
+              <select class="b_month">
+                <option value="出生月份" disabled selected="selected">出生月份</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <input type="tel" class="b_day" placeholder="出生日期" maxlength="2"  />
+            </div>
             <input type="email" class="" placeholder="電子信箱" />
             <div class="t_left d_flex">
               <input type="checkbox" name="" id="all" required="" />

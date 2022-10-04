@@ -80,7 +80,7 @@ textarea {
   input,
 select,
 textarea {
-    padding: 8px 12px 10px;
+    padding: 9px 12px;
   }
 }
 input[type=checkbox], input[type=radio],
@@ -117,10 +117,36 @@ textarea[type=checkbox]:disabled + label,
 textarea[type=radio]:disabled + label {
   opacity: 0.4;
 }
-input[name=birthday],
-select[name=birthday],
-textarea[name=birthday] {
-  min-height: 42px;
+input.b_year, input.b_month, input.b_day,
+select.b_year,
+select.b_month,
+select.b_day,
+textarea.b_year,
+textarea.b_month,
+textarea.b_day {
+  width: calc(33% - 3px) !important;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+@media screen and (max-width: 413px) {
+  input.b_year, input.b_month, input.b_day,
+select.b_year,
+select.b_month,
+select.b_day,
+textarea.b_year,
+textarea.b_month,
+textarea.b_day {
+    width: 100% !important;
+  }
+  input.b_year:not(:last-child), input.b_month:not(:last-child), input.b_day:not(:last-child),
+select.b_year:not(:last-child),
+select.b_month:not(:last-child),
+select.b_day:not(:last-child),
+textarea.b_year:not(:last-child),
+textarea.b_month:not(:last-child),
+textarea.b_day:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 input.ico,
 select.ico,
@@ -172,7 +198,7 @@ select {
   background-size: 16px;
   background-position: right 13px center;
   background-repeat: no-repeat;
-  padding: 10px 25px 12px 20px;
+  padding-right: 25px;
 }
 select.unit {
   border: none;
@@ -194,6 +220,34 @@ select.unit {
 }
 select.unit.xl {
   width: 95px;
+}
+
+.has_birth_wrap {
+  min-width: 300px;
+}
+@media screen and (max-width: 599px) {
+  .has_birth_wrap {
+    min-width: 200px;
+  }
+}
+
+.birthday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 413px) {
+  .birthday {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -1046,8 +1100,10 @@ select.unit.xl {
 }
 .subscription .info .personal_info .d_flex .W50 input,
 .subscription .info .personal_info .d_flex .W50 .multi_input,
+.subscription .info .personal_info .d_flex .W50 .birthday,
 .subscription .info .bill_info .d_flex .W50 input,
-.subscription .info .bill_info .d_flex .W50 .multi_input {
+.subscription .info .bill_info .d_flex .W50 .multi_input,
+.subscription .info .bill_info .d_flex .W50 .birthday {
   width: calc(100% - 90px);
 }
 .subscription .info .personal_info .d_flex .W33,
@@ -1449,11 +1505,13 @@ select.unit.xl {
   margin-bottom: 0;
 }
 .multi_input .m1 {
-  width: 90px;
+  width: 75px;
   text-align: left;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .multi_input .m2 {
-  width: calc(100% - 100px) !important;
+  width: calc(100% - 85px) !important;
 }
 
 .close {
@@ -1567,9 +1625,9 @@ select.unit.xl {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 17px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 .member .basic_info > .d_flex span {
   width: 80px;
@@ -1596,7 +1654,8 @@ select.unit.xl {
   }
 }
 .member .basic_info > .d_flex > input,
-.member .basic_info > .d_flex select {
+.member .basic_info > .d_flex select,
+.member .basic_info > .d_flex .birthday {
   width: calc(100% - 100px);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1605,7 +1664,8 @@ select.unit.xl {
 }
 @media screen and (max-width: 767px) {
   .member .basic_info > .d_flex > input,
-.member .basic_info > .d_flex select {
+.member .basic_info > .d_flex select,
+.member .basic_info > .d_flex .birthday {
     width: calc(100% - 75px);
   }
 }
@@ -1618,12 +1678,22 @@ select.unit.xl {
   }
 }
 .member .basic_info > .d_flex .multi_input .m1 {
-  width: 90px;
+  width: 75px;
   margin-bottom: 0;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .member .basic_info > .d_flex .multi_input .m2 {
-  width: calc(100% - 100px);
+  width: calc(100% - 85px);
   margin-bottom: 0;
+}
+.member .basic_info > .d_flex .birthday > * {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 414px) {
+  .member .basic_info > .d_flex .birthday > *:not(.member .basic_info > .d_flex .birthday > *:last-child) {
+    margin-bottom: 10px;
+  }
 }
 .member .sub_account {
   max-width: 880px;

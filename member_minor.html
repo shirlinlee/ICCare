@@ -118,7 +118,25 @@
           </div>
           <div class="d_flex">
             <span class="filled">生日</span
-            ><input type="text" id="datepicker" name="birthday" value="1980/01/01" />
+            ><div class="birthday">
+              <input type="tel" class="b_year" placeholder="年份" maxlength="4" />
+              <select class="b_month">
+                <option value="月份" disabled selected="selected">月份</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <input type="tel" class="b_day" placeholder="日期"  maxlength="2" />
+            </div>
           </div>
           <div class="d_flex">
             <span>電子信箱</span

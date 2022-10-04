@@ -71,7 +71,7 @@ textarea {
   width: 100%;
   margin-bottom: 17px;
   @media screen and (max-width: 767px) {
-    padding: 8px 12px 10px;
+    padding: 9px 12px;
   }
 
   &[type="checkbox"],
@@ -96,9 +96,24 @@ textarea {
       }
     }
   }
-  &[name="birthday"] {
-    min-height: 42px;
+  // &[name="birthday"] {
+  //   min-height: 42px;
+  // }
+  &.b_year, &.b_month, &.b_day  {
+    width: calc(33% - 3px) !important;
+    // text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    @media screen and (max-width: 413px) {
+      width: 100% !important;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
   }
+  // &.b_month {}
+  // &.b_day {}
+
 
   &.ico {
     padding-left: 42px;
@@ -142,7 +157,7 @@ select {
   background-size: 16px;
   background-position: right 13px center;
   background-repeat: no-repeat;
-  padding: 10px 25px 12px 20px;
+  padding-right: 25px;
   &.unit {
     border: none;
     width: 60px;
@@ -163,6 +178,22 @@ select {
     &.xl {
       width: 95px;
     }
+  }
+}
+
+.has_birth_wrap {
+  min-width: 300px;
+  @media screen and (max-width: 599px) {
+    min-width: 200px;
+  }
+}
+
+.birthday {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width: 413px) {
+    flex-direction: column;
   }
 }
 
@@ -1026,7 +1057,8 @@ select {
           }
 
           input,
-          .multi_input {
+          .multi_input,
+          .birthday {
             width: calc(100% - 90px);
             // margin-left: 10px;
           }
@@ -1365,15 +1397,17 @@ select {
   margin-bottom: 0;
 
   .m1 {
-    width: 90px;
+    width: 75px;
     text-align: left;
+    padding-left: 8px;
+    padding-right: 8px;
 
     @media screen and (max-width: 767px) {
     }
   }
 
   .m2 {
-    width: calc(100% - 100px) !important;
+    width: calc(100% - 85px) !important;
 
     // @media screen and (max-width: 767px) {
     //   width: calc(100% - 72px);
@@ -1493,7 +1527,7 @@ select {
     > .d_flex {
       justify-content: space-between;
       margin-bottom: 17px;
-      align-items: center;
+      align-items: baseline;
 
       span {
         width: 80px;
@@ -1520,7 +1554,8 @@ select {
       }
 
       > input,
-      select {
+      select,
+      .birthday {
         width: calc(100% - 100px);
         justify-content: space-between;
         margin-bottom: 0;
@@ -1538,13 +1573,26 @@ select {
         }
 
         .m1 {
-          width: 90px;
+          width: 75px;
           margin-bottom: 0;
+          padding-left: 8px;
+          padding-right: 8px;
         }
 
         .m2 {
-          width: calc(100% - 100px);
+          width: calc(100% - 85px);
           margin-bottom: 0;
+        }
+      }
+
+      .birthday {
+        > * {
+          margin-bottom: 0;
+          @media screen and (max-width: 414px) {
+            &:not(&:last-child) {
+              margin-bottom: 10px;;
+            }
+          }
         }
       }
     }

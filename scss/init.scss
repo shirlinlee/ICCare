@@ -1,22 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@500&family=Reem+Kufi&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@500&family=Reem+Kufi&display=swap");
 
-@font-face {
-  font-family: "NotoSansCJKtc";
-  src: url("../fonts/NotoSansCJKtc-DemiLight.otf");
-  font-weight: normal;
-}
+// @font-face {
+//   font-family: "NotoSansCJKtc";
+//   src: url("../fonts/NotoSansCJKtc-DemiLight.otf");
+//   font-weight: normal;
+// }
 
-@font-face {
-  font-family: "NotoSansCJKtc M";
-  src: url("../fonts/NotoSansCJKtc-Medium.otf");
-  font-weight: 700;
-}
+// @font-face {
+//   font-family: "NotoSansCJKtc M";
+//   src: url("../fonts/NotoSansCJKtc-Medium.otf");
+//   font-weight: 700;
+// }
 
-@font-face {
-  font-family: "NotoSansCJKtc";
-  src: url("../fonts/NotoSansCJKtc-Bold.otf");
-  font-weight: bold;
-}
+// @font-face {
+//   font-family: "NotoSansCJKtc";
+//   src: url("../fonts/NotoSansCJKtc-Bold.otf");
+//   font-weight: bold;
+// }
+
 
 body,
 html {
@@ -45,7 +46,8 @@ a {
 * {
   box-sizing: border-box;
   font-weight: normal;
-  font-family: "NotoSansCJKtc";
+  font-family:'Microsoft JhengHei', '微軟正黑體', 'Microsoft YaHei', sans-serif;
+  // font-family: "NotoSansCJKtc";
 }
 
 b {
@@ -415,7 +417,7 @@ b {
     text-align: center;
     line-height: 30px;
     margin: 0 10px;
-    font-family: "NotoSansCJKtc M";
+    // font-family: "NotoSansCJKtc M";
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;

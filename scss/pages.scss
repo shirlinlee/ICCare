@@ -17,7 +17,7 @@ input[type="submit"] {
   cursor: pointer;
 
   span {
-    font-family: "NotoSansCJKtc M";
+    // font-family: "NotoSansCJKtc M";
     padding-right: 25px;
     background-size: 10px;
     background-repeat: no-repeat;
@@ -345,7 +345,7 @@ select {
 .forget_pw {
   p {
     margin-bottom: 15px;
-    font-family: "NotoSansCJKtc M";
+    // font-family: "NotoSansCJKtc M";
   }
 
   button {
@@ -389,12 +389,12 @@ select {
 
       label {
         padding-right: 4px;
-        font-family: "NotoSansCJKtc M";
+        // font-family: "NotoSansCJKtc M";
       }
 
       a {
         padding: 0;
-        font-family: "NotoSansCJKtc M";
+        // font-family: "NotoSansCJKtc M";
       }
     }
 
@@ -836,7 +836,7 @@ select {
       margin-bottom: 20px;
       border-bottom: 2px solid #fff;
       display: inline-block;
-      font-family: "NotoSansCJKtc M";
+      // font-family: "NotoSansCJKtc M";
 
       @media screen and (max-width: 767px) {
         font-size: 30px;
@@ -881,7 +881,7 @@ select {
       display: block;
       position: relative;
       display: inline-block;
-      font-family: "NotoSansCJKtc M";
+      // font-family: "NotoSansCJKtc M";
     }
 
     p.f19 {
@@ -965,7 +965,7 @@ select {
       line-height: 42px;
 
       * {
-        font-family: "NotoSansCJKtc M";
+        // font-family: "NotoSansCJKtc M";
       }
 
       @media screen and (max-width: 767px) {
@@ -1890,7 +1890,7 @@ select {
     }
 
     * {
-      font-family: "NotoSansCJKtc M";
+      // font-family: "NotoSansCJKtc M";
     }
   }
 
@@ -2104,7 +2104,7 @@ select {
 
         h6 {
           border-bottom: solid 2px #49c4e5;
-          font-family: "NotoSansCJKtc M";
+          // font-family: "NotoSansCJKtc M";
 
           &::after {
             background-image: url(../images/ic-arrow-5.png);
@@ -2157,7 +2157,7 @@ select {
         h4 {
           line-height: 1.3;
           margin-bottom: 5px;
-          font-family: "NotoSansCJKtc M";
+          // font-family: "NotoSansCJKtc M";
         }
 
         p {
@@ -2315,7 +2315,7 @@ select {
         }
 
         h6 {
-          font-family: "NotoSansCJKtc M";
+          // font-family: "NotoSansCJKtc M";
         }
 
         &.active {
@@ -2323,7 +2323,7 @@ select {
           color: #34b6e0;
 
           h6 {
-            font-family: "NotoSansCJKtc";
+            // font-family: "NotoSansCJKtc";
             font-weight: bold;
           }
         }
@@ -2497,7 +2497,7 @@ select {
     }
     p.title {
       margin: 0 0 14px 0;
-      font-family: NotoSansCJKtc;
+      // font-family: NotoSansCJKtc;
       font-size: 18px;
       font-weight: normal;
       font-stretch: normal;

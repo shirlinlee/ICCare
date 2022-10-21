@@ -87,8 +87,11 @@
             ><input type="text" value="abc1234" />
           </div>
           <div class="d_flex">
-            <span class="filled">會員等級</span
-            ><input type="text" value="會員等級" />
+            <span class="filled">會員等級</span>
+            <div class="multi_input d_flex has_btn">
+              <input type="text" value="會員等級" />
+              <button>重發驗證信</button>
+            </div>
           </div>
           <div class="d_flex">
             <span class="">帳號</span
@@ -110,16 +113,24 @@
           </div>
           <div class="d_flex">
             <span class="filled">手機</span>
-            <div class="multi_input d_flex">
+            <div class="multi_input has_btn d_flex">
               <select name="" id="" class="m1">
                 <option value="886">886</option></select
               ><input type="tel" value="901234567" class="m2" />
+              <button>
+                驗證
+              </button>
             </div>
           </div>
           <div class="d_flex">
-            <span class="filled">生日</span
-            ><div class="birthday">
-              <input type="tel" class="b_year" placeholder="年份" maxlength="4" />
+            <span class="filled">生日</span>
+            <div class="birthday">
+              <input
+                type="tel"
+                class="b_year"
+                placeholder="年份"
+                maxlength="4"
+              />
               <select class="b_month">
                 <option value="月份" disabled selected="selected">月份</option>
                 <option value="1">1</option>
@@ -135,7 +146,12 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
               </select>
-              <input type="tel" class="b_day" placeholder="日期"  maxlength="2" />
+              <input
+                type="tel"
+                class="b_day"
+                placeholder="日期"
+                maxlength="2"
+              />
             </div>
           </div>
           <div class="d_flex">

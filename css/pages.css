@@ -124,7 +124,6 @@ textarea.b_year,
 textarea.b_month,
 textarea.b_day {
   width: calc(33% - 3px) !important;
-  padding-left: 8px;
   padding-right: 8px;
 }
 @media screen and (max-width: 413px) {
@@ -1504,6 +1503,21 @@ select.unit.xl {
 .multi_input .m2 {
   width: calc(100% - 85px) !important;
 }
+.multi_input .m3 {
+  width: calc(33% - 3px);
+}
+.multi_input .m4 {
+  width: calc(67% - 3px);
+}
+@media screen and (max-width: 413px) {
+  .multi_input .m3,
+.multi_input .m4 {
+    width: 100% !important;
+  }
+  .multi_input .m3 {
+    margin-bottom: 10px;
+  }
+}
 
 .close {
   position: absolute;
@@ -1586,12 +1600,12 @@ select.unit.xl {
 }
 
 .member {
-  margin-top: 110px;
+  margin-top: 60px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 38px;
-  margin-bottom: 110px;
+  margin-bottom: 60px;
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
   -ms-border-radius: 22px;
@@ -1604,6 +1618,12 @@ select.unit.xl {
     margin-bottom: 30px;
     padding: 30px 20px 0;
   }
+}
+.member .content {
+  display: none;
+}
+.member .content.active {
+  display: block;
 }
 .member .basic_info {
   max-width: 410px;
@@ -1686,6 +1706,24 @@ select.unit.xl {
 @media screen and (max-width: 767px) {
   .member .basic_info > .d_flex .multi_input .m2 {
     width: calc(100% - 85px) !important;
+  }
+}
+.member .basic_info > .d_flex .multi_input .m3 {
+  width: calc(50% - 3px);
+  padding-right: 8px;
+  line-height: 20px;
+}
+.member .basic_info > .d_flex .multi_input .m4 {
+  width: calc(50% - 3px);
+  margin-bottom: 0;
+}
+@media screen and (max-width: 413px) {
+  .member .basic_info > .d_flex .multi_input .m3,
+.member .basic_info > .d_flex .multi_input .m4 {
+    width: 100% !important;
+  }
+  .member .basic_info > .d_flex .multi_input .m3 {
+    margin-bottom: 10px;
   }
 }
 .member .basic_info > .d_flex .multi_input.has_btn button {
@@ -2066,6 +2104,87 @@ select.unit.xl {
   background-position: center;
 }
 
+.tab {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+.tab li {
+  color: #535353;
+  margin: 0;
+  padding: 0 50px;
+  line-height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (max-width: 599px) {
+  .tab li {
+    padding: 0 20px;
+  }
+}
+.tab li h6 {
+  border-bottom: solid 2px transparent;
+}
+.tab li.multi h6 {
+  position: relative;
+}
+.tab li.multi h6::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-image: url(../images/ic-arrow-6.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px;
+}
+@media screen and (max-width: 599px) {
+  .tab li.multi h6::after {
+    right: 0;
+  }
+}
+.tab li .sub_list {
+  display: none;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 50px;
+  -webkit-box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
+          box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
+  background-color: rgba(71, 195, 228, 0.8);
+  border-radius: 15px;
+  padding: 10px;
+}
+@media screen and (max-width: 599px) {
+  .tab li .sub_list {
+    position: relative;
+    top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+.tab li .sub_list a {
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+.tab li.active {
+  color: #49c4e5;
+  border-color: transparent;
+}
+.tab li.active .sub_list {
+  display: block;
+}
+.tab li.active h6 {
+  border-bottom: solid 2px #49c4e5;
+}
+.tab li.active h6::after {
+  background-image: url(../images/ic-arrow-5.png);
+}
+
 .product_list {
   padding-top: 90px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f7faff), to(#d9f4ff));
@@ -2081,87 +2200,12 @@ select.unit.xl {
     width: 100%;
   }
 }
-.product_list .tab {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
-}
-.product_list .tab li {
-  color: #535353;
-  margin: 0;
-  padding: 0 50px;
-  line-height: 40px;
-  position: relative;
-  cursor: pointer;
-}
 @media screen and (max-width: 599px) {
   .product_list .tab li {
     width: 100%;
     padding: 0;
     border-bottom: 1px solid #ccc;
   }
-}
-.product_list .tab li h6 {
-  border-bottom: solid 2px transparent;
-}
-.product_list .tab li.multi h6 {
-  position: relative;
-}
-.product_list .tab li.multi h6::after {
-  content: "";
-  position: absolute;
-  right: -30px;
-  display: inline-block;
-  width: 20px;
-  height: 40px;
-  background-image: url(../images/ic-arrow-6.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 15px;
-}
-@media screen and (max-width: 599px) {
-  .product_list .tab li.multi h6::after {
-    right: 0;
-  }
-}
-.product_list .tab li .sub_list {
-  display: none;
-  width: 100%;
-  left: 0;
-  position: absolute;
-  top: 50px;
-  -webkit-box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
-          box-shadow: 0px 7px 14.7px 1.3px rgba(75, 143, 178, 0.15);
-  background-color: rgba(71, 195, 228, 0.8);
-  border-radius: 15px;
-  padding: 10px;
-}
-@media screen and (max-width: 599px) {
-  .product_list .tab li .sub_list {
-    position: relative;
-    top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-}
-.product_list .tab li .sub_list a {
-  color: #fff;
-  text-align: center;
-  line-height: 40px;
-}
-.product_list .tab li.active {
-  color: #49c4e5;
-  border-color: transparent;
-}
-.product_list .tab li.active .sub_list {
-  display: block;
-}
-.product_list .tab li.active h6 {
-  border-bottom: solid 2px #49c4e5;
-}
-.product_list .tab li.active h6::after {
-  background-image: url(../images/ic-arrow-5.png);
 }
 .product_list .products {
   -webkit-box-pack: justify;
@@ -2463,7 +2507,7 @@ select.unit.xl {
           justify-content: space-between;
 }
 .lb .lb_content .d_flex .W50 {
-  width: calc(50% - 10px);
+  width: calc(50% - 3px);
 }
 @media screen and (max-width: 767px) {
   .lb .lb_content .d_flex .W50 {

@@ -65,6 +65,12 @@
             </li>
 
             <li class="redirect">
+              <a href="javascript:;" onclick="openCouponLb()">
+                <p>抵用碼兌換</p>
+              </a>
+            </li>
+
+            <li class="redirect">
               <a href="member.html">
                 <p>會員專區</p>
               </a>
@@ -79,155 +85,241 @@
         <!-- <div class="menu_bg"></div> -->
       </div>
 
-      <div class="member W1280 d_flex bg_white">
-        <div class="basic_info">
-          <h4 class="title must_filled">基本資訊</h4>
-          <div class="d_flex">
-            <span class="filled">會員編號</span
-            ><input type="text" value="abc1234" />
-          </div>
-          <div class="d_flex">
-            <span class="filled">會員等級</span>
-            <div class="multi_input d_flex has_btn">
-              <input type="text" value="會員等級" />
-              <button>重發驗證信</button>
+      <!-- 折扣碼的code start -->
+      <div class="lb coupin_lb">
+        <div class="lb_content W520">
+          <label class="close close_lb">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+          <div class="W400">
+            <div class="coupon_input">
+              <div class="t_center">
+                <h3 class="title underline">請輸入抵用碼</h3>
+              </div>
+              <input type="text" class="mb10" />
+              <div class="errMsg f_red f14 pl5 t_center">
+                兌換失敗，請重新輸入
+              </div>
+              <div class="d_flex btn_area mt20">
+                <button class="light W50 close_lb">
+                  <span>取消</span>
+                </button>
+                <button class="W50 sendCoupon">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+            <div class="coupon_sent">
+              <div class="t_center">
+                <h3 class="title underline">兌換成功</h3>
+              </div>
+              <p class="f16 f_grey t_center">
+                延長VIP效期 6個月<br />增加緊急諸詢次數 2次
+              </p>
+
+              <div style="width: 200px; margin: 30px auto 10px">
+                <button class="W100 close_lb">
+                  <span>確認</span>
+                </button>
+              </div>
             </div>
           </div>
-          <div class="d_flex">
-            <span class="">帳號</span
-            ><input type="text" value="arthur@pace.com.tw" />
-          </div>
-          <div class="d_flex">
-            <span class="filled">密碼</span
-            ><input type="text" value="Pace*****" />
-          </div>
-          <div class="d_flex">
-            <span class="filled">姓名</span><input type="text" value="陳*明" />
-          </div>
-          <div class="d_flex">
-            <span class="filled">性別</span
-            ><select name="" id="">
-              <option value="男">男</option>
-              <option value="女">女</option>
-            </select>
-          </div>
-          <div class="d_flex">
-            <span class="filled">手機</span>
-            <div class="multi_input has_btn d_flex">
-              <select name="" id="" class="m1">
-                <option value="886">886</option></select
-              ><input type="tel" value="901234567" class="m2" />
-              <button>
-                驗證
-              </button>
+        </div>
+      </div>
+      <script>
+        function openCouponLb() {
+          $(".coupon_input").css({ display: "block" });
+          $(".coupon_sent").css({ display: "none" });
+          $(".coupin_lb").addClass("open");
+        }
+        $("body").on("click", ".close_lb", function () {
+          $(".lb").removeClass("open");
+        });
+
+        $("body").on("click", ".sendCoupon", function () {
+          $(".coupon_input").css({ display: "none" });
+          $(".coupon_sent").css({ display: "block" });
+        });
+      </script>
+      <!-- 折扣碼的code end -->
+
+      <div class="member W1280 bg_white">
+        <ul class="tab d_flex f19 W100">
+          <li class="active" data-tab="content1"><h6>基本資訊</h6></li>
+          <li data-tab="content2"><h6>子帳號設定</h6></li>
+        </ul>
+        <div class="content content1 active">
+          <div class="basic_info">
+            <h4 class="title must_filled">基本資訊</h4>
+            <div class="d_flex">
+              <span class="filled">會員編號</span
+              ><input type="text" value="abc1234" />
             </div>
-          </div>
-          <div class="d_flex">
-            <span class="filled">生日</span>
-            <div class="birthday">
-              <input
-                type="tel"
-                class="b_year"
-                placeholder="年份"
-                maxlength="4"
-              />
-              <select class="b_month">
-                <option value="月份" disabled selected="selected">月份</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
+            <div class="d_flex">
+              <span class="filled">會員等級</span>
+              <div class="multi_input d_flex has_btn">
+                <input type="text" value="會員等級" />
+                <button>重發驗證信</button>
+              </div>
+            </div>
+            <div class="d_flex">
+              <span class="">帳號</span
+              ><input type="text" value="arthur@pace.com.tw" />
+            </div>
+            <div class="d_flex">
+              <span class="filled">密碼</span
+              ><input type="text" value="Pace*****" />
+            </div>
+            <div class="d_flex">
+              <span class="filled">姓名</span
+              ><input type="text" value="陳*明" />
+            </div>
+            <div class="d_flex">
+              <span class="filled">性別</span
+              ><select name="" id="">
+                <option value="男">男</option>
+                <option value="女">女</option>
               </select>
-              <input
-                type="tel"
-                class="b_day"
-                placeholder="日期"
-                maxlength="2"
-              />
+            </div>
+            <div class="d_flex">
+              <span class="filled">手機</span>
+              <div class="multi_input has_btn d_flex">
+                <select name="" id="" class="m1">
+                  <option value="886">886</option></select
+                ><input type="tel" value="901234567" class="m2" />
+                <button>驗證</button>
+              </div>
+            </div>
+            <div class="d_flex">
+              <span class="filled">生日</span>
+              <div class="birthday">
+                <input
+                  type="tel"
+                  class="b_year"
+                  placeholder="年份"
+                  maxlength="4"
+                />
+                <select class="b_month">
+                  <option value="月份" disabled selected="selected">
+                    月份
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <input
+                  type="tel"
+                  class="b_day"
+                  placeholder="日期"
+                  maxlength="2"
+                />
+              </div>
+            </div>
+            <div class="d_flex">
+              <span class="filled">證件號碼</span>
+              <div class="multi_input d_flex">
+                <select name="" id="" class="m3">
+                  <option selected disabled hidden>證件類別</option>
+                  <option value="身分證">身分證</option>
+                  <option value="護照">護照</option>
+                  <option value="居留證">居留證</option>
+                </select>
+                <input type="tel" value="" class="m4" placeholder="證件號碼" />
+              </div>
+            </div>
+            <div class="d_flex">
+              <span>電子信箱</span
+              ><input type="text" value=" arthur@pace.com.tw" />
+            </div>
+            <div class="d_flex">
+              <span
+                >健保卡號 <font class="f_blue">※非臺灣地區民眾免填</font></span
+              ><input type="text" id="card" value="4439-2228-1234" />
+              <!-- pattern="{4}\-?\d{4}\-?\d{4}" -->
+            </div>
+            <a href="#" class="btn">
+              <span>確認儲存</span>
+            </a>
+          </div>
+
+          <hr />
+
+          <div class="social_binding W300">
+            <h4 class="title">社交帳號綁定</h4>
+            <p>定期提供優惠訊息</p>
+            <div class="d_flex">
+              <a href=""><img src="images/ic-line-color.png" alt="" /></a>
+              <a href=""><img src="images/ic-google-color.png" alt="" /></a>
+              <a href=""><img src="images/ic-fb-color.png" alt="" /></a>
             </div>
           </div>
-          <div class="d_flex">
-            <span>電子信箱</span
-            ><input type="text" value=" arthur@pace.com.tw" />
-          </div>
-          <div class="d_flex">
-            <span>健保卡號 <font class="f_blue">※非臺灣地區民眾免填</font></span
-            ><input type="text" id="card" value="4439-2228-1234" />
-            <!-- pattern="{4}\-?\d{4}\-?\d{4}" -->
-          </div>
-          <a href="#" class="btn">
-            <span>確認儲存</span>
-          </a>
         </div>
 
-        <hr />
-
-        <div class="social_binding W300">
-          <h4 class="title">社交帳號綁定</h4>
-          <p>定期提供優惠訊息</p>
-          <div class="d_flex">
-            <a href=""><img src="images/ic-line-color.png" alt="" /></a>
-            <a href=""><img src="images/ic-google-color.png" alt="" /></a>
-            <a href=""><img src="images/ic-fb-color.png" alt="" /></a>
-          </div>
-        </div>
-
-        <hr />
-
-        <div class="sub_account">
-          <h4 class="title">家庭群組設定</h4>
-          <button name="create_new">新增子帳號</button>
-          <div class="d_flex account_item">
-            <span class="sm">姓名</span
-            ><input type="text" value="王*華" class="sm" />
-            <span class="pl5">帳號1</span>
-            <input type="text" value="arthur@pace.com.tw" />
-            <div class="agent_btn_area d_flex">
-              <button class="f16 grey W140" name="agent" onclick="openLb()">
-                代理人設定
-              </button>
-              <button class="f16 grey W85" name="edit">編輯</button>
-              <button class="f16 light_grey W85" name="delete">刪除</button>
+        <div class="content content2">
+          <div class="sub_account">
+            <h4 class="title">子帳號設定</h4>
+            <button name="create_new">新增子帳號</button>
+            <div class="d_flex account_item">
+              <span class="sm">姓名</span
+              ><input type="text" value="王*華" class="sm" />
+              <span class="pl5">帳號1</span>
+              <input type="text" value="arthur@pace.com.tw" />
+              <div class="agent_btn_area d_flex">
+                <button class="f16 grey W140" name="agent" onclick="openLb()">
+                  代理人設定
+                </button>
+                <button class="f16 grey W85" name="edit">編輯</button>
+                <button class="f16 light_grey W85" name="delete">刪除</button>
+              </div>
             </div>
-          </div>
-          <div class="d_flex account_item">
-            <span class="sm">姓名</span
-            ><input type="text" value="王*華" class="sm" />
-            <span class="pl5">帳號2</span>
-            <input type="text" value="arthur@pace.com.tw" />
-            <div class="agent_btn_area d_flex">
-              <button class="f16 grey W140" name="agent" onclick="openLb()">
-                代理人設定
-              </button>
-              <button class="f16 grey W85" name="edit">編輯</button>
-              <button class="f16 light_grey W85" name="delete">刪除</button>
+            <div class="d_flex account_item">
+              <span class="sm">姓名</span
+              ><input type="text" value="王*華" class="sm" />
+              <span class="pl5">帳號2</span>
+              <input type="text" value="arthur@pace.com.tw" />
+              <div class="agent_btn_area d_flex">
+                <button class="f16 grey W140" name="agent" onclick="openLb()">
+                  代理人設定
+                </button>
+                <button class="f16 grey W85" name="edit">編輯</button>
+                <button class="f16 light_grey W85" name="delete">刪除</button>
+              </div>
             </div>
-          </div>
-          <div class="d_flex account_item">
-            <span class="sm">姓名</span
-            ><input type="text" value="王*華" class="sm" />
-            <span class="pl5">帳號3</span>
-            <input type="text" value="arthur@pace.com.tw" />
-            <div class="agent_btn_area d_flex">
-              <button class="f16 grey W140" name="agent" onclick="openLb()">
-                代理人設定
-              </button>
-              <button class="f16 grey W85" name="edit">編輯</button>
-              <button class="f16 light_grey W85" name="delete">刪除</button>
+            <div class="d_flex account_item">
+              <span class="sm">姓名</span
+              ><input type="text" value="王*華" class="sm" />
+              <span class="pl5">帳號3</span>
+              <input type="text" value="arthur@pace.com.tw" />
+              <div class="agent_btn_area d_flex">
+                <button class="f16 grey W140" name="agent" onclick="openLb()">
+                  代理人設定
+                </button>
+                <button class="f16 grey W85" name="edit">編輯</button>
+                <button class="f16 light_grey W85" name="delete">刪除</button>
+              </div>
             </div>
+
+            <!-- <a href="#" class="btn">
+              <span>確認儲存</span>
+            </a> -->
           </div>
 
-          <!-- <a href="#" class="btn">
-            <span>確認儲存</span>
-          </a> -->
+          <hr />
+
+          <div class="family basic_info">
+            <h4 class="title">家庭群組設定</h4>
+          </div>
         </div>
       </div>
       <div id="footer">
@@ -324,6 +416,12 @@
         return value;
       }
     }
+    $(".tab").on("click", "li", function () {
+      var content = $(this).attr('data-tab');
+      $(".tab li, .content").removeClass("active");
+      $(this).addClass("active");
+      $(`.${content}`).addClass("active");
+    });
   });
   function openLb() {
     $(".lb").addClass("open");

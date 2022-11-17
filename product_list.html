@@ -67,6 +67,12 @@
             </li>
 
             <li class="redirect">
+              <a href="javascript:;" onclick="openCouponLb()">
+                <p>抵用碼兌換</p>
+              </a>
+            </li>
+
+            <li class="redirect">
               <a href="member.html">
                 <p>會員專區</p>
               </a>
@@ -75,6 +81,64 @@
         </div>
         <!-- <div class="menu_bg"></div> -->
       </div>
+
+      <!-- 折扣碼的code start -->
+      <div class="lb coupin_lb">
+        <div class="lb_content W520">
+          <label class="close close_lb">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+          <div class="W400">
+            <div class="coupon_input">
+              <div class="t_center">
+                <h3 class="title underline">請輸入抵用碼</h3>
+              </div>
+              <input type="text" class="mb10">
+              <div class="errMsg f_red f14 pl5 t_center">兌換失敗，請重新輸入</div>
+              <div class="d_flex btn_area mt20">
+                <button class="light W50 close_lb">
+                  <span>取消</span>
+                </button>
+                <button class="W50 sendCoupon">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+            <div class="coupon_sent">
+              <div class="t_center">
+                <h3 class="title underline">兌換成功</h3>
+              </div>
+              <p class="f16 f_grey t_center">
+                延長VIP效期 6個月<br />增加緊急諸詢次數 2次
+              </p>
+  
+              <div style="width: 200px; margin: 30px auto 10px">
+                <button class="W100 close_lb">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function openCouponLb() {
+          $(".coupon_input").css({ display: "block" });
+          $(".coupon_sent").css({ display: "none" });
+          $(".coupin_lb").addClass("open");
+        }
+        $("body").on("click", ".close_lb", function () {
+          $(".lb").removeClass("open");
+        });
+
+        $("body").on("click", ".sendCoupon", function () {
+          $(".coupon_input").css({ display: "none" });
+          $(".coupon_sent").css({ display: "block" });
+        });
+      </script>
+      <!-- 折扣碼的code end -->
 
       <div class="wrapper product_list">
         <div class="W1280">

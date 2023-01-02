@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="csrf-token"
+      content="j0rgeeCTAcOzlyb1svycxKZwKcFCWIVdaumJ4g5N"
+    />
+
+    <title>ICCare</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="https://demo.iccare.vip/favicon.png"
+      type="images/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://demo.iccare.vip/front/css/reset.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/init.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://demo.iccare.vip/front/css/pages.css"
+    />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://demo.iccare.vip/front/plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="https://demo.iccare.vip/front/plugins/js/slick.min.js"></script>
+    <script src="https://demo.iccare.vip/front/plugins/js/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="https://demo.iccare.vip/en" class="logo"
+            ><img
+              src="https://demo.iccare.vip/front/images/logo.png"
+              alt="ICCare"
+          /></a>
+          <div class="func d_flex">
+            <label class="func_item menu-open-button" for="menu-open">
+              <span class="hamburger hamburger-1"></span>
+              <span class="hamburger hamburger-2"></span>
+              <span class="hamburger hamburger-3"></span>
+            </label>
+          </div>
+          <ul class="nav d_flex">
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en">
+                <p>24HR emergency consultation</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en/bankbook">
+                <p>My Health Passpport</p>
+              </a>
+            </li>
+            <li class="redirect" style="display: none">
+              <a
+                href="https://intellicentrics.page.link/?link=https://www.iccare.vip?apn%3Dcom.intellicentrics.biobytes%26ibi%3Dcom.intellicentrics.biobytes%26countryCode%3DTWN&apn=com.intellicentrics.biobytes&isi=1534598305&ibi=com.intellicentrics.biobytes&st=BioBytes&st=Redefining+how+we+care+for+our+health+one+byte+at+a+time&si=https://www.biobytes.net/wp-content/uploads/2021/01/BioBytes_color_no_URL.png"
+                target="_blank"
+              >
+                <p>健康數據管理</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en/products">
+                <p>Merchandise</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en/booking/list">
+                <p>Consultation Record</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en/login">
+                <p>Voucher Redemption</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en/member">
+                <p>My Account Info</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en/login">
+                <p>Login</p>
+              </a>
+            </li>
+            <li class="open_sub">
+              <p>Language</p>
+              <ul>
+                <li>English</li>
+                <li>中文</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="lb coupon_lb">
+        <div class="lb_content W520">
+          <label class="close close_lb">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+          <div class="W400">
+            <div class="coupon_input">
+              <div class="t_center">
+                <h3 class="title underline">Please enter voucher code</h3>
+              </div>
+              <input type="text" class="mb10" />
+              <div class="errMsg f_red f14 p15 t_center">
+                Redemption failed, please try again
+              </div>
+              <div class="d_flex btn_area mt20">
+                <button
+                  class="light W50 close_lb"
+                  type="button"
+                  onclick="closeCouponLb();"
+                >
+                  <span>Cancel</span>
+                </button>
+                <button
+                  class="W50 sendCoupon"
+                  type="button"
+                  onclick="sendCoupon();"
+                >
+                  <span>Confirm</span>
+                </button>
+              </div>
+            </div>
+            <div class="coupon_sent">
+              <div class="t_center">
+                <h3 class="title underline">Redemption Success</h3>
+              </div>
+              <p class="credit_code_result f16 f_grey t_center"></p>
+              <div style="width: 200px; margin: 30px auto 10px">
+                <button
+                  class="W100 close_lb"
+                  type="button"
+                  onclick="closeCouponLb();"
+                >
+                  <span>Confirm</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function openCouponLb() {
+          $(".coupon_input").show();
+          $(".coupon_input").find(".errMsg").hide();
+          $(".coupon_input").find("input").val("");
+          $(".coupon_sent").hide();
+          $(".coupon_lb").addClass("open");
+        }
+
+        function closeCouponLb() {
+          $(".coupon_lb").removeClass("open");
+          location.reload();
+        }
+
+        function sendCoupon() {
+          var code = $(".coupon_input").find("input").val();
+          if (code.length == 0) {
+            $(".coupon_input")
+              .find(".errMsg")
+              .text("Please enter voucher code");
+            $(".coupon_input").find(".errMsg").show();
+            return false;
+          }
+
+          var formData = new FormData();
+          formData.append("code", code);
+
+          $.ajax({
+            url: "https://demo.iccare.vip/en/credit/code/verify",
+            method: "POST",
+            data: formData,
+            dataType: "json",
+            contentType: false,
+            processData: false,
+            headers: {
+              "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+            },
+          }).done(function (res) {
+            if (res.error) {
+              $(".coupon_input").find(".errMsg").text(res.error.msg);
+              $(".coupon_input").find(".errMsg").show();
+              return false;
+            }
+
+            $(".coupon_input").hide();
+            $(".credit_code_result").text(res.data.msg);
+            $(".coupon_sent").show();
+          });
+        }
+      </script>
+      <div class="wrapper login pd130 W1280">
+        <div class="W300">
+          <h3 class="title">Welcome to IC Care</h3>
+          <form action="https://demo.iccare.vip/en/login" method="POST">
+            <input
+              type="hidden"
+              name="_token"
+              value="j0rgeeCTAcOzlyb1svycxKZwKcFCWIVdaumJ4g5N"
+            />
+            <input
+              type="text"
+              name="account"
+              class="ico mail"
+              placeholder="Account"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              class="ico pw"
+              placeholder="Password"
+              required
+            />
+            <div class="d_flex mb17">
+              <img
+                src="https://demo.iccare.vip/verify/code/image"
+                id="verifyCodeImage"
+              />
+              <input type="text" name="verifyCode" class="mt10" />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          <div class="d_flex">
+            <a href="https://demo.iccare.vip/en/password/reset" class="f_blue"
+              >Forgot your password?</a
+            >
+            <a href="https://demo.iccare.vip/en/register" class="f_blue"
+              >Register member</a
+            >
+          </div>
+          <div class="or"><font>or</font></div>
+          <div class="login_area">
+            <a href="https://demo.iccare.vip/en/login/google/auth"
+              ><img
+                src="https://demo.iccare.vip/front/images/ic-google-color.png"
+                alt=""
+              />
+              <font>Login via GOOGLE</font>
+            </a>
+            <a href="https://demo.iccare.vip/en/login/fb/auth"
+              ><img
+                src="https://demo.iccare.vip/front/images/ic-fb.png"
+                alt=""
+              />
+              <font class="f_white">Login via FACEBOOK</font>
+            </a>
+            <a href="https://demo.iccare.vip/en/login/line/auth"
+              ><img
+                src="https://demo.iccare.vip/front/images/ic-line.png"
+                alt=""
+              />
+              <font class="f_white">Login via LINE</font>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="https://demo.iccare.vip/front/images/logo_black.png" />
+          <p>
+            IntelliCentrics introduces trust into organizational
+            decision-making, enabling our customers to make more informed
+            decisions, reduce risk, and improve operational efficiencies.
+          </p>
+          <a
+            href="https://demo.iccare.vip/files/隱私權條款.pdf"
+            target="_blank"
+            style="display: unset"
+            >隱私權條款</a
+          >
+          |
+          <a
+            href="https://demo.iccare.vip/files/使用條款.pdf"
+            target="_blank"
+            style="display: unset"
+            >使用條款</a
+          >
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/init.js"></script>
+    <script>
+      $(function () {
+        var t = 0;
+        $("#verifyCodeImage").on("click", function () {
+          document.getElementById("verifyCodeImage").src =
+            "https://demo.iccare.vip/verify/code/image?_=" + t;
+          t++;
+        });
+      });
+    </script>
+  </body>
+</html>

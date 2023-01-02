@@ -75,6 +75,14 @@
                 <p>會員專區</p>
               </a>
             </li>
+
+            <li class="open_sub">
+              <p>語言</p>
+              <ul>
+                <li>中文</li>
+                <li>English</li>
+              </ul>
+            </li>
           </ul>
           <label class="func_item menu-open-button" for="menu-open">
             <span class="hamburger hamburger-1"></span>
@@ -417,7 +425,7 @@
       }
     }
     $(".tab").on("click", "li", function () {
-      var content = $(this).attr('data-tab');
+      var content = $(this).attr("data-tab");
       $(".tab li, .content").removeClass("active");
       $(this).addClass("active");
       $(`.${content}`).addClass("active");

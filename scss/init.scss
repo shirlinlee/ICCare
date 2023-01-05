@@ -1101,15 +1101,78 @@ b {
     }
   }
 
-  input[name="verifyCode"] {
-    width: calc(100% - 140px);
-    margin-bottom: 0;
-  }
-
   .login {
     .title {
       font-size: 31px;
       white-space: nowrap;
+    }
+  }
+  .member {
+    .basic_info {
+      max-width: 500px;
+      > .d_flex {
+        span {
+          width: 200px;
+        }
+        > input,
+        select,
+        .multi_input,
+        .birthday {
+          width: calc(100% - 220px);
+        }
+        @media screen and (max-width: 599px) {
+          span {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 5px;
+            .f_blue {
+              margin: 2px 0 0;
+            }
+          }
+          > input,
+          select,
+          .multi_input,
+          .birthday {
+            width: 100%;
+            .iti {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .sub_account {
+      .d_flex {
+        span {
+          width: 65px !important;
+          @media screen and (max-width: 767px) {
+            width: 100% !important;
+            margin-bottom: 10px;
+          }
+          &.sm {
+            width: 50px !important;
+            @media screen and (max-width: 767px) {
+              width: 100% !important;
+            }
+        }
+        }
+        input {
+          width: calc(45% - 160px);
+          
+        }
+        &.account_item {
+          > input {
+            @media screen and (max-width: 767px) {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+    .agent_btn_area {
+      @media screen and (max-width: 767px) {
+        padding-left: 0 !important;
+      }
     }
   }
 }

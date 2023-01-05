@@ -447,6 +447,11 @@ select {
   }
 }
 
+input[name="verifyCode"] {
+  width: calc(100% - 140px);
+  margin-bottom: 0;
+}
+
 .healthForm_detail {
   width: calc(100% - 60px);
   max-width: 880px;

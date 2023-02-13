@@ -597,14 +597,20 @@ b {
     width: 100%;
     height: calc(100vh - 60px);
     background-color: #fff;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
     -webkit-transform: translate(-100%, 0);
             transform: translate(-100%, 0);
+    opacity: 0;
+    z-index: -1;
   }
   #header .nav.active {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    opacity: 1;
+    z-index: 11;
   }
 }
 #header .nav > li {
@@ -996,7 +1002,7 @@ b {
 }
 @media screen and (max-width: 1100px) {
   .en #header .nav > li {
-    margin: 0 10px;
+    margin: 0 auto;
   }
 }
 .en #header .nav > li .dropdown {
@@ -1058,15 +1064,15 @@ b {
     margin: 2px 0 0;
   }
   .en .member .basic_info > .d_flex > input,
-.en .member .basic_info > .d_flex select,
-.en .member .basic_info > .d_flex .multi_input,
-.en .member .basic_info > .d_flex .birthday {
+  .en .member .basic_info > .d_flex select,
+  .en .member .basic_info > .d_flex .multi_input,
+  .en .member .basic_info > .d_flex .birthday {
     width: 100%;
   }
   .en .member .basic_info > .d_flex > input .iti,
-.en .member .basic_info > .d_flex select .iti,
-.en .member .basic_info > .d_flex .multi_input .iti,
-.en .member .basic_info > .d_flex .birthday .iti {
+  .en .member .basic_info > .d_flex select .iti,
+  .en .member .basic_info > .d_flex .multi_input .iti,
+  .en .member .basic_info > .d_flex .birthday .iti {
     width: 100%;
   }
 }

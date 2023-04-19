@@ -77,7 +77,7 @@ const init = {
   },
   langDetect() {
     const isEnVersion = window.location.pathname.indexOf("/en") > -1;
-    console.log(isEnVersion);
+    // console.log(isEnVersion);
     if (isEnVersion) {
       init.$body.addClass("en");
     } else {

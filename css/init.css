@@ -1105,4 +1105,12 @@ b {
   .en .member .agent_btn_area {
     padding-left: 0 !important;
   }
+}
+
+.swal2-popup {
+  width: 210px !important;
+}
+
+.swal2-html-container {
+  color: #47c3e4 !important;
 }/*# sourceMappingURL=init.css.map */

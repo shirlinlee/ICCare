@@ -77,8 +77,8 @@ textarea {
 }
 @media screen and (max-width: 767px) {
   input,
-select,
-textarea {
+  select,
+  textarea {
     padding: 9px 12px;
   }
 }
@@ -128,21 +128,21 @@ textarea.b_day {
 }
 @media screen and (max-width: 413px) {
   input.b_year, input.b_month, input.b_day,
-select.b_year,
-select.b_month,
-select.b_day,
-textarea.b_year,
-textarea.b_month,
-textarea.b_day {
+  select.b_year,
+  select.b_month,
+  select.b_day,
+  textarea.b_year,
+  textarea.b_month,
+  textarea.b_day {
     width: 100% !important;
   }
   input.b_year:not(:last-child), input.b_month:not(:last-child), input.b_day:not(:last-child),
-select.b_year:not(:last-child),
-select.b_month:not(:last-child),
-select.b_day:not(:last-child),
-textarea.b_year:not(:last-child),
-textarea.b_month:not(:last-child),
-textarea.b_day:not(:last-child) {
+  select.b_year:not(:last-child),
+  select.b_month:not(:last-child),
+  select.b_day:not(:last-child),
+  textarea.b_year:not(:last-child),
+  textarea.b_month:not(:last-child),
+  textarea.b_day:not(:last-child) {
     margin-bottom: 10px;
   }
 }
@@ -175,8 +175,8 @@ textarea.ico.phone {
 }
 @media screen and (max-width: 767px) {
   input.ico.phone,
-select.ico.phone,
-textarea.ico.phone {
+  select.ico.phone,
+  textarea.ico.phone {
     background-size: 15px;
     background-position: left 15px center;
   }
@@ -296,12 +296,12 @@ select.unit.xl {
 }
 @media screen and (max-width: 767px) {
   .login,
-.forget_pw,
-.contract,
-.contract_detail,
-.reserved,
-.bankbook,
-.booking_list {
+  .forget_pw,
+  .contract,
+  .contract_detail,
+  .reserved,
+  .bankbook,
+  .booking_list {
     margin-top: 30px;
     margin-bottom: 30px;
   }
@@ -657,12 +657,12 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 999px) {
   .plan .free,
-.plan .enterprise {
+  .plan .enterprise {
     width: 100%;
     margin-bottom: 30px;
   }
   .plan .free .detail,
-.plan .enterprise .detail {
+  .plan .enterprise .detail {
     padding-bottom: 20px;
   }
 }
@@ -679,7 +679,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .plan .free a,
-.plan .enterprise a {
+  .plan .enterprise a {
     margin-top: 30px;
   }
 }
@@ -690,7 +690,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .plan .free ul,
-.plan .enterprise ul {
+  .plan .enterprise ul {
     margin-top: 30px;
     padding: 0 30px 0 20px;
   }
@@ -1083,7 +1083,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .subscription .info .personal_info .d_flex .W50,
-.subscription .info .bill_info .d_flex .W50 {
+  .subscription .info .bill_info .d_flex .W50 {
     width: 100%;
   }
 }
@@ -1112,9 +1112,9 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .subscription .info .personal_info .d_flex .W33,
-.subscription .info .personal_info .d_flex .W67,
-.subscription .info .bill_info .d_flex .W33,
-.subscription .info .bill_info .d_flex .W67 {
+  .subscription .info .personal_info .d_flex .W67,
+  .subscription .info .bill_info .d_flex .W33,
+  .subscription .info .bill_info .d_flex .W67 {
     width: 100%;
   }
 }
@@ -1141,13 +1141,13 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .subscription .info .personal_info .d_flex .W33 select,
-.subscription .info .personal_info .d_flex .W33 input,
-.subscription .info .personal_info .d_flex .W67 select,
-.subscription .info .personal_info .d_flex .W67 input,
-.subscription .info .bill_info .d_flex .W33 select,
-.subscription .info .bill_info .d_flex .W33 input,
-.subscription .info .bill_info .d_flex .W67 select,
-.subscription .info .bill_info .d_flex .W67 input {
+  .subscription .info .personal_info .d_flex .W33 input,
+  .subscription .info .personal_info .d_flex .W67 select,
+  .subscription .info .personal_info .d_flex .W67 input,
+  .subscription .info .bill_info .d_flex .W33 select,
+  .subscription .info .bill_info .d_flex .W33 input,
+  .subscription .info .bill_info .d_flex .W67 select,
+  .subscription .info .bill_info .d_flex .W67 input {
     width: calc(100% - 90px);
   }
 }
@@ -1157,7 +1157,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .subscription .info .personal_info .d_flex .W67,
-.subscription .info .bill_info .d_flex .W67 {
+  .subscription .info .bill_info .d_flex .W67 {
     width: 100%;
   }
 }
@@ -1174,7 +1174,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .subscription .info .personal_info .d_flex .iti.iti--allow-dropdown,
-.subscription .info .bill_info .d_flex .iti.iti--allow-dropdown {
+  .subscription .info .bill_info .d_flex .iti.iti--allow-dropdown {
     margin-bottom: 17px;
   }
 }
@@ -1265,7 +1265,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .prescription,
-.pres_index {
+  .pres_index {
     margin-top: 0px;
     margin-bottom: 40px;
   }
@@ -1290,9 +1290,9 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 999px) {
   .prescription .medicine,
-.prescription .trans,
-.pres_index .medicine,
-.pres_index .trans {
+  .prescription .trans,
+  .pres_index .medicine,
+  .pres_index .trans {
     width: 100% !important;
     margin-bottom: 30px;
   }
@@ -1312,9 +1312,9 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 599px) {
   .prescription .medicine .upper,
-.prescription .trans .upper,
-.pres_index .medicine .upper,
-.pres_index .trans .upper {
+  .prescription .trans .upper,
+  .pres_index .medicine .upper,
+  .pres_index .trans .upper {
     padding: 25px 35px 0;
   }
 }
@@ -1336,9 +1336,9 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 599px) {
   .prescription .medicine .detail,
-.prescription .trans .detail,
-.pres_index .medicine .detail,
-.pres_index .trans .detail {
+  .prescription .trans .detail,
+  .pres_index .medicine .detail,
+  .pres_index .trans .detail {
     padding: 30px 35px 35px;
   }
 }
@@ -1356,15 +1356,15 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 599px) {
   .prescription .medicine .W50,
-.prescription .trans .W50,
-.pres_index .medicine .W50,
-.pres_index .trans .W50 {
+  .prescription .trans .W50,
+  .pres_index .medicine .W50,
+  .pres_index .trans .W50 {
     width: 100%;
   }
   .prescription .medicine .W50:last-child,
-.prescription .trans .W50:last-child,
-.pres_index .medicine .W50:last-child,
-.pres_index .trans .W50:last-child {
+  .prescription .trans .W50:last-child,
+  .pres_index .medicine .W50:last-child,
+  .pres_index .trans .W50:last-child {
     margin-top: 40px;
   }
 }
@@ -1390,7 +1390,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 599px) {
   .prescription .trans h3,
-.pres_index .trans h3 {
+  .pres_index .trans h3 {
     height: 0 !important;
   }
 }
@@ -1412,7 +1412,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 599px) {
   .prescription a,
-.pres_index a {
+  .pres_index a {
     margin: 15px auto 0;
     line-height: 45px;
     height: 48px;
@@ -1424,7 +1424,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 599px) {
   .prescription a span,
-.pres_index a span {
+  .pres_index a span {
     font-size: 17px;
   }
 }
@@ -1516,7 +1516,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 413px) {
   .multi_input .m3,
-.multi_input .m4 {
+  .multi_input .m4 {
     width: 100% !important;
   }
   .multi_input .m3 {
@@ -1603,6 +1603,100 @@ input[name=verifyCode] {
     width: calc(50% - 8px);
   }
 }
+.reserved .share_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 780px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.reserved .share_area ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.reserved .share_area ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 65px;
+  margin: 0 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.reserved .share_area ul li img {
+  width: 40px;
+  margin-bottom: 5px;
+}
+.reserved .share_area ul li p {
+  font-size: 13px;
+  color: #444;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.reserved .share_area .copy_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: calc(100% - 320px);
+  border: 2px dashed #dcdcdc;
+  border-radius: 30px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 5px;
+}
+.reserved .share_area .copy_link p {
+  width: calc(100% - 150px);
+  text-align: left;
+  padding: 0 15px 0 15px;
+  line-height: 44px;
+  font-size: 15px;
+  color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.reserved .share_area .copy_link button {
+  width: 150px;
+  margin-bottom: 0;
+  font-size: 15px;
+  cursor: pointer;
+}
 
 .member {
   margin-top: 60px;
@@ -1685,8 +1779,8 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 767px) {
   .member .basic_info > .d_flex > input,
-.member .basic_info > .d_flex select,
-.member .basic_info > .d_flex .birthday {
+  .member .basic_info > .d_flex select,
+  .member .basic_info > .d_flex .birthday {
     width: calc(100% - 75px);
   }
 }
@@ -1724,7 +1818,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 413px) {
   .member .basic_info > .d_flex .multi_input .m3,
-.member .basic_info > .d_flex .multi_input .m4 {
+  .member .basic_info > .d_flex .multi_input .m4 {
     width: 100% !important;
   }
   .member .basic_info > .d_flex .multi_input .m3 {
@@ -2031,7 +2125,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 999px) {
   .booking_list .product,
-.booking_list .consult {
+  .booking_list .consult {
     margin-bottom: 0;
   }
 }

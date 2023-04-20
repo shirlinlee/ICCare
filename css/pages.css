@@ -1623,6 +1623,17 @@ input[name=verifyCode] {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media screen and (max-width: 700px) {
+  .reserved .share_area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .reserved .share_area ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1633,6 +1644,14 @@ input[name=verifyCode] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+@media screen and (max-width: 700px) {
+  .reserved .share_area ul {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .reserved .share_area ul li {
   display: -webkit-box;
@@ -1651,9 +1670,26 @@ input[name=verifyCode] {
           align-items: center;
   cursor: pointer;
 }
+@media screen and (max-width: 999px) {
+  .reserved .share_area ul li {
+    margin: 0 3px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .reserved .share_area ul li {
+    max-width: 65px;
+    width: 25%;
+    margin: 0;
+  }
+}
 .reserved .share_area ul li img {
   width: 40px;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 999px) {
+  .reserved .share_area ul li img {
+    width: 37px;
+  }
 }
 .reserved .share_area ul li p {
   font-size: 13px;
@@ -1680,6 +1716,18 @@ input[name=verifyCode] {
           justify-content: end;
   padding: 5px;
 }
+@media screen and (max-width: 999px) {
+  .reserved .share_area .copy_link {
+    width: calc(100% - 300px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .reserved .share_area .copy_link {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 15px;
+  }
+}
 .reserved .share_area .copy_link p {
   width: calc(100% - 150px);
   text-align: left;
@@ -1691,11 +1739,26 @@ input[name=verifyCode] {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media screen and (max-width: 999px) {
+  .reserved .share_area .copy_link p {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .reserved .share_area .copy_link p {
+    width: calc(100% - 120px);
+  }
+}
 .reserved .share_area .copy_link button {
   width: 150px;
   margin-bottom: 0;
   font-size: 15px;
   cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .reserved .share_area .copy_link button {
+    width: 115px;
+  }
 }
 
 .member {

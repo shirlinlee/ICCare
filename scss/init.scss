@@ -1179,8 +1179,18 @@ b {
   }
 }
 .swal2-popup {
-  width: 210px !important;
+  width: 280px !important;
+  .swal2-styled {
+    height: 44px;
+    border-radius: 22px !important;
+    padding: 0 30px;
+    -webkit-border-radius: 22px !important;
+    -moz-border-radius: 22px !important;
+    -ms-border-radius: 22px !important;
+    -o-border-radius: 22px !important;
+  }
 }
 .swal2-html-container {
-  color: #47c3e4 !important;
+  padding-top: 10px !important;
+  // color: #47c3e4 !important;
 }

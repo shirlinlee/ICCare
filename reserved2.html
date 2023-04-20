@@ -248,7 +248,6 @@
             document.execCommand("copy");
             $temp.remove();
             Swal.fire({
-              position: "bottom-start",
               text: "連結已複製",
               showConfirmButton: false,
               timer: 1500,
@@ -257,9 +256,13 @@
           break;
         case "whatsapp":
           {
-            window.location.href = `${
-              isMobile ? "https://web.whatsapp.com/send?" : "whatsapp://send?"
-            }${shareLink}`;
+            window.open(
+              `${
+                isMobile
+                  ? "whatsapp://send?text="
+                  : "https://web.whatsapp.com/send?text="
+              }${shareLink}`
+            );
           }
           break;
         case "messenger":
@@ -276,6 +279,34 @@
             }
           }
           break;
+        case "wechat":
+          {
+            if (isMobile) {
+              var $temp = $("<input>");
+              $("body").append($temp);
+              $temp.val(shareLink).select();
+              document.execCommand("copy");
+              $temp.remove();
+              Swal.fire({
+                text: "連結已複製",
+                confirmButtonText: "開啟wechat",
+                confirmButtonColor: "#49c4e5",
+              }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                  window.open("weixin://");
+                }
+              });
+            } else {
+              window.open(
+                `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${shareLink}`,
+                "_blank",
+                "top=280,left=280,width=300,height=300"
+              );
+            }
+          }
+          break;
+
         default: {
           window.open(`https://lineit.line.me/share/ui?url=${shareLink}`);
         }

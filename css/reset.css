@@ -360,42 +360,6 @@ td {
   vertical-align: top;
 }
 
-/* loading */
-.loading {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.99);
-  z-index: 99;
-}
-
-.loading .box {
-  margin: 5rem auto;
-  font-size: 0.3em;
-  color: #c5a86f;
-  position: relative;
-  -webkit-animation: opac 2s infinite linear;
-  animation: opac 2s infinite linear;
-}
-
-.loading span {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -0.8rem auto auto -0.8rem;
-  border: 2px solid;
-  border-color: #c5a86f transparent #c5a86f transparent;
-  border-radius: 5rem;
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-}
-
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);

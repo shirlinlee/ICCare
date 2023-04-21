@@ -1582,6 +1582,9 @@ input[name=verifyCode] {
   font-weight: bold;
   padding-right: 10px;
 }
+.reserved .wait_line .loading {
+  margin: 0 auto;
+}
 .reserved .d_flex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1615,10 +1618,10 @@ input[name=verifyCode] {
           flex-direction: row;
   width: 100%;
   max-width: 780px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1664,7 +1667,7 @@ input[name=verifyCode] {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 65px;
-  margin: 0 5px;
+  margin: 0 5px 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1672,14 +1675,7 @@ input[name=verifyCode] {
 }
 @media screen and (max-width: 999px) {
   .reserved .share_area ul li {
-    margin: 0 3px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .reserved .share_area ul li {
-    max-width: 65px;
-    width: 25%;
-    margin: 0;
+    margin: 0 3px 20px;
   }
 }
 .reserved .share_area ul li img {
@@ -2758,6 +2754,34 @@ input[name=verifyCode] {
   .lb .scrollbar {
     height: calc(95vh - 300px);
   }
+}
+@media screen and (max-width: 767px) {
+  .lb .privacy_title,
+  .lb .usage_title {
+    font-size: 21px;
+  }
+}
+.lb .privacy_content,
+.lb .usage_content {
+  font-size: 14px;
+  line-height: 1.5;
+  height: calc(100vh - 300px);
+  overflow-y: scroll;
+  padding-right: 15px;
+}
+@media screen and (max-width: 767px) {
+  .lb .privacy_content,
+  .lb .usage_content {
+    margin-bottom: 10px;
+  }
+}
+.lb .privacy_content strong,
+.lb .usage_content strong {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 15px;
 }
 
 .uploader input[type=file] {

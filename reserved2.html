@@ -156,27 +156,35 @@
         <div class="W100">
           <div class="share_area">
             <ul>
-              <li class="share" id="whatsapp" data-pc="" data-mb="">
+              <li class="share" id="whatsapp">
                 <img src="images/share/whatsapp.png" alt="" />
                 <p>whatsapp</p>
               </li>
-              <li class="share" id="line" data-pc="" data-mb="">
+              <li class="share" id="line">
                 <img src="images/share/line.png" alt="" />
                 <p>line</p>
               </li>
-              <li class="share" id="wechat" data-pc="" data-mb="">
+              <li class="share" id="wechat">
                 <img src="images/share/wechat.png" alt="" />
                 <p>wechat</p>
               </li>
-              <li class="share" id="messenger" data-pc="" data-mb="">
+              <li class="share" id="messenger">
                 <img src="images/share/messenger.png" alt="" />
                 <p>messenger</p>
               </li>
+              <!-- <li class="share" id="chrome">
+                <img src="images/share/chrome.png" alt="" />
+                <p>chrome</p>
+              </li> -->
+              <li class="share" id="copy">
+                <img src="images/share/copy.png" alt="" />
+                <p>複製連結</p>
+              </li>
             </ul>
-            <div class="copy_link">
+            <!-- <div class="copy_link">
               <p></p>
               <button class="share" id="copy">複製視訊連結</button>
-            </div>
+            </div> -->
           </div>
         </div>
         <iframe
@@ -205,7 +213,8 @@
             decision-making, enabling our customers to make more informed
             decisions, reduce risk, and improve operational efficiencies.
           </p>
-          <a href="javascript:;">隱私權條款</a>
+          <a href="javascript:;" class="privacy">隱私權條款</a> |
+          <a href="javascript:;" class="usage">使用條款</a>
         </div>
       </div>
     </div>
@@ -306,7 +315,14 @@
             }
           }
           break;
-
+        case "chrome":
+          {
+            window.location.href = `googlechrome${shareLink.replace(
+              "http",
+              ""
+            )}`;
+          }
+          break;
         default: {
           window.open(`https://lineit.line.me/share/ui?url=${shareLink}`);
         }

@@ -84,9 +84,38 @@ const init = {
       init.$body.removeClass("en");
     }
   },
+  policyHandler: function () {
+    var policy_name;
+    init.$body.on("click", "a", function () {
+      var policy_name = $(this).attr("class");
+      if ($(`#${policy_name}_lb`).length === 0) {
+        $.ajax({
+          url: `./../${policy_name}_policy.html`,
+          success: function (response) {
+            init.$body.append(response).ready(function () {
+              $(`#${policy_name}_lb`).addClass("open");
+              $("html, body").addClass("scrollHide");
+            });
+          },
+          error: function (xhr) {
+            alert("發生錯誤: " + xhr.status + " " + xhr.statusText);
+          },
+        });
+      } else {
+        $(`#${policy_name}_lb`).addClass("open");
+        $("html, body").addClass("scrollHide");
+      }
+    });
+
+    init.$body.on("click", ".close_lb", function () {
+      $(`#${policy_name}_lb`).removeClass("open");
+      $("html, body").removeClass("scrollHide");
+    });
+  },
 };
 
 $(function () {
   init.navHandler();
   init.langDetect();
+  init.policyHandler();
 });

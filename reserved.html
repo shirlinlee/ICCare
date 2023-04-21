@@ -151,12 +151,31 @@
       </script>
       <!-- 折扣碼的code end -->
 
-      <div class="wrapper reserved pd150 W1280">
-        <b class="f36">已為您安排健康諮詢</b>
+      <div id="reserved1" class="wrapper reserved pd150 W1280">
+        <div class="W630">
+          <div class="wait_line">
+            <p class="f26">正在確認候診人數</p>
+            <img src="./images/loading.svg" alt="" class="loading" />
+          </div>
+          <div class="d_flex btn_area">
+            <button class="light">
+              <span><a href="https://demo.iccare.vip/zh-TW">取消</a></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="reserved2"
+        class="wrapper reserved pd150 W1280"
+        style="display: none"
+      >
+        <b class="f36">已為您安排緊急醫療諮詢</b>
         <div class="W630">
           <div class="wait_line">
             <p class="f26">目前等候人數</p>
             <p class="f26 line2"><font class="f100 f_blue">06</font> 位</p>
+            <p class="f26 line2" id="waitingTime">預估等候時間：35分鐘</p>
           </div>
           <p class="f26">
             是否確認進入診間
@@ -180,7 +199,8 @@
             decision-making, enabling our customers to make more informed
             decisions, reduce risk, and improve operational efficiencies.
           </p>
-          <a href="javascript:;">隱私權條款</a>
+          <a href="javascript:;" class="privacy">隱私權條款</a> |
+          <a href="javascript:;" class="usage">使用條款</a>
         </div>
       </div>
     </div>
@@ -319,4 +339,10 @@
       console.log(uploadFiles[i].file);
     }
   }
+
+  // loading demo展示用，請後端關閉
+  setTimeout(() => {
+    $("#reserved1").hide();
+    $("#reserved2").show();
+  }, 3000);
 </script>

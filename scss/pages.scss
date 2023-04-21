@@ -1501,6 +1501,10 @@ input[name="verifyCode"] {
         padding-right: 10px;
       }
     }
+
+    .loading {
+      margin: 0 auto;
+    }
   }
 
   .d_flex {
@@ -1529,8 +1533,8 @@ input[name="verifyCode"] {
     flex-direction: row;
     width: 100%;
     max-width: 780px;
-    justify-content: space-between;
-    margin: 0 auto 20px;
+    justify-content: center;
+    margin: 0 auto;
     align-items: flex-start;
     @media screen and (max-width: 700px) {
       flex-direction: column;
@@ -1549,16 +1553,11 @@ input[name="verifyCode"] {
         flex-wrap: wrap;
         flex-direction: column;
         width: 65px;
-        margin: 0 5px;
+        margin: 0 5px 20px;
         align-items: center;
         cursor: pointer;
         @media screen and (max-width: 999px) {
-          margin: 0 3px;
-        }
-        @media screen and (max-width: 700px) {
-          max-width: 65px;
-          width: 25%;
-          margin: 0;
+          margin: 0 3px 20px;
         }
         img {
           width: 40px;
@@ -2713,6 +2712,30 @@ input[name="verifyCode"] {
     overflow-y: auto;
     @media screen and (max-width: 767px) {
       height: calc(95vh - 300px);
+    }
+  }
+  .privacy_title,
+  .usage_title {
+    @media screen and (max-width: 767px) {
+      font-size: 21px;
+    }
+  }
+  .privacy_content,
+  .usage_content {
+    font-size: 14px;
+    line-height: 1.5;
+    height: calc(100vh - 300px);
+    overflow-y: scroll;
+    padding-right: 15px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+    strong {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 15px;
     }
   }
 }

@@ -7,11 +7,11 @@ const init = {
     });
 
     init.$body.on("mouseenter", ".has_sub", function (e) {
-      $(".dropdown").fadeIn(200);
+      $(this).find(".dropdown").fadeIn(200);
     });
 
     init.$body.on("mouseleave", ".has_sub", function (e) {
-      $(".dropdown").hide();
+      $(this).find(".dropdown").hide();
     });
 
     init.$body.on("click", ".open_sub", function () {

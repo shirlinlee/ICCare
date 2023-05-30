@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>ICCare</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="images/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="plugins/js/slick.min.js"></script>
+    <script src="plugins/js/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="/" class="logo"
+            ><img src="images/logo.png" alt="ICCare"
+          /></a>
+          <ul class="nav d_flex">
+            <li class="redirect">
+              <a href="index.html">
+                <p>24小時醫療諮詢</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="bankbook.html">
+                <p>我的健康存摺</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="#" target="_blank">
+                <p>健康數據管理</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="product_list.html">
+                <p>周邊商品</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="booking_list.html">
+                <p>訂單記錄</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="javascript:;" onclick="openCouponLb()">
+                <p>抵用碼兌換</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="member.html">
+                <p>會員專區</p>
+              </a>
+            </li>
+
+            <li class="open_sub">
+              <p>語言</p>
+              <ul>
+                <li>中文</li>
+                <li>English</li>
+              </ul>
+            </li>
+          </ul>
+          <label class="func_item menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+        </div>
+        <!-- <div class="menu_bg"></div> -->
+      </div>
+
+      <!-- 折扣碼的code start -->
+      <div class="lb coupin_lb">
+        <div class="lb_content W520">
+          <label class="close close_lb">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+          <div class="W400">
+            <div class="coupon_input">
+              <div class="t_center">
+                <h3 class="title underline">請輸入抵用碼</h3>
+              </div>
+              <input type="text" class="mb10" />
+              <div class="errMsg f_red f14 pl5 t_center">
+                兌換失敗，請重新輸入
+              </div>
+              <div class="d_flex btn_area mt20">
+                <button class="light W50 close_lb">
+                  <span>取消</span>
+                </button>
+                <button class="W50 sendCoupon">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+            <div class="coupon_sent">
+              <div class="t_center">
+                <h3 class="title underline">兌換成功</h3>
+              </div>
+              <p class="f16 f_grey t_center">
+                延長VIP效期 6個月<br />增加緊急諸詢次數 2次
+              </p>
+
+              <div style="width: 200px; margin: 30px auto 10px">
+                <button class="W100 close_lb">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function openCouponLb() {
+          $(".coupon_input").css({ display: "block" });
+          $(".coupon_sent").css({ display: "none" });
+          $(".coupin_lb").addClass("open");
+        }
+        $("body").on("click", ".close_lb", function () {
+          $(".lb").removeClass("open");
+        });
+
+        $("body").on("click", ".sendCoupon", function () {
+          $(".coupon_input").css({ display: "none" });
+          $(".coupon_sent").css({ display: "block" });
+        });
+      </script>
+      <!-- 折扣碼的code end -->
+
+      <div class="vip_page W1280 bg_white">
+        <h4 class="title">VIP專人服務</h4>
+        <ul class="tab d_flex f19 W100">
+          <li><a href="med_consult.html">藥物諮詢</a></li>
+          <li><a href="med_deliver.html">藥物寄送</a></li>
+          <li class="active">特診服務</li>
+          <li><a href="vip_record.html">紀錄追蹤</a></li>
+        </ul>
+        <div class="content">
+          <div class="basic_info">
+            <div class="W630">
+              IC
+              Care與各大特約醫學中心及專科診所合作，提供即時專科的約診服務，針對不同的醫療需求，IC
+              Care 協助用戶安排至合適的門診，使用戶獲得更完善的醫療品質與體驗
+              。<br /><br />
+              費用：依地區及狀況而定，目前特診服務會依照地區及用戶需求有所差異，詳細需求請洽客服人員。<br />
+              服務時間：周一至周五 09:00-22:00 （不含例假日）<br />
+              您可以隨時提交表單，客服人員將於服務時間協助您。
+            </div>
+            <div class="W630">
+              <div class="d_flex">
+                <span class="filled mb10"
+                  >1.諮詢人姓名
+                  <font class="f_blue f11">請填寫真實姓名</font></span
+                >
+                <input type="text" />
+              </div>
+              <div class="d_flex">
+                <span class="filled mb10">2.諮詢人電話</span>
+                <input type="tel" />
+              </div>
+              <div class="d_flex mb17">
+                <span class="filled mb10 W100">3.諮詢人性別</span>
+                <div class="d_flex mr20">
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <label for="male">男</label>
+                </div>
+                <div class="d_flex">
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <label for="female">女</label>
+                </div>
+              </div>
+              <div class="d_flex">
+                <span class="filled mb10">4.諮詢人生日</span>
+                <input type="date" />
+              </div>
+              <div class="d_flex mb17">
+                <span class="filled mb10 W100">5.諮詢人證件號碼</span>
+                <div class="multi_input d_flex W100">
+                  <select name="" id="" class="m3">
+                    <option selected disabled hidden>證件類別</option>
+                    <option value="身分證">身分證</option>
+                    <option value="護照">護照</option>
+                    <option value="居留證">居留證</option>
+                  </select>
+                  <input
+                    type="tel"
+                    value=""
+                    class="m4"
+                    placeholder="證件號碼"
+                  />
+                </div>
+              </div>
+
+              <div class="d_flex">
+                <span class="filled mb10">6.看診地區</span>
+                <div class="W100 d_flex area_wrap mb17">
+                  <div class="W50 d_flex">
+                    <input name="area" type="radio" id="" />
+                    <select
+                      name=""
+                      id=""
+                      class=""
+                      style="width: calc(100% - 30px)"
+                    >
+                      <option value="北北基">北北基</option>
+                      <option value="桃竹苗">桃竹苗</option>
+                      <option value="中彰投">中彰投</option>
+                      <option value="雲嘉南">雲嘉南</option>
+                      <option value="高屏">高屏</option>
+                      <option value="宜花東">宜花東</option>
+                    </select>
+                  </div>
+                  <div class="W50 d_flex">
+                    <input name="area" type="radio" id="" />
+                    <p>其他 &nbsp;</p>
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      style="width: calc(100% - 75px)"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="d_flex">
+                <span class="filled mb10">7.看診科別</span>
+                <select name="" id="">
+                  <option value="胸腔內科">胸腔內科</option>
+                  <option value="">感染科</option>
+                  <option value="">胃腸肝膽科</option>
+                  <option value="">免疫風濕科</option>
+                  <option value="">腎臟內科</option>
+                  <option value="">新陳代謝內分泌 科</option>
+                  <option value="">心臟科</option>
+                  <option value="">神經外科</option>
+                  <option value="">大直腸肛門科</option>
+                  <option value="">乳房甲狀腺科</option>
+                  <option value="">胸腔外科</option>
+                  <option value="">整形外科</option>
+                  <option value="">消化外科</option>
+                  <option value="">血液腫瘤科</option>
+                  <option value="">家醫科</option>
+                  <option value="">婦產科</option>
+                  <option value="">小兒科</option>
+                  <option value="">耳鼻喉科精神科</option>
+                  <option value="">神經內科</option>
+                  <option value="">牙科</option>
+                  <option value="">骨科</option>
+                  <option value="">眼科</option>
+                  <option value="">復健科</option>
+                  <option value="">皮膚科</option>
+                  <option value="">泌尿科</option>
+                  <option value="">疼痛科</option>
+                  <option value="">其他</option>
+                </select>
+              </div>
+
+              <div class="d_flex">
+                <span class="filled mb10">8.看診時段選擇</span>
+                <div class="multi_input d_flex W100 has_btn time_wrap">
+                  <input type="date" name="" id="" />
+                  <select name="" id="">
+                    <option value="上午(08:00~12:00)">上午(08:00~12:00)</option>
+                  </select>
+                  <button class="add">新增</button>
+                </div>
+                <ul class="time_list W100">
+                  <li class="item">
+                    2023/6/10 上午 (08:00~12:00) <span class="remove">X</span>
+                  </li>
+                  <li class="item">
+                    2023/6/11 下午 (14:00~18:00) <span class="remove">X</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="d_flex">
+                <span class="filled mb10">9.其他需求說明</span>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="7"
+                  placeholder="如有其他需求，請詳細描述，以利後續門診安排，謝謝。"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="d_flex btn_area mt20">
+              <button class="light W50">
+                <span>清除資料</span>
+              </button>
+              <button class="W50">
+                <span>確認送出</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content content2"></div>
+
+        <div class="content content2"></div>
+
+        <div class="content content2"></div>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="images/logo_black.png" alt="" />
+          <p>
+            IntelliCentrics introduces trust into organizational
+            decision-making, enabling our customers to make more informed
+            decisions, reduce risk, and improve operational efficiencies.
+          </p>
+          <a href="javascript:;" class="privacy">隱私權條款</a> |
+          <a href="javascript:;" class="usage">使用條款</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb">
+      <div class="lb_content W1060">
+        <label class="close" onclick="closeLb()">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        <div class="W520">
+          <div class="status_checkMail">
+            <div class="t_center">
+              <h3 class="title underline">代理人設定</h3>
+            </div>
+            <p class="f16 f_grey mb40">
+              請勾選以下帳號，作為XXX 之 IC Care
+              緊急諮詢服務代理人，代理人可於緊急諮詢時切換資料身分，為 XXX
+              進行預約。
+            </p>
+
+            <div class="radio_area">
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+            </div>
+
+            <div class="d_flex btn_area">
+              <button class="W50 light" onclick="closeLb()">
+                <span>取消</span>
+              </button>
+              <button class="W50" onclick="confirm()">
+                <span>確認送出</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首頁only -->
+  </body>
+</html>
+<script type="text/javascript" src="js/init.js"></script>
+
+<script>
+  $(function () {
+    $("body").on("click", ".remove", function () {
+      $(this).parent(".item").remove();
+    });
+
+    $("body").on("click", ".add", function () {
+      //   var length = $(".time_list .item").length;
+      $(".time_list").append(
+        '<li class="item">2023/6/10 上午 (08:00~12:00) <span class="remove">X</span></li>'
+      );
+    });
+  });
+</script>

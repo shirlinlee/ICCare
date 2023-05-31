@@ -329,15 +329,6 @@ select.unit.xl {
   height: 26px;
   margin-right: 10px;
 }
-.login_area a:first-child {
-  border: solid 1px #959595;
-}
-.login_area a:nth-child(2) {
-  background-color: #039be5;
-}
-.login_area a:last-child {
-  background-color: #00c300;
-}
 .login_area_sm {
   -webkit-box-pack: center;
       -ms-flex-pack: center;

@@ -251,17 +251,17 @@ select {
       margin-right: 10px;
     }
 
-    &:first-child {
-      border: solid 1px #959595;
-    }
+    // &:first-child {
+    //   border: solid 1px #959595;
+    // }
 
-    &:nth-child(2) {
-      background-color: #039be5;
-    }
+    // &:nth-child(2) {
+    //   background-color: #039be5;
+    // }
 
-    &:last-child {
-      background-color: #00c300;
-    }
+    // &:last-child {
+    //   background-color: #00c300;
+    // }
   }
 
   &_sm {

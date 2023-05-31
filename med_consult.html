@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>ICCare</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="images/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="plugins/js/slick.min.js"></script>
+    <script src="plugins/js/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="/" class="logo"
+            ><img src="images/logo.png" alt="ICCare"
+          /></a>
+          <ul class="nav d_flex">
+            <li class="redirect">
+              <a href="index.html">
+                <p>24小時醫療諮詢</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="bankbook.html">
+                <p>我的健康存摺</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="#" target="_blank">
+                <p>健康數據管理</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="product_list.html">
+                <p>周邊商品</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="booking_list.html">
+                <p>訂單記錄</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="javascript:;" onclick="openCouponLb()">
+                <p>抵用碼兌換</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="member.html">
+                <p>會員專區</p>
+              </a>
+            </li>
+
+            <li class="open_sub">
+              <p>語言</p>
+              <ul>
+                <li>中文</li>
+                <li>English</li>
+              </ul>
+            </li>
+          </ul>
+          <label class="func_item menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+        </div>
+        <!-- <div class="menu_bg"></div> -->
+      </div>
+
+      <!-- 折扣碼的code start -->
+      <div class="lb coupin_lb">
+        <div class="lb_content W520">
+          <label class="close close_lb">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+          <div class="W400">
+            <div class="coupon_input">
+              <div class="t_center">
+                <h3 class="title underline">請輸入抵用碼</h3>
+              </div>
+              <input type="text" class="mb10" />
+              <div class="errMsg f_red f14 pl5 t_center">
+                兌換失敗，請重新輸入
+              </div>
+              <div class="d_flex btn_area mt20">
+                <button class="light W50 close_lb">
+                  <span>取消</span>
+                </button>
+                <button class="W50 sendCoupon">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+            <div class="coupon_sent">
+              <div class="t_center">
+                <h3 class="title underline">兌換成功</h3>
+              </div>
+              <p class="f16 f_grey t_center">
+                延長VIP效期 6個月<br />增加緊急諸詢次數 2次
+              </p>
+
+              <div style="width: 200px; margin: 30px auto 10px">
+                <button class="W100 close_lb">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function openCouponLb() {
+          $(".coupon_input").css({ display: "block" });
+          $(".coupon_sent").css({ display: "none" });
+          $(".coupin_lb").addClass("open");
+        }
+        $("body").on("click", ".close_lb", function () {
+          $(".lb").removeClass("open");
+        });
+
+        $("body").on("click", ".sendCoupon", function () {
+          $(".coupon_input").css({ display: "none" });
+          $(".coupon_sent").css({ display: "block" });
+        });
+      </script>
+      <!-- 折扣碼的code end -->
+
+      <div class="vip_page W1280 bg_white">
+        <h4 class="title">VIP專人服務</h4>
+        <ul class="tab d_flex f19 W100">
+          <li class="active">藥物諮詢</li>
+          <li><a href="med_deliver.html">藥物寄送</a></li>
+          <li><a href="special_service.html">特診服務</a></li>
+          <li><a href="vip_record.html">紀錄追蹤</a></li>
+        </ul>
+        <div class="content">
+          <div class="basic_info">
+            <div class="W630">
+              如果有藥物相關的問題，用戶可以透過IC Care
+              線上諮詢藥師，我們提供用戶藥物資訊、適當性評估、用藥指導、懷孕及哺乳服藥安全性等，提交表單後，藥師將於服務時間
+              24 小時內回覆。<br />
+              ※注意事項 <br />
+              一、若有緊急狀況建議撥打當地醫療院所藥物諮詢專線或 119 。 <br />
+              二、藥物諮詢服務不涉及診斷內容。 <br />
+              三、藥物諮詢提供服務項目範圍如下： <br />
+              <ul>
+                <li>藥物資訊：如適應症，副作用，禁忌及注意事項。</li>
+                <li>
+                  用藥適當性評估：依據客戶提供的身體指數等，評估藥物劑量或藥物適當性。
+                </li>
+                <li>
+                  用藥指導：說明藥物相關資訊，如藥名、主要適應症、用量、用法等等。
+                </li>
+                <li>
+                  重複用藥：請用戶提供所有正在使用的藥物清單給藥師做為用藥評估參考。
+                </li>
+                <li>懷孕及哺乳服藥安全性</li>
+              </ul>
+              服務時間：周一至周五09:00-22:00 （不含例假日） <br />
+              您可以隨時提交表單，客服人員將於服務時間協助您。
+            </div>
+            <div class="W630">
+              <div class="d_flex">
+                <span class="filled mb10">1.諮詢人姓名</span>
+                <input type="text" />
+              </div>
+              <div class="d_flex">
+                <span class="filled mb10">2.諮詢人電話</span>
+                <input type="tel" />
+              </div>
+              <div class="d_flex mb17">
+                <span class="filled mb10 W100">3.藥物使用者性別</span>
+                <div class="d_flex mr20">
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <label for="male">男</label>
+                </div>
+                <div class="d_flex">
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <label for="female">女</label>
+                </div>
+              </div>
+              <div class="d_flex">
+                <span class="filled mb10">4.藥物使用者年齡</span>
+                <input type="tel" />
+              </div>
+              <div class="d_flex mb17">
+                <span class="filled mb10 W100">5.是否有藥物過敏史</span>
+                <div class="d_flex mr20">
+                  <input
+                    type="radio"
+                    id="isAllergyToMeds"
+                    name="allergyToMeds"
+                    value="isAllergyToMeds"
+                  />
+                  <label for="isAllergyToMeds">是</label>
+                </div>
+                <div class="d_flex">
+                  <input
+                    type="radio"
+                    id="notAllergyToMeds"
+                    name="allergyToMeds"
+                    value="notAllergyToMeds"
+                  />
+                  <label for="notAllergyToMeds">否</label>
+                </div>
+              </div>
+              <div class="d_flex">
+                <span class="mb10"
+                  >6.若有藥物過敏請填寫詳細藥品學名或商品名（選填）</span
+                >
+                <textarea name="" id="" cols="30" rows="7"></textarea>
+              </div>
+              <div class="d_flex mb17">
+                <span class="filled mb10 W100">7.是否有食物過敏史</span>
+                <div class="d_flex mr20">
+                  <input
+                    type="radio"
+                    id="isAllergyToFood"
+                    name="allergyToFood"
+                    value="isAllergyToFood"
+                  />
+                  <label for="isAllergyToFood">是</label>
+                </div>
+                <div class="d_flex">
+                  <input
+                    type="radio"
+                    id="notAllergyToFood"
+                    name="allergyToFood"
+                    value="notAllergyToFood"
+                  />
+                  <label for="notAllergyToFood">否</label>
+                </div>
+              </div>
+              <div class="d_flex">
+                <span class="mb10">8.若有食物過敏，請寫下食物名稱（選填）</span>
+                <textarea name="" id="" cols="30" rows="7"></textarea>
+              </div>
+              <div class="d_flex">
+                <span class="mb10"
+                  >9.若近期有進行預防針施打，請填寫施打項目（選填）</span
+                >
+                <textarea name="" id="" cols="30" rows="7"></textarea>
+              </div>
+
+              <div class="d_flex mb17">
+                <span class="filled mb10 W100"
+                  >10.疾病史 （選填） Medical History ( Optional )</span
+                >
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d1"
+                    name="medicalHistory"
+                    value="d1"
+                  />
+                  <label for="d1">高血壓</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d2"
+                    name="medicalHistory"
+                    value="d2"
+                  />
+                  <label for="d2">糖尿病</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d3"
+                    name="medicalHistory"
+                    value="d3"
+                  />
+                  <label for="d3">高血脂</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d4"
+                    name="medicalHistory"
+                    value="d4"
+                  />
+                  <label for="d4">癲癇</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d5"
+                    name="medicalHistory"
+                    value="d5"
+                  />
+                  <label for="d5">心臟病</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d6"
+                    name="medicalHistory"
+                    value="d6"
+                  />
+                  <label for="d6">氣喘</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d7"
+                    name="medicalHistory"
+                    value="d7"
+                  />
+                  <label for="d7">慢性腎衰竭</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d8"
+                    name="medicalHistory"
+                    value="d8"
+                  />
+                  <label for="d8">洗腎Dialysis</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d9"
+                    name="medicalHistory"
+                    value="d9"
+                  />
+                  <label for="d9">慢性B型肝炎</label>
+                </div>
+
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d10"
+                    name="medicalHistory"
+                    value="d10"
+                  />
+                  <label for="d10">慢性C型肝炎</label>
+                </div>
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d11"
+                    name="medicalHistory"
+                    value="d11"
+                  />
+                  <label for="d11">無</label>
+                </div>
+                <div class="d_flex mr20 W33">
+                  <input
+                    type="radio"
+                    id="d12"
+                    name="medicalHistory"
+                    value="d12"
+                  />
+                  <label for="d12">其他</label>
+                </div>
+              </div>
+
+              <div class="d_flex">
+                <span class="filled mb10"
+                  >11.本次問題相關藥的商品名或者學名</span
+                >
+                <textarea name="" id="" cols="30" rows="7"></textarea>
+              </div>
+
+              <div class="d_flex">
+                <span class="filled mb10">12.詢問內容</span>
+                <textarea name="" id="" cols="30" rows="7"></textarea>
+              </div>
+
+              <div class="d_flex">
+                <span class="mb10 W100"
+                  >13.檔案上傳
+                  <font class="f_blue f11"
+                    >(單一檔案請勿超過 10MB 、檔案大小合計不得超過 100MB)</font
+                  ></span
+                >
+
+                <!-- 上傳區塊 -->
+                <div id="uploader1" class="uploader W100">
+                  <!-- 隱藏的 Input -->
+                  <input class="file" type="file" multiple />
+                  <!-- 選擇上傳檔案 -->
+                  <div class="empty">
+                    <div class="empty_box"></div>
+                    <img src="./images/ic-uploader.png" alt="" />
+                    <p>選擇上傳檔案</p>
+                  </div>
+
+                  <div class="box">
+                    <div class="list">
+                      <div class="list-head list-item list-item--name">
+                        名稱
+                      </div>
+                      <div class="list-head list-item list-item--size">
+                        檔案大小
+                      </div>
+                      <div class="list-head list-item list-item--button">
+                        <a href="javascript:void(0)">
+                          <img class="add" src="./images/ic-add.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="list-line"></div>
+                    <!-- 上傳檔案 - 列表物件 -->
+                    <!-- <div class="list">
+                    <div class="list-item list-item--name">胸腔 X 光片.pdf</div>
+                    <div class="list-item list-item--size">8.2MB</div>
+                    <div class="list-item list-item--button">
+                      <a
+                        class=".btn-remove"
+                        href="javascript:void(0)"
+                        data-file-id=""
+                      >
+                        <img class="remove" src="./images/ic-x.png" alt="" />
+                      </a>
+                    </div>
+                  </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d_flex btn_area mt20">
+              <button class="light W50">
+                <span>清除資料</span>
+              </button>
+              <button class="W50">
+                <span>確認送出</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content content2"></div>
+
+        <div class="content content2"></div>
+
+        <div class="content content2"></div>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="images/logo_black.png" alt="" />
+          <p>
+            IntelliCentrics introduces trust into organizational
+            decision-making, enabling our customers to make more informed
+            decisions, reduce risk, and improve operational efficiencies.
+          </p>
+          <a href="javascript:;" class="privacy">隱私權條款</a> |
+          <a href="javascript:;" class="usage">使用條款</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb">
+      <div class="lb_content W1060">
+        <label class="close" onclick="closeLb()">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        <div class="W520">
+          <div class="status_checkMail">
+            <div class="t_center">
+              <h3 class="title underline">代理人設定</h3>
+            </div>
+            <p class="f16 f_grey mb40">
+              請勾選以下帳號，作為XXX 之 IC Care
+              緊急諮詢服務代理人，代理人可於緊急諮詢時切換資料身分，為 XXX
+              進行預約。
+            </p>
+
+            <div class="radio_area">
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+            </div>
+
+            <div class="d_flex btn_area">
+              <button class="W50 light" onclick="closeLb()">
+                <span>取消</span>
+              </button>
+              <button class="W50" onclick="confirm()">
+                <span>確認送出</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首頁only -->
+  </body>
+</html>
+<script type="text/javascript" src="js/init.js"></script>
+
+<script>
+  var uploader1 = $("#uploader1").uploader();
+
+  function submit() {
+    var formData = new FormData();
+    var uploadFiles = uploader1.getUploads();
+    for (var i = 0, len = uploadFiles.length; i < len; i++) {
+      formData.append("files[]", uploadFiles[i].file, uploadFiles[i].file.name);
+      console.log(uploadFiles[i].file);
+    }
+  }
+</script>

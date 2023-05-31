@@ -171,6 +171,10 @@ b {
   width: 100%;
 }
 
+.f11 {
+  font-size: 11px;
+}
+
 .f12 {
   font-size: 12px;
 }
@@ -315,6 +319,10 @@ b {
   margin-left: 0 !important;
 }
 
+.mr20 {
+  margin-right: 20px;
+}
+
 .mb10 {
   margin-bottom: 10px;
 }
@@ -395,7 +403,7 @@ b {
 * {
   &.filled {
     &:after {
-      content: "*";
+      content: "*必填";
       color: #49c4e5;
       font-size: 11px;
       padding-left: 4px;
@@ -623,110 +631,96 @@ b {
         margin: 0 10px;
       }
 
-      .dropdown {
-        display: none;
-        width: 100vw;
-        left: 0;
-        top: auto;
-        background: #49c4e5;
-        // opacity: 0;
-        top: 100px;
-        z-index: 5;
-        position: fixed;
-        text-align: left;
-        // -webkit-box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .1);
-        // box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .1);
-        padding: 20px 0 30px;
-        // transform: translate(0, 100%);
-        // -webkit-transform: translate(0, 100%);
-        // -moz-transform: translate(0, 100%);
-        // -ms-transform: translate(0, 100%);
-        // -o-transform: translate(0, 100%);
-        // -webkit-transition: opacity 0.2s;
-        // -moz-transition: opacity 0.2s;
-        // -ms-transition: opacity 0.2s;
-        // -o-transition: opacity 0.2s;
+      // .dropdown {
+      //   display: none;
+      //   width: 100vw;
+      //   left: 0;
+      //   top: auto;
+      //   background: #49c4e5;
+      //   // opacity: 0;
+      //   top: 100px;
+      //   z-index: 5;
+      //   position: fixed;
+      //   text-align: left;
+      //   padding: 20px 0 30px;
 
-        // &.open {
-        //   visibility: visible;
-        //   opacity: 1;
-        //   z-index: 20;
-        //   transform: translate(0, 0);
-        //   -webkit-transform: translate(0, 0);
-        //   -moz-transform: translate(0, 0);
-        //   -ms-transform: translate(0, 0);
-        //   -o-transform: translate(0, 0);
-        // }
+      //   &.white {
+      //     background: #fff;
+      //     text-align: center;
+      //     li {
+      //       display: inline-block;
+      //     }
+      //   }
 
-        .d_flex {
-          justify-content: center;
+      //   .d_flex {
+      //     justify-content: center;
 
-          li {
-            margin-right: 64px;
-            list-style: disc;
-            color: #fff;
-            padding: 0 5px;
+      //     li {
+      //       margin-right: 64px;
+      //       list-style: disc;
+      //       color: #fff;
+      //       padding: 0 5px;
 
-            a {
-              color: #fff;
-              line-height: 1.6;
-              margin-bottom: 10px;
-              padding-bottom: 5px;
+      //       a {
+      //         color: #fff;
+      //         line-height: 1.6;
+      //         margin-bottom: 10px;
+      //         padding-bottom: 5px;
 
-              &.hover {
-                display: table;
-                border-bottom: 1.5px solid transparent;
+      //         &.hover {
+      //           display: table;
+      //           border-bottom: 1.5px solid transparent;
 
-                &:hover {
-                  border-bottom: 1.5px solid #fff;
-                }
-              }
-            }
-          }
-        }
+      //           &:hover {
+      //             border-bottom: 1.5px solid #fff;
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
 
-        @media screen and (max-width: 1050px) {
-          position: relative;
-          display: block;
-          width: auto;
-          background-color: #fff;
-          top: 0;
-          padding: 10px 0 10px 20px;
+      //   @media screen and (max-width: 1050px) {
+      //     position: relative;
+      //     display: block;
+      //     width: auto;
+      //     background-color: #fff;
+      //     top: 0;
+      //     padding: 10px 0 10px 20px;
 
-          .d_flex {
-            // flex-direction: column;
-            justify-content: space-evenly;
+      //     .d_flex {
+      //       // flex-direction: column;
+      //       justify-content: space-evenly;
 
-            li {
-              list-style: none;
-              line-height: 30px;
-              width: calc(50% - 10px);
-              margin-right: 0;
+      //       li {
+      //         list-style: none;
+      //         line-height: 30px;
+      //         width: calc(50% - 10px);
+      //         margin-right: 0;
 
-              h5 {
-                display: none;
-              }
+      //         h5 {
+      //           display: none;
+      //         }
 
-              a {
-                color: #999;
+      //         a {
+      //           color: #999;
 
-                &::before {
-                  content: "";
-                  display: inline-block;
-                  background-color: #999;
-                  height: 10px;
-                  width: 10px;
-                  margin-right: 5px;
-                }
-              }
-            }
-          }
-        }
-      }
+      //           &::before {
+      //             content: "";
+      //             display: inline-block;
+      //             background-color: #999;
+      //             height: 10px;
+      //             width: 10px;
+      //             margin-right: 5px;
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
 
       @media screen and (min-width: 769px) {
         &:hover {
-          a {
+          p {
             color: #47c3e4;
           }
         }
@@ -743,6 +737,7 @@ b {
         border-bottom: 1px solid #ccc;
         line-height: 60px;
         width: calc(100% - 60px);
+        padding-right: 0 !important;
 
         &:last-child {
           border-color: transparent;
@@ -754,7 +749,7 @@ b {
         background-size: 13px;
         background-position: right top 22px;
         background-image: url(../images/ic-arrow-01.png);
-
+        position: relative;
         @media screen and (max-width: 767px) {
           background-position: right 30px center;
         }
@@ -763,6 +758,11 @@ b {
       * {
         color: #656565;
         font-size: 16px;
+      }
+
+      p {
+        display: inline-block;
+        position: relative;
       }
 
       font {
@@ -809,7 +809,11 @@ b {
 
       &.open_sub {
         position: relative;
-
+        background-image: url(../images/ic-arrow-01.png);
+        background-repeat: no-repeat;
+        background-size: 13px;
+        background-position: right top 22px;
+        padding-right: 20px;
         ul {
           background: rgba(255, 255, 255, 0.9);
           box-shadow: none;
@@ -824,6 +828,11 @@ b {
           text-align: center;
           list-style: none;
           padding-bottom: 5px;
+
+          &.vip {
+            width: 170px;
+            left: -20px;
+          }
 
           li {
             padding: 0;
@@ -842,6 +851,14 @@ b {
                 }
               }
             }
+            @media screen and (min-width: 769px) {
+              &:hover {
+                color: #47c3e4;
+                a {
+                  color: #47c3e4;
+                }
+              }
+            }
           }
           &.active {
             display: block;
@@ -850,10 +867,11 @@ b {
           @media screen and (max-width: 1050px) {
             position: relative;
             top: 0;
-            left: 0;
-            width: 100%;
+            left: 0 !important;
+            width: 100% !important;
             background-color: #f4f4f4;
             padding-bottom: 0;
+            margin-bottom: 10px;
             li {
               width: 100px;
               display: inline-block;
@@ -876,6 +894,15 @@ b {
 
       &.active {
         height: 110px;
+      }
+    }
+
+    .notify {
+      top: -10px;
+      right: -10px;
+      @media screen and (max-width: 1050px) {
+        right: -25px;
+        top: 5px;
       }
     }
   }
@@ -1179,6 +1206,19 @@ b {
     }
   }
 }
+
+.notify {
+  background-color: #49c4e5;
+  color: #fff !important;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  width: 20px;
+  font-size: 12px !important;
+  display: block;
+  position: absolute;
+}
+
 .swal2-popup {
   width: 280px !important;
   .swal2-styled {

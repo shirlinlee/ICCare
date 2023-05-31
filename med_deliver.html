@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>ICCare</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="images/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="plugins/js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="plugins/js/slick.min.js"></script>
+    <script src="plugins/js/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="/" class="logo"
+            ><img src="images/logo.png" alt="ICCare"
+          /></a>
+          <ul class="nav d_flex">
+            <li class="redirect">
+              <a href="index.html">
+                <p>24小時醫療諮詢</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="bankbook.html">
+                <p>我的健康存摺</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="#" target="_blank">
+                <p>健康數據管理</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="product_list.html">
+                <p>周邊商品</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="booking_list.html">
+                <p>訂單記錄</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="javascript:;" onclick="openCouponLb()">
+                <p>抵用碼兌換</p>
+              </a>
+            </li>
+
+            <li class="redirect">
+              <a href="member.html">
+                <p>會員專區</p>
+              </a>
+            </li>
+
+            <li class="open_sub">
+              <p>語言</p>
+              <ul>
+                <li>中文</li>
+                <li>English</li>
+              </ul>
+            </li>
+          </ul>
+          <label class="func_item menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+        </div>
+        <!-- <div class="menu_bg"></div> -->
+      </div>
+
+      <!-- 折扣碼的code start -->
+      <div class="lb coupin_lb">
+        <div class="lb_content W520">
+          <label class="close close_lb">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+          <div class="W400">
+            <div class="coupon_input">
+              <div class="t_center">
+                <h3 class="title underline">請輸入抵用碼</h3>
+              </div>
+              <input type="text" class="mb10" />
+              <div class="errMsg f_red f14 pl5 t_center">
+                兌換失敗，請重新輸入
+              </div>
+              <div class="d_flex btn_area mt20">
+                <button class="light W50 close_lb">
+                  <span>取消</span>
+                </button>
+                <button class="W50 sendCoupon">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+            <div class="coupon_sent">
+              <div class="t_center">
+                <h3 class="title underline">兌換成功</h3>
+              </div>
+              <p class="f16 f_grey t_center">
+                延長VIP效期 6個月<br />增加緊急諸詢次數 2次
+              </p>
+
+              <div style="width: 200px; margin: 30px auto 10px">
+                <button class="W100 close_lb">
+                  <span>確認</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function openCouponLb() {
+          $(".coupon_input").css({ display: "block" });
+          $(".coupon_sent").css({ display: "none" });
+          $(".coupin_lb").addClass("open");
+        }
+        $("body").on("click", ".close_lb", function () {
+          $(".lb").removeClass("open");
+        });
+
+        $("body").on("click", ".sendCoupon", function () {
+          $(".coupon_input").css({ display: "none" });
+          $(".coupon_sent").css({ display: "block" });
+        });
+      </script>
+      <!-- 折扣碼的code end -->
+
+      <div class="vip_page W1280 bg_white">
+        <h4 class="title">VIP專人服務</h4>
+        <ul class="tab d_flex f19 W100">
+          <li><a href="med_consult.html">藥物諮詢</a></li>
+          <li class="active">藥物寄送</li>
+          <li><a href="special_service.html">特診服務</a></li>
+          <li><a href="vip_record.html">紀錄追蹤</a></li>
+        </ul>
+        <div class="content">
+          <div class="basic_info">
+            <div class="W630">
+              當用戶結束諮詢時，可以填寫下方表單，請專人安排藥物寄送到指定地址，寄送地區包含台灣及海外（依照各地區法規寄送）。
+              <br />
+              一、服務地區：台灣及海外<br />
+              二、寄送時間：<br />
+              <ul>
+                <li>
+                  台灣：成立訂單後 24 小時內寄送到目的地。（偏遠地區不適用於 24
+                  小時寄送）
+                </li>
+                <li>
+                  海外：海外會依照各地法規不同有所差異，詳細時間請洽客服人員。
+                </li>
+              </ul>
+              三、費用：依寄送地區而定，詳細需求請洽客服人員。<br />
+              服務時間：周一至周五09:00-22:00 （不含例假日)<br />
+              您可以隨時提交表單，客服人員將於服務時間協助您。
+            </div>
+            <div class="W630">
+              <div class="d_flex">
+                <span class="filled mb10">1. 諮詢記錄選擇</span>
+                <select name="" id="">
+                  <option value="">諮詢紀錄1</option>
+                  <option value="">諮詢紀錄2</option>
+                </select>
+              </div>
+              <div class="d_flex">
+                <span class="filled mb10">2.藥品配送地址</span>
+                <input type="text" />
+              </div>
+              <div class="d_flex">
+                <span class="filled mb10">3.收件人姓名</span>
+                <input type="text" />
+              </div>
+              <div class="d_flex">
+                <span class="filled mb10">4.收件人電話</span>
+                <input type="text" />
+              </div>
+            </div>
+
+            <div class="d_flex btn_area mt20">
+              <button class="light W50">
+                <span>清除資料</span>
+              </button>
+              <button class="W50">
+                <span>確認送出</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content content2"></div>
+
+        <div class="content content2"></div>
+
+        <div class="content content2"></div>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="images/logo_black.png" alt="" />
+          <p>
+            IntelliCentrics introduces trust into organizational
+            decision-making, enabling our customers to make more informed
+            decisions, reduce risk, and improve operational efficiencies.
+          </p>
+          <a href="javascript:;" class="privacy">隱私權條款</a> |
+          <a href="javascript:;" class="usage">使用條款</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lb">
+      <div class="lb_content W1060">
+        <label class="close" onclick="closeLb()">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        <div class="W520">
+          <div class="status_checkMail">
+            <div class="t_center">
+              <h3 class="title underline">代理人設定</h3>
+            </div>
+            <p class="f16 f_grey mb40">
+              請勾選以下帳號，作為XXX 之 IC Care
+              緊急諮詢服務代理人，代理人可於緊急諮詢時切換資料身分，為 XXX
+              進行預約。
+            </p>
+
+            <div class="radio_area">
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+              <div class="item d_flex">
+                <input name="agent" type="radio" id="" /><label for=""
+                  >陳大華</label
+                >
+              </div>
+            </div>
+
+            <div class="d_flex btn_area">
+              <button class="W50 light" onclick="closeLb()">
+                <span>取消</span>
+              </button>
+              <button class="W50" onclick="confirm()">
+                <span>確認送出</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首頁only -->
+  </body>
+</html>
+<script type="text/javascript" src="js/init.js"></script>
+
+<script>
+  var uploader1 = $("#uploader1").uploader();
+
+  function submit() {
+    var formData = new FormData();
+    var uploadFiles = uploader1.getUploads();
+    for (var i = 0, len = uploadFiles.length; i < len; i++) {
+      formData.append("files[]", uploadFiles[i].file, uploadFiles[i].file.name);
+      console.log(uploadFiles[i].file);
+    }
+  }
+</script>

@@ -39,27 +39,27 @@
           /></a>
           <ul class="nav d_flex">
             <li class="redirect">
-              <a href="index.html">
+              <a href="/index.html">
                 <p>24小時醫療諮詢</p>
               </a>
             </li>
             <li class="redirect">
-              <a href="bankbook.html">
+              <a href="/bankbook.html">
                 <p>我的健康存摺</p>
               </a>
             </li>
             <li class="redirect">
-              <a href="#" target="_blank">
+              <a href="javascript:;">
                 <p>健康數據管理</p>
               </a>
             </li>
             <li class="redirect">
-              <a href="product_list.html">
+              <a href="/product_list.html">
                 <p>周邊商品</p>
               </a>
             </li>
             <li class="redirect">
-              <a href="booking_list.html">
+              <a href="/booking_list.html">
                 <p>訂單記錄</p>
               </a>
             </li>
@@ -72,7 +72,7 @@
 
             <li class="redirect">
               <a href="member.html">
-                <p>會員專區</p>
+                <p>登出</p>
               </a>
             </li>
 
@@ -161,6 +161,15 @@
           <li><a href="special_service.html">特診服務</a></li>
           <li><a href="vip_record.html">紀錄追蹤</a></li>
         </ul>
+        <div class="t_center tab_mb W100">
+          <select name="" id="" onchange="changeTab(this)">
+            <option value="med_consult" disabled selected>藥物諮詢</option>
+            <option value="med_deliver">藥物寄送</option>
+            <option value="special_service">特診服務</option>
+            <option value="vip_record">紀錄追蹤</option>
+          </select>
+        </div>
+
         <div class="content">
           <div class="basic_info">
             <div class="W630">
@@ -276,12 +285,12 @@
               </div>
 
               <div class="d_flex mb17">
-                <span class="filled mb10 W100"
-                  >10.疾病史 （選填） Medical History ( Optional )</span
+                <span class="mb10 W100"
+                  >10.疾病史（選填）Medical History (Optional)</span
                 >
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d1"
                     name="medicalHistory"
                     value="d1"
@@ -291,7 +300,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d2"
                     name="medicalHistory"
                     value="d2"
@@ -301,7 +310,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d3"
                     name="medicalHistory"
                     value="d3"
@@ -311,7 +320,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d4"
                     name="medicalHistory"
                     value="d4"
@@ -321,7 +330,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d5"
                     name="medicalHistory"
                     value="d5"
@@ -331,7 +340,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d6"
                     name="medicalHistory"
                     value="d6"
@@ -341,7 +350,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d7"
                     name="medicalHistory"
                     value="d7"
@@ -351,7 +360,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d8"
                     name="medicalHistory"
                     value="d8"
@@ -361,7 +370,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d9"
                     name="medicalHistory"
                     value="d9"
@@ -371,7 +380,7 @@
 
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d10"
                     name="medicalHistory"
                     value="d10"
@@ -380,7 +389,7 @@
                 </div>
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d11"
                     name="medicalHistory"
                     value="d11"
@@ -389,12 +398,18 @@
                 </div>
                 <div class="d_flex mr20 W33">
                   <input
-                    type="radio"
+                    type="checkbox"
                     id="d12"
                     name="medicalHistory"
                     value="d12"
                   />
                   <label for="d12">其他</label>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    style="width: calc(100% - 75px); margin: -5px 0 0 10px"
+                  />
                 </div>
               </div>
 
@@ -551,17 +566,14 @@
     <!-- 首頁only -->
   </body>
 </html>
-<script type="text/javascript" src="js/init.js"></script>
+<script type="text/babel" src="js/init.js"></script>
+<script type="text/babel" src="js/uploader.js"></script>
+<script type="text/babel">
+  $(function () {
+    var uploader1 = $("#uploader1").uploader();
+  });
 
-<script>
-  var uploader1 = $("#uploader1").uploader();
-
-  function submit() {
-    var formData = new FormData();
-    var uploadFiles = uploader1.getUploads();
-    for (var i = 0, len = uploadFiles.length; i < len; i++) {
-      formData.append("files[]", uploadFiles[i].file, uploadFiles[i].file.name);
-      console.log(uploadFiles[i].file);
-    }
+  function changeTab(e) {
+    window.location = `${$(e).val()}.html`;
   }
 </script>

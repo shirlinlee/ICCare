@@ -76,8 +76,8 @@ const init = {
     });
   },
   langDetect() {
-    const isEnVersion = window.location.pathname.indexOf("/en") > -1;
-    // console.log(isEnVersion);
+    const isEnVersion = window && window.location.pathname.indexOf("/en") > -1;
+    console.log(isEnVersion);
     if (isEnVersion) {
       init.$body.addClass("en");
     } else {
@@ -86,7 +86,7 @@ const init = {
   },
   policyHandler: function () {
     var policy_name;
-    init.$body.on("click", "a", function () {
+    $("#footer").on("click", "a", function () {
       var policy_name = $(this).attr("class");
       if ($(`#${policy_name}_lb`).length === 0) {
         $.ajax({

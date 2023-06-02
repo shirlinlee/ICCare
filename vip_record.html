@@ -154,77 +154,55 @@
       </script>
       <!-- 折扣碼的code end -->
 
-      <div class="wrapper forget_pw pd130 W1280">
-        <!-- <div class="W300">
-          <h3 class="title">忘記密碼</h3>
-          <p class="f18">請填寫您註冊的手機號碼</p>
-          <div class="multi_input d_flex">
-            <select name="" id="" class="m1">
-              <option selected disabled hidden>國碼</option>
-              <option value="886">886</option>
-            </select>
-            <input type="tel" value="901234567" class="m2" />
+      <div class="vip_page W1280 bg_white">
+        <h4 class="title">VIP專人服務</h4>
+        <ul class="tab d_flex f19 W100">
+          <li><a href="med_consult.html">藥物諮詢</a></li>
+          <li><a href="med_deliver.html">藥物寄送</a></li>
+          <li><a href="special_service.html">特診服務</a></li>
+          <li class="active">紀錄追蹤</li>
+        </ul>
+        <div class="t_center tab_mb W100">
+          <select name="" id="" onchange="changeTab(this)">
+            <option value="med_consult">藥物諮詢</option>
+            <option value="med_deliver">藥物寄送</option>
+            <option value="special_service">特診服務</option>
+            <option value="vip_record" disabled selected>紀錄追蹤</option>
+          </select>
+        </div>
+        <div class="content">
+          <div class="th d_flex f16">
+            <div class="W20">日期</div>
+            <div class="W16">類別</div>
+            <div class="W16">編輯修改</div>
+            <div class="W16">客服回應</div>
+            <div class="W16">付款</div>
+            <div class="W16">進度</div>
           </div>
-          <button onclick="reset()">
-            <span>確認重設密碼</span>
-          </button>
-        </div> -->
-        <div class="W300">
-          <h3 class="title">重設密碼</h3>
-          <form
-            action="https://demo.iccare.vip/zh-TW/password/first/reset"
-            method="POST"
-          >
-            <input
-              type="hidden"
-              name="_token"
-              value="J3XmNY5wrzNHzTpN96M8uCBVZWoWJNoMwT3b11cf"
-            />
-            <div class="d_flex">
-              <input
-                type="password"
-                class="password"
-                name="password"
-                id="password"
-                placeholder="密碼*(請輸入8位數以上，包含英文大小寫與數字)"
-                required=""
-              />
-            </div>
-            <div class="d_flex">
-              <input
-                type="password"
-                class="password"
-                name="password2"
-                id="password2"
-                placeholder="再次輸入密碼*"
-                required=""
-              />
-            </div>
-            <div class="d_flex">
-              <input type="checkbox" name="all" id="all" required="" />
-              <label for="all"
-                >已閱讀並接受<a
-                  href="https://demo.iccare.vip/files/使用條款.pdf"
-                  target="_blank"
-                  class="f_blue"
-                >
-                  細則與條款</a
-                >和<a
-                  href="https://demo.iccare.vip/files/隱私權條款.pdf"
-                  target="_blank"
-                  class="f_blue"
-                  >隱私權聲明</a
-                >。</label
+          <div class="td d_flex f16">
+            <div class="W20"><font class="mb">日期:</font>20220817</div>
+            <div class="W16"><font class="mb">類別:</font>藥品諮詢</div>
+            <div class="W16"><font class="mb">編輯修改:</font>編輯</div>
+            <div class="W16">
+              <font class="mb">客服回應:</font
+              ><font class="service_msg"
+                >查看<span class="notify">1</span></font
               >
             </div>
-            <div class="d_flex">
-              <input type="checkbox" name="all2" id="all2" required="" />
-              <label for="all2">確認加入家庭群組並共享線上健康諮詢次數</label>
+            <div class="W16"><font class="mb">付款:</font>點我付款</div>
+            <div class="W16"><font class="mb">進度:</font>處理中</div>
+          </div>
+          <div class="td d_flex f16">
+            <div class="W20"><font class="mb">日期:</font>20220520</div>
+            <div class="W16"><font class="mb">類別:</font>藥物配送</div>
+            <div class="W16"><font class="mb">編輯修改:</font>編輯</div>
+            <div class="W16">
+              <font class="mb">客服回應:</font
+              ><font class="service_msg">查看</font>
             </div>
-            <button type="submit">
-              <span>確認送出</span>
-            </button>
-          </form>
+            <div class="W16"><font class="mb">付款:</font>點我付款</div>
+            <div class="W16"><font class="mb">進度:</font>已配達</div>
+          </div>
         </div>
       </div>
       <div id="footer">
@@ -241,13 +219,65 @@
       </div>
     </div>
 
+    <div class="lb service_lb">
+      <div class="lb_content W1060">
+        <div class="t_center"><h4 class="title">客服回應</h4></div>
+        <label class="close close_lb">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        <div class="online_service">
+          <p class="f18 f_grey">IC CARE客服人員001</p>
+          <div class="conversation">
+            <div class="service">
+              <div class="bg">
+                <p>
+                  IC
+                  CARE是一家通過集成式端到端技術平臺，為北美、英國和亞太地區使用者提供服務的醫療保健技術平臺公司，以創新解決方案，提供可信賴的醫療保健體驗服務。
+                </p>
+                <span>下午4:57</span>
+              </div>
+            </div>
+            <div class="user">
+              <div class="bg">
+                <p>家庭群組健康數據共享?</p>
+                <span>下午4:56</span>
+              </div>
+            </div>
+          </div>
+          <div class="text_area d_flex">
+            <textarea
+              name=""
+              id="online_textarea"
+              rows="1"
+              placeholder="輸入文字"
+              class="blank"
+            ></textarea>
+            <a href="javascript:;" class="send"
+              ><img src="images/ic-send.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 首頁only -->
   </body>
 </html>
-<script type="text/javascript" src="js/init.js"></script>
+<script type="text/babel" src="js/init.js"></script>
 
-<script>
-  function reset() {
-    window.location = "login.html";
+<script type="text/babel">
+  $(function () {
+    $("body").on("click", ".close", function () {
+      $(".lb").removeClass("open");
+    });
+
+    $("body").on("click", ".service_msg", function () {
+      $(".service_lb").addClass("open");
+    });
+  });
+  function changeTab(e) {
+    window.location = `${$(e).val()}.html`;
   }
 </script>

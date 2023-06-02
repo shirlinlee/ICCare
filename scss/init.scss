@@ -139,6 +139,10 @@ b {
   width: 15%;
 }
 
+.W16 {
+  width: 16%;
+}
+
 .W18 {
   width: 18%;
 }
@@ -403,7 +407,7 @@ b {
 * {
   &.filled {
     &:after {
-      content: "*必填";
+      content: "*";
       color: #49c4e5;
       font-size: 11px;
       padding-left: 4px;

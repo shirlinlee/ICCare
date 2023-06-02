@@ -1970,6 +1970,9 @@ input[name="verifyCode"] {
     margin-right: auto;
     margin-left: auto;
     width: 85%;
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
     li {
       text-align: center;
       width: 25%;
@@ -2002,6 +2005,15 @@ input[name="verifyCode"] {
     }
   }
 
+  .tab_mb {
+    display: none;
+    padding: 0 10px;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      display: inline-block;
+    }
+  }
+
   .content {
     .W630 {
       margin-bottom: 40px;
@@ -2024,6 +2036,151 @@ input[name="verifyCode"] {
       li {
         list-style: decimal;
         list-style-position: inside;
+      }
+    }
+    .th {
+      background-color: rgba(73, 196, 229, 0.3);
+      line-height: 42px;
+      text-align: center;
+
+      @media screen and (max-width: 999px) {
+        display: none !important;
+      }
+
+      * {
+        // font-family: "NotoSansCJKtc M";
+      }
+    }
+
+    .td {
+      padding: 10px 0;
+      text-align: center;
+
+      @media screen and (max-width: 999px) {
+        padding: 0 20px 10px;
+
+        > div {
+          width: 100%;
+          text-align: left;
+
+          &::before {
+            padding-right: 5px;
+            display: inline-block;
+            width: 85px;
+          }
+
+          .mb {
+            display: inline-block;
+            width: 105px;
+          }
+        }
+
+        .number {
+          @media screen and (max-width: 999px) {
+            background-color: rgba(73, 196, 229, 0.3);
+            width: calc(100% + 40px);
+            margin: 0 -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 5px;
+            color: #000;
+          }
+
+          // &::before {
+          //   content: "訂單編號：";
+          // }
+        }
+
+        // .date {
+        //   &::before {
+        //     content: "訂單日期：";
+        //   }
+        // }
+
+        // .price {
+        //   &::before {
+        //     content: "訂單金額：";
+        //   }
+        // }
+
+        // .status {
+        //   &::before {
+        //     content: "付款狀態：";
+        //   }
+        // }
+
+        // .ship {
+        //   &::before {
+        //     content: "出貨狀態：";
+        //   }
+        // }
+
+        // .verify {
+        //   &::before {
+        //     content: "付款證明：";
+        //   }
+        // }
+
+        // .consult_record {
+        //   &::before {
+        //     content: "諮詢紀錄：";
+        //   }
+        // }
+
+        // .service {
+        //   &::before {
+        //     content: "線上客服：";
+        //   }
+        // }
+      }
+
+      &:nth-child(even) {
+        background-color: rgba(230, 230, 230, 0.3);
+      }
+
+      select {
+        margin-bottom: 0 !important;
+      }
+
+      div {
+        line-height: 1.4;
+        color: #777;
+        padding: 8px 0;
+
+        a {
+          display: inline;
+
+          &[download] {
+            &:after {
+              content: "";
+              display: inline-block;
+              width: 20px;
+              height: 16px;
+              margin-left: 4px;
+              background-image: url(../images/ic_download.png);
+              background-repeat: no-repeat;
+              background-size: 15px;
+              background-position: center;
+            }
+          }
+        }
+
+        .service_msg {
+          position: relative;
+          cursor: pointer;
+          .notify {
+            right: -20px;
+            top: -10px;
+          }
+        }
+      }
+    }
+
+    * {
+      &.filled {
+        &:after {
+          content: "*必填";
+        }
       }
     }
   }
@@ -2104,6 +2261,28 @@ input[name="verifyCode"] {
 
     @media screen and (max-width: 767px) {
       margin-top: 10px;
+    }
+  }
+}
+
+.service_lb {
+  h4 {
+  }
+  .online_service {
+    width: calc(100% - 40px);
+    max-width: 630px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 20px;
+    > p {
+      padding: 25px;
+      border-bottom: 1px solid #acacad;
+    }
+    #online_textarea {
+      width: calc(100% - 30px);
     }
   }
 }

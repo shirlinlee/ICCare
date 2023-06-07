@@ -1982,6 +1982,7 @@ input[name="verifyCode"] {
       padding: 0 0 10px;
       &.active {
         border-color: #49c4e5;
+        font-weight: bold;
       }
     }
     @media screen and (max-width: 767px) {
@@ -2012,6 +2013,9 @@ input[name="verifyCode"] {
     @media screen and (max-width: 767px) {
       display: inline-block;
     }
+    select {
+      font-weight: bold;
+    }
   }
 
   .content {
@@ -2026,6 +2030,9 @@ input[name="verifyCode"] {
       }
       @media screen and (max-width: 599px) {
         margin-bottom: 15px;
+      }
+      > .d_flex {
+        margin-bottom: 10px;
       }
     }
     .basic_info {
@@ -2134,6 +2141,10 @@ input[name="verifyCode"] {
         // }
       }
 
+      @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+
       &:nth-child(even) {
         background-color: rgba(230, 230, 230, 0.3);
       }
@@ -2171,6 +2182,11 @@ input[name="verifyCode"] {
           .notify {
             right: -20px;
             top: -10px;
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
           }
         }
       }
@@ -2180,6 +2196,11 @@ input[name="verifyCode"] {
       &.filled {
         &:after {
           content: "*必填";
+        }
+      }
+      &.filled_no_text {
+        &:after {
+          content: "*";
         }
       }
     }

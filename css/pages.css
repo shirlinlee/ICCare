@@ -2121,6 +2121,7 @@ input[name=verifyCode] {
 }
 .vip_page .tab li.active {
   border-color: #49c4e5;
+  font-weight: bold;
 }
 @media screen and (max-width: 767px) {
   .vip_page .tab {
@@ -2156,6 +2157,9 @@ input[name=verifyCode] {
     display: inline-block;
   }
 }
+.vip_page .tab_mb select {
+  font-weight: bold;
+}
 .vip_page .content .W630 {
   margin-bottom: 40px;
 }
@@ -2172,6 +2176,9 @@ input[name=verifyCode] {
   .vip_page .content .W630 {
     margin-bottom: 15px;
   }
+}
+.vip_page .content .W630 > .d_flex {
+  margin-bottom: 10px;
 }
 .vip_page .content .basic_info {
   line-height: 1.5;
@@ -2226,6 +2233,11 @@ input[name=verifyCode] {
     color: #000;
   }
 }
+@media screen and (max-width: 767px) {
+  .vip_page .content .td {
+    margin-bottom: 20px;
+  }
+}
 .vip_page .content .td:nth-child(even) {
   background-color: rgba(230, 230, 230, 0.3);
 }
@@ -2258,9 +2270,17 @@ input[name=verifyCode] {
 .vip_page .content .td div .service_msg .notify {
   right: -20px;
   top: -10px;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
 }
 .vip_page .content *.filled:after {
   content: "*必填";
+}
+.vip_page .content *.filled_no_text:after {
+  content: "*";
 }
 .vip_page .area_wrap {
   -webkit-box-pack: justify;

@@ -343,8 +343,16 @@ b {
   margin-bottom: 20px;
 }
 
+.mb25 {
+  margin-bottom: 25px !important;
+}
+
 .mb40 {
   margin-bottom: 40px !important;
+}
+
+.mt10 {
+  margin-top: 10px !important;
 }
 
 .mt20 {
@@ -405,7 +413,8 @@ b {
 }
 
 * {
-  &.filled {
+  &.filled,
+  &.filled_no_text {
     &:after {
       content: "*";
       color: #49c4e5;
@@ -767,6 +776,8 @@ b {
       p {
         display: inline-block;
         position: relative;
+        justify-content: center;
+        align-items: center;
       }
 
       font {
@@ -824,7 +835,7 @@ b {
           width: 120px;
           position: absolute;
           top: 100%;
-          left: -40px;
+          left: -15px;
           z-index: 1000;
           display: none;
           float: left;

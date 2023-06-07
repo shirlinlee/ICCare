@@ -81,7 +81,9 @@
             </li>
 
             <li class="open_sub">
-              <p>語言</p>
+              <p class="d_flex">
+                <img src="./images/ic-lang.png" alt="" />中文
+              </p>
               <ul>
                 <li>中文</li>
                 <li>English</li>
@@ -186,18 +188,18 @@
             </div>
             <div class="W630">
               <div class="d_flex">
-                <span class="filled mb10"
+                <span class="filled_no_text mb10"
                   >1.諮詢人姓名
                   <font class="f_blue f11">請填寫真實姓名</font></span
                 >
                 <input type="text" />
               </div>
               <div class="d_flex">
-                <span class="filled mb10">2.諮詢人電話</span>
+                <span class="filled_no_text mb10">2.諮詢人電話</span>
                 <input type="tel" />
               </div>
-              <div class="d_flex mb17">
-                <span class="filled mb10 W100">3.諮詢人性別</span>
+              <div class="d_flex mb25">
+                <span class="filled_no_text mb10 W100">3.諮詢人性別</span>
                 <div class="d_flex mr20">
                   <input type="radio" id="male" name="gender" value="male" />
                   <label for="male">男</label>
@@ -213,11 +215,14 @@
                 </div>
               </div>
               <div class="d_flex">
-                <span class="filled mb10">4.諮詢人生日</span>
+                <span class="filled_no_text mb10">4.諮詢人生日</span>
                 <input type="date" />
               </div>
-              <div class="d_flex mb17">
-                <span class="filled mb10 W100">5.諮詢人證件號碼</span>
+              <div class="d_flex mb25">
+                <span class="mb10 W100"
+                  >5.諮詢人證件號碼
+                  <font class="f_blue f11">請正確填寫</font></span
+                >
                 <div class="multi_input d_flex W100">
                   <select name="" id="" class="m3">
                     <option selected disabled hidden>證件類別</option>
@@ -235,8 +240,8 @@
               </div>
 
               <div class="d_flex">
-                <span class="filled mb10">6.看診地區</span>
-                <div class="W100 d_flex area_wrap mb17">
+                <span class="filled_no_text mb10">6.看診地區</span>
+                <div class="W100 d_flex area_wrap mb25">
                   <div class="W50 d_flex">
                     <input name="area" type="radio" id="" />
                     <select
@@ -267,7 +272,7 @@
               </div>
 
               <div class="d_flex">
-                <span class="filled mb10">7.看診科別</span>
+                <span class="filled_no_text mb10">7.看診科別</span>
                 <select name="" id="">
                   <option value="胸腔內科">胸腔內科</option>
                   <option value="">感染科</option>
@@ -300,7 +305,7 @@
               </div>
 
               <div class="d_flex">
-                <span class="filled mb10">8.看診時段選擇</span>
+                <span class="filled_no_text mb10">8.看診時段選擇</span>
                 <div class="multi_input d_flex W100 has_btn time_wrap">
                   <input type="date" name="" id="" />
                   <select name="" id="">
@@ -319,7 +324,7 @@
               </div>
 
               <div class="d_flex">
-                <span class="filled mb10">9.其他需求說明</span>
+                <span class="mb10">9.其他需求說明</span>
                 <textarea
                   name=""
                   id=""

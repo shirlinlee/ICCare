@@ -336,8 +336,16 @@ b {
   margin-bottom: 20px;
 }
 
+.mb25 {
+  margin-bottom: 25px !important;
+}
+
 .mb40 {
   margin-bottom: 40px !important;
+}
+
+.mt10 {
+  margin-top: 10px !important;
 }
 
 .mt20 {
@@ -395,7 +403,7 @@ b {
   display: inline-block;
 }
 
-*.filled:after {
+*.filled:after, *.filled_no_text:after {
   content: "*";
   color: #49c4e5;
   font-size: 11px;
@@ -680,6 +688,12 @@ b {
 #header .nav > li p {
   display: inline-block;
   position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #header .nav > li font {
   display: block;
@@ -733,7 +747,7 @@ b {
   width: 120px;
   position: absolute;
   top: 100%;
-  left: -40px;
+  left: -15px;
   z-index: 1000;
   display: none;
   float: left;

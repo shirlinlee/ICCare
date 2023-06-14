@@ -216,7 +216,7 @@
               </div>
               <div class="d_flex">
                 <span class="filled_no_text mb10">4.諮詢人生日</span>
-                <input type="date" />
+                <input type="text" class="datepicker" />
               </div>
               <div class="d_flex mb25">
                 <span class="mb10 W100"
@@ -307,7 +307,7 @@
               <div class="d_flex">
                 <span class="filled_no_text mb10">8.看診時段選擇</span>
                 <div class="multi_input d_flex W100 has_btn time_wrap">
-                  <input type="date" name="" id="" />
+                  <input type="text" class="datepicker" />
                   <select name="" id="">
                     <option value="上午(08:00~12:00)">上午(08:00~12:00)</option>
                   </select>
@@ -425,6 +425,15 @@
 </html>
 <script type="text/javascript" src="js/init.js"></script>
 
+<!-- Pikaday Library -->
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src="https://pikaday.com/plugins/pikaday.jquery.js"></script>
+
 <script>
   $(function () {
     $("body").on("click", ".remove", function () {
@@ -436,6 +445,10 @@
         '<li class="item">2023/6/10 上午 (08:00~12:00) <span class="remove">X</span></li>'
       );
     });
+
+    var today = new Date();
+    var lastMonth = new Date().getMonth() - 1;
+    $(".datepicker").pikaday({ firstDay: 1, minDate: today });
   });
 
   function changeTab(e) {

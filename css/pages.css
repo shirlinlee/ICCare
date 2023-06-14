@@ -181,9 +181,11 @@ textarea.ico.phone {
     background-position: left 15px center;
   }
 }
-input#datepicker,
+input#datepicker, input.datepicker,
 select#datepicker,
-textarea#datepicker {
+select.datepicker,
+textarea#datepicker,
+textarea.datepicker {
   background-repeat: no-repeat;
   background-image: url(../images/ic_calender.png);
   background-size: 21px;
@@ -2306,13 +2308,14 @@ input[name=verifyCode] {
 }
 .vip_page .time_wrap input,
 .vip_page .time_wrap select {
-  width: calc(50% - 60px);
+  width: calc(50% - 60px) !important;
+  margin-bottom: 17px !important;
 }
 @media screen and (max-width: 767px) {
   .vip_page .time_wrap input,
   .vip_page .time_wrap select {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 100% !important;
+    margin-bottom: 10px !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2365,6 +2368,10 @@ input[name=verifyCode] {
   .vip_page .btn_area {
     margin-top: 10px;
   }
+}
+.vip_page .checkbox_area label {
+  width: calc(100% - 30px);
+  margin-top: -2px;
 }
 
 .service_lb .online_service {
@@ -2466,6 +2473,11 @@ input[name=verifyCode] {
     padding: 30px 20px;
   }
 }
+@media screen and (max-width: 599px) {
+  .booking_list {
+    padding: 25px 15px;
+  }
+}
 .booking_list .title {
   text-align: left;
 }
@@ -2495,6 +2507,69 @@ input[name=verifyCode] {
     margin-top: 40px;
   }
 }
+.booking_list .product .product_detail {
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 0;
+  display: none;
+}
+.booking_list .product .product_detail.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.booking_list .product .product_detail > div {
+  padding: 0;
+}
+@media screen and (max-width: 999px) {
+  .booking_list .product .product_detail > div {
+    width: calc(100% - 85px);
+    margin-right: -20px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .booking_list .product .product_detail > div {
+    width: calc(100% - 75px);
+  }
+}
+.booking_list .product .product_detail > div .W33 > div {
+  background-color: rgba(230, 230, 230, 0.55);
+}
+@media screen and (max-width: 999px) {
+  .booking_list .product .product_detail > div .W33 > div {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .booking_list .product .product_detail > div .W33 > div {
+    padding-left: 6px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .booking_list .product .product_detail > div .W33 {
+    width: 100%;
+    padding: 0;
+  }
+  .booking_list .product .product_detail > div .W33 .W50 {
+    width: 50%;
+  }
+}
+.booking_list .product .seeMore_btn {
+  position: relative;
+  background-image: url(../images/ic-arrow-01.png);
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: right 10px top 17px;
+  border: solid 1px #dedede;
+  padding: 8px 30px 8px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 .booking_list .th {
   background-color: rgba(73, 196, 229, 0.3);
   line-height: 42px;
@@ -2516,6 +2591,9 @@ input[name=verifyCode] {
   .booking_list .td > div {
     width: 100%;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .booking_list .td > div::before {
     padding-right: 5px;
@@ -2536,6 +2614,11 @@ input[name=verifyCode] {
     padding-right: 20px;
     margin-bottom: 5px;
     color: #000;
+  }
+}
+@media screen and (max-width: 599px) {
+  .booking_list .td > div .mb {
+    width: 95px;
   }
 }
 .booking_list .td:nth-child(even) {

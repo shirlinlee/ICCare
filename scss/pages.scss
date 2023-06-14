@@ -144,7 +144,8 @@ textarea {
     }
   }
 
-  &#datepicker {
+  &#datepicker,
+  &.datepicker {
     background-repeat: no-repeat;
     background-image: url(../images/ic_calender.png);
     background-size: 21px;
@@ -2226,10 +2227,11 @@ input[name="verifyCode"] {
   .time_wrap {
     input,
     select {
-      width: calc(50% - 60px);
+      width: calc(50% - 60px) !important;
+      margin-bottom: 17px !important;
       @media screen and (max-width: 767px) {
-        width: 100%;
-        margin-bottom: 10px;
+        width: 100% !important;
+        margin-bottom: 10px !important;
       }
     }
     .add {
@@ -2282,6 +2284,13 @@ input[name="verifyCode"] {
 
     @media screen and (max-width: 767px) {
       margin-top: 10px;
+    }
+  }
+
+  .checkbox_area {
+    label {
+      width: calc(100% - 30px);
+      margin-top: -2px;
     }
   }
 }
@@ -2387,6 +2396,10 @@ input[name="verifyCode"] {
     padding: 30px 20px;
   }
 
+  @media screen and (max-width: 599px) {
+    padding: 25px 15px;
+  }
+
   .title {
     text-align: left;
   }
@@ -2417,6 +2430,67 @@ input[name="verifyCode"] {
     @media screen and (max-width: 999px) {
       margin-top: 40px;
     }
+    .product_detail {
+      width: 100%;
+      justify-content: end;
+      padding: 0;
+      display: none;
+      &.open {
+        display: flex;
+      }
+      > div {
+        padding: 0;
+        @media screen and (max-width: 999px) {
+          width: calc(100% - 85px);
+          margin-right: -20px;
+        }
+        @media screen and (max-width: 599px) {
+          width: calc(100% - 75px);
+        }
+        .W33 {
+          // &:not(:last-child) {
+          //   position: relative;
+          //   &:after {
+          //     content: "|";
+          //     position: absolute;
+          //     right: 0;
+          //     top: 15px;
+          //   }
+          // }
+          > div {
+            background-color: rgba(230, 230, 230, 0.55);
+            @media screen and (max-width: 999px) {
+              padding-left: 10px;
+            }
+            @media screen and (max-width: 599px) {
+              padding-left: 6px;
+            }
+          }
+
+          @media screen and (max-width: 767px) {
+            width: 100%;
+            padding: 0;
+            .W50 {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+    .seeMore_btn {
+      position: relative;
+      background-image: url(../images/ic-arrow-01.png);
+      background-repeat: no-repeat;
+      background-size: 13px;
+      background-position: right 10px top 17px;
+      border: solid 1px #dedede;
+      padding: 8px 30px 8px 10px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
   }
 
   .th {
@@ -2443,6 +2517,7 @@ input[name="verifyCode"] {
       > div {
         width: 100%;
         text-align: left;
+        display: flex;
 
         &::before {
           padding-right: 5px;
@@ -2513,6 +2588,14 @@ input[name="verifyCode"] {
       //     content: "線上客服：";
       //   }
       // }
+    }
+
+    @media screen and (max-width: 599px) {
+      > div {
+        .mb {
+          width: 95px;
+        }
+      }
     }
 
     &:nth-child(even) {

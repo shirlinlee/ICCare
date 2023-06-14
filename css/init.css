@@ -308,6 +308,10 @@ b {
   display: none;
 }
 
+.d_inline {
+  display: inline !important;
+}
+
 .br20 {
   border-radius: 20px;
 }

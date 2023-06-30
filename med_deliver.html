@@ -167,14 +167,14 @@
           <li><a href="special_service.html">特診服務</a></li>
           <li><a href="vip_record.html">紀錄追蹤</a></li>
         </ul>
-        <div class="t_center tab_mb W100">
+        <!-- <div class="t_center tab_mb W100">
           <select name="" id="" onchange="changeTab(this)">
             <option value="med_consult">藥物諮詢</option>
             <option value="med_deliver" disabled selected>藥物寄送</option>
             <option value="special_service">特診服務</option>
             <option value="vip_record">紀錄追蹤</option>
           </select>
-        </div>
+        </div> -->
         <div class="content">
           <div class="basic_info">
             <div class="W630">
@@ -207,10 +207,33 @@
                 <span class="filled mb10">2.藥品配送地址</span>
                 <input type="text" />
               </div>
-              <div class="d_flex">
-                <span class="filled mb10">3.收件人姓名</span>
-                <input type="text" />
+              <div class="d_flex mb17">
+                <span class="filled mb10 W100">3.收件人姓名</span>
+                <div class="d_flex mr20" style="align-items: center">
+                  <input
+                    type="radio"
+                    id="user_name"
+                    name="name"
+                    value="user_name"
+                  />
+                  <label for="user_name">王大明</label>
+                </div>
+                <div class="d_flex" style="align-items: center">
+                  <input
+                    type="radio"
+                    id="other_name"
+                    name="name"
+                    value="other_name"
+                  />
+                  <label for="other_name">其他 &nbsp;</label>
+                  <input
+                    type="text"
+                    style="width: calc(100% - 80px)"
+                    class="mb0"
+                  />
+                </div>
               </div>
+
               <div class="d_flex">
                 <span class="filled mb10">4.收件人電話</span>
                 <input type="text" />

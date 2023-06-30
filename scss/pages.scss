@@ -85,6 +85,10 @@ textarea {
     &:checked {
       border-color: #49c4e5;
       background-color: #49c4e5;
+      background-image: url(../images/ic_pass.svg);
+      background-size: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     &:disabled {
@@ -1971,9 +1975,9 @@ input[name="verifyCode"] {
     margin-right: auto;
     margin-left: auto;
     width: 85%;
-    @media screen and (max-width: 599px) {
-      display: none !important;
-    }
+    // @media screen and (max-width: 599px) {
+    //   display: none !important;
+    // }
     li {
       text-align: center;
       width: 25%;

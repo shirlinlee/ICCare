@@ -100,6 +100,10 @@ textarea[type=checkbox]:checked,
 textarea[type=radio]:checked {
   border-color: #49c4e5;
   background-color: #49c4e5;
+  background-image: url(../images/ic_pass.svg);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 input[type=checkbox]:disabled, input[type=radio]:disabled,
 select[type=checkbox]:disabled,
@@ -2107,11 +2111,6 @@ input[name=verifyCode] {
   margin-right: auto;
   margin-left: auto;
   width: 85%;
-}
-@media screen and (max-width: 599px) {
-  .vip_page .tab {
-    display: none !important;
-  }
 }
 .vip_page .tab li {
   text-align: center;

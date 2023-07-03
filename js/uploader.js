@@ -37,9 +37,14 @@ $.fn.uploader = function (filesToUpload, sectionIdentifier) {
       $box.show();
       return;
     }
-
-    $empty.show();
+    $empty
+      .html('<img src="./images/ic-uploader.png" alt="" /><p>選擇上傳檔案</p>')
+      .show();
     $box.hide();
+  };
+
+  var showLoading = function () {
+    $empty.html('<img src="./images/loading.svg">');
   };
 
   // 點擊 "選擇上傳檔案"
@@ -56,6 +61,7 @@ $.fn.uploader = function (filesToUpload, sectionIdentifier) {
 
   $file.on("change", function (e) {
     e.preventDefault();
+    console.log(e);
 
     for (var i = 0; i < e.target.files.length; i++) {
       var file = e.target.files[i];
@@ -87,7 +93,10 @@ $.fn.uploader = function (filesToUpload, sectionIdentifier) {
     }
 
     e.target.value = null;
-    refresh();
+    showLoading();
+    setTimeout(function () {
+      refresh();
+    }, 2000);
   });
 
   $uploader.on("click", ".btn-remove", function (e) {

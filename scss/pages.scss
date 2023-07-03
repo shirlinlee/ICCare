@@ -1789,20 +1789,24 @@ input[name="verifyCode"] {
       width: 100%;
     }
 
-    button[name="create_new"] {
-      max-width: 400px;
-      margin: 0 auto 40px;
-      background-image: url(../images/ic-add-white.png);
-      background-size: 18px;
-      background-repeat: no-repeat;
-      background-position: left calc(50% + 65px) center;
-      @media screen and (max-width: 767px) {
-        margin: 0 auto 30px;
+    button {
+      &[name="create_new"],
+      &[name="invite_new"] {
+        width: 40%;
+        max-width: 400px;
+        margin: 0 10px 40px;
+        // background-image: url(../images/ic-add-white.png);
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: left calc(50% + 65px) center;
+        @media screen and (max-width: 767px) {
+          margin: 0 auto 30px;
+        }
       }
     }
 
     .d_flex {
-      justify-content: space-between;
+      justify-content: center;
       margin-bottom: 22px;
       align-items: center;
 

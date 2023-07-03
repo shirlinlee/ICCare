@@ -168,16 +168,22 @@
           <div class="basic_info">
             <h4 class="title must_filled">基本資訊</h4>
             <div class="d_flex">
-              <span class="filled">會員編號</span
-              ><input type="text" value="abc1234" />
+              <span class="filled">會員編號</span>
+              <!-- 正常狀態 -->
+              <!-- <input type="text" value="abc1234" /> -->
+              <!-- 方案到期前提醒 -->
+              <div class="multi_input d_flex has_btn">
+                <input type="text" value="abc1234" />
+                <button>VIP續約</button>
+              </div>
             </div>
-            <div class="d_flex">
+            <!-- <div class="d_flex">
               <span class="filled">會員等級</span>
               <div class="multi_input d_flex has_btn">
                 <input type="text" value="會員等級" />
                 <button>重發驗證信</button>
               </div>
-            </div>
+            </div> -->
             <div class="d_flex">
               <span class="">帳號</span
               ><input type="text" value="arthur@pace.com.tw" />
@@ -283,14 +289,24 @@
         <div class="content content2">
           <div class="sub_account">
             <h4 class="title">子帳號設定</h4>
-            <button name="create_new">新增子帳號</button>
+            <div class="btn_area d_flex">
+              <button name="create_new">建立子帳號</button>
+              <button name="invite_new" onclick="openInviteLb()">
+                邀請其他帳號(免費)
+              </button>
+            </div>
+
             <div class="d_flex account_item">
               <span class="sm">姓名</span
               ><input type="text" value="王*華" class="sm" />
               <span class="pl5">帳號1</span>
               <input type="text" value="arthur@pace.com.tw" />
               <div class="agent_btn_area d_flex">
-                <button class="f16 grey W140" name="agent" onclick="openLb()">
+                <button
+                  class="f16 grey W140"
+                  name="agent"
+                  onclick="openAgentLb()"
+                >
                   代理人設定
                 </button>
                 <button class="f16 grey W85" name="edit">編輯</button>
@@ -303,7 +319,11 @@
               <span class="pl5">帳號2</span>
               <input type="text" value="arthur@pace.com.tw" />
               <div class="agent_btn_area d_flex">
-                <button class="f16 grey W140" name="agent" onclick="openLb()">
+                <button
+                  class="f16 grey W140"
+                  name="agent"
+                  onclick="openAgentLb()"
+                >
                   代理人設定
                 </button>
                 <button class="f16 grey W85" name="edit">編輯</button>
@@ -316,7 +336,11 @@
               <span class="pl5">帳號3</span>
               <input type="text" value="arthur@pace.com.tw" />
               <div class="agent_btn_area d_flex">
-                <button class="f16 grey W140" name="agent" onclick="openLb()">
+                <button
+                  class="f16 grey W140"
+                  name="agent"
+                  onclick="openAgentLb()"
+                >
                   代理人設定
                 </button>
                 <button class="f16 grey W85" name="edit">編輯</button>
@@ -350,7 +374,7 @@
       </div>
     </div>
 
-    <div class="lb">
+    <div class="lb agent_lb">
       <div class="lb_content W1060">
         <label class="close" onclick="closeLb()">
           <span class="hamburger hamburger-1"></span>
@@ -404,6 +428,30 @@
       </div>
     </div>
 
+    <div class="lb invite_lb">
+      <div class="lb_content W1060">
+        <label class="close" onclick="closeLb()">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        <div class="W520">
+          <div class="status_checkMail">
+            <div class="t_center">
+              <h3 class="title underline">邀請其他帳號</h3>
+            </div>
+            <input type="text" placeholder="帳號" />
+
+            <div class="d_flex btn_area" style="justify-content: center">
+              <button class="W50" onclick="confirm()">
+                <span>確認送出</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 首頁only -->
   </body>
 </html>
@@ -438,8 +486,11 @@
       $(`.${content}`).addClass("active");
     });
   });
-  function openLb() {
-    $(".lb").addClass("open");
+  function openAgentLb() {
+    $(".agent_lb").addClass("open");
+  }
+  function openInviteLb() {
+    $(".invite_lb").addClass("open");
   }
   function closeLb() {
     $(".lb").removeClass("open");

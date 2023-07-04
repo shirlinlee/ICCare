@@ -1983,35 +1983,29 @@ input[name="verifyCode"] {
     //   display: none !important;
     // }
     li {
-      text-align: center;
-      width: 25%;
-      border-bottom: 1px solid #acacad;
-      font-size: 18px;
-      color: #acacad;
-      padding: 0 0 10px;
-      &.active {
-        border-color: #49c4e5;
-        font-weight: bold;
+      @media screen and (min-width: 600px) {
+        text-align: center;
+        // width: 25%;
+        width: 50%;
+        border-bottom: 1px solid #acacad;
+        font-size: 18px;
+        color: #acacad;
+        padding: 0 0 10px;
+        &.active {
+          border-color: #49c4e5;
+          font-weight: bold;
+        }
+        h6 {
+          border-bottom: solid 2px transparent !important;
+        }
+      }
+      @media screen and (max-width: 599px) {
+        margin: 0 20px;
       }
     }
     @media screen and (max-width: 767px) {
       width: 95%;
       margin-bottom: 20px;
-    }
-    @media screen and (max-width: 599px) {
-      li {
-        width: 100%;
-        font-size: 15px;
-        order: 3;
-        padding-bottom: 0;
-        background-color: #f7f7f7;
-
-        &.active {
-          border-color: #49c4e5;
-          order: 1;
-          background-color: #fff;
-        }
-      }
     }
   }
 
@@ -2655,6 +2649,7 @@ input[name="verifyCode"] {
     }
     h6 {
       border-bottom: solid 2px transparent;
+      display: inline-block;
     }
 
     &.multi {

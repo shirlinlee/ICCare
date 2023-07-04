@@ -163,6 +163,7 @@
         <ul class="tab d_flex f19 W100">
           <li class="active" data-tab="content1"><h6>基本資訊</h6></li>
           <li data-tab="content2"><h6>子帳號設定</h6></li>
+          <li data-tab="content3"><h6>會籍期限查詢</h6></li>
         </ul>
         <div class="content content1 active">
           <div class="basic_info">
@@ -359,6 +360,44 @@
             <h4 class="title">家庭群組設定</h4>
           </div>
         </div>
+
+        <div class="content content3">
+          <h4 class="title">會籍資訊</h4>
+          <div class="content">
+            <div class="th d_flex f16">
+              <div class="W20">日期</div>
+              <div class="W16">類別</div>
+              <div class="W16">編輯修改</div>
+              <div class="W16">客服回應</div>
+              <div class="W16">付款</div>
+              <div class="W16">進度</div>
+            </div>
+            <div class="td d_flex f16">
+              <div class="W20"><font class="mb">日期:</font>2022/08/17</div>
+              <div class="W16"><font class="mb">類別:</font>藥品諮詢</div>
+              <div class="W16"><font class="mb">編輯修改:</font>編輯</div>
+              <div class="W16">
+                <font class="mb">客服回應:</font
+                ><font class="service_msg"
+                  >查看<span class="notify">1</span></font
+                >
+              </div>
+              <div class="W16"><font class="mb">付款:</font>點我付款</div>
+              <div class="W16"><font class="mb">進度:</font>處理中</div>
+            </div>
+            <div class="td d_flex f16">
+              <div class="W20"><font class="mb">日期:</font>2022/05/20</div>
+              <div class="W16"><font class="mb">類別:</font>藥物配送</div>
+              <div class="W16"><font class="mb">編輯修改:</font>編輯</div>
+              <div class="W16">
+                <font class="mb">客服回應:</font
+                ><font class="service_msg">查看</font>
+              </div>
+              <div class="W16"><font class="mb">付款:</font>點我付款</div>
+              <div class="W16"><font class="mb">進度:</font>已配達</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="footer">
         <div class="footer_detail f16">
@@ -452,6 +491,34 @@
       </div>
     </div>
 
+    <div class="lb expire_lb">
+      <div class="lb_content W1060">
+        <label class="close" onclick="closeLb()">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        <div class="W520">
+          <div class="t_center">
+            <h3 class="title underline">到期提醒</h3>
+          </div>
+          <p class="f16 f_grey mb40 t_center">
+            敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述 <br />
+            敘述敘述敘述敘述敘述敘
+          </p>
+
+          <div class="d_flex btn_area">
+            <button class="W50 light" onclick="closeLb()">
+              <span>稍候處理</span>
+            </button>
+            <button class="W50" onclick="closeLb()">
+              <span>立即續約</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 首頁only -->
   </body>
 </html>
@@ -464,6 +531,8 @@
     document.getElementById("card").oninput = function () {
       this.value = cc_format(this.value);
     };
+
+    $(".expire_lb").addClass("open"); // 到期的彈窗先打開
 
     function cc_format(value) {
       var v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");

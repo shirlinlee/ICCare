@@ -3014,6 +3014,155 @@ input[name="verifyCode"] {
   }
 }
 
+.table {
+  .th {
+    background-color: rgba(73, 196, 229, 0.3);
+    line-height: 42px;
+    text-align: center;
+
+    @media screen and (max-width: 999px) {
+      display: none !important;
+    }
+
+    * {
+      // font-family: "NotoSansCJKtc M";
+    }
+  }
+
+  .td {
+    padding: 10px 0;
+    text-align: center;
+
+    @media screen and (max-width: 999px) {
+      padding: 0 20px 10px;
+
+      > div {
+        width: 100%;
+        text-align: left;
+
+        &::before {
+          padding-right: 5px;
+          display: inline-block;
+          width: 85px;
+        }
+
+        .mb {
+          display: inline-block;
+          width: 105px;
+        }
+      }
+
+      .number {
+        @media screen and (max-width: 999px) {
+          background-color: rgba(73, 196, 229, 0.3);
+          width: calc(100% + 40px);
+          margin: 0 -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-bottom: 5px;
+          color: #000;
+        }
+
+        // &::before {
+        //   content: "訂單編號：";
+        // }
+      }
+
+      // .date {
+      //   &::before {
+      //     content: "訂單日期：";
+      //   }
+      // }
+
+      // .price {
+      //   &::before {
+      //     content: "訂單金額：";
+      //   }
+      // }
+
+      // .status {
+      //   &::before {
+      //     content: "付款狀態：";
+      //   }
+      // }
+
+      // .ship {
+      //   &::before {
+      //     content: "出貨狀態：";
+      //   }
+      // }
+
+      // .verify {
+      //   &::before {
+      //     content: "付款證明：";
+      //   }
+      // }
+
+      // .consult_record {
+      //   &::before {
+      //     content: "諮詢紀錄：";
+      //   }
+      // }
+
+      // .service {
+      //   &::before {
+      //     content: "線上客服：";
+      //   }
+      // }
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+    &:nth-child(even) {
+      background-color: rgba(230, 230, 230, 0.3);
+    }
+
+    select {
+      margin-bottom: 0 !important;
+    }
+
+    div {
+      line-height: 1.4;
+      color: #777;
+      padding: 8px 0;
+
+      a {
+        display: inline;
+
+        &[download] {
+          &:after {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-left: 4px;
+            background-image: url(../images/ic_download.png);
+            background-repeat: no-repeat;
+            background-size: 15px;
+            background-position: center;
+          }
+        }
+      }
+
+      .service_msg {
+        position: relative;
+        cursor: pointer;
+        .notify {
+          right: -20px;
+          top: -10px;
+          transform: scale(0.8);
+          -webkit-transform: scale(0.8);
+          -moz-transform: scale(0.8);
+          -ms-transform: scale(0.8);
+          -o-transform: scale(0.8);
+        }
+      }
+    }
+  }
+}
+
 .lb {
   position: fixed;
   background-color: rgba(102, 102, 102, 0.4);
@@ -3357,6 +3506,7 @@ input[name="verifyCode"] {
   width: 295px;
   border-radius: 15px;
   overflow: hidden;
+  z-index: 300;
 
   .bg_blue {
     background-color: #47c3e4;

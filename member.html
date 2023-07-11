@@ -160,12 +160,18 @@
       <!-- 折扣碼的code end -->
 
       <div class="member W1280 bg_white">
-        <ul class="tab d_flex f19 W100">
-          <li class="active" data-tab="content1"><h6>基本資訊</h6></li>
-          <li data-tab="content2"><h6>子帳號設定</h6></li>
-          <li data-tab="content3"><h6>會籍期限查詢</h6></li>
+        <ul class="tab tab_style2 d_flex f19 W100">
+          <div class="W33 d_flex" style="justify-content: center">
+            <li class="active W100" data-tab="content1"><h6>基本資訊</h6></li>
+          </div>
+          <div class="W33 d_flex" style="justify-content: center">
+            <li data-tab="content2" class="W100"><h6>子帳號設定</h6></li>
+          </div>
+          <div class="W33 d_flex" style="justify-content: center">
+            <li data-tab="content3" class="W100"><h6>會籍期限查詢</h6></li>
+          </div>
         </ul>
-        <div class="content content1">
+        <div class="content content1 active">
           <div class="basic_info">
             <h4 class="title must_filled">基本資訊</h4>
             <div class="d_flex">
@@ -250,7 +256,7 @@
             <div class="d_flex">
               <span class="filled">證件號碼</span>
               <div class="multi_input d_flex">
-                <select name="" id="" class="m3">
+                <select name="" id="" class="m3 mb10_mb">
                   <option selected disabled hidden>證件類別</option>
                   <option value="身分證">身分證</option>
                   <option value="護照">護照</option>
@@ -302,7 +308,10 @@
               ><input type="text" value="王*華" class="sm" />
               <span class="pl5">帳號1</span>
               <input type="text" value="arthur@pace.com.tw" />
-              <div class="agent_btn_area d_flex">
+              <div
+                class="agent_btn_area d_flex"
+                style="justify-content: space-between"
+              >
                 <button
                   class="f16 grey W140"
                   name="agent"
@@ -319,7 +328,10 @@
               ><input type="text" value="王*華" class="sm" />
               <span class="pl5">帳號2</span>
               <input type="text" value="arthur@pace.com.tw" />
-              <div class="agent_btn_area d_flex">
+              <div
+                class="agent_btn_area d_flex"
+                style="justify-content: space-between"
+              >
                 <button
                   class="f16 grey W140"
                   name="agent"
@@ -336,7 +348,10 @@
               ><input type="text" value="王*華" class="sm" />
               <span class="pl5">帳號3</span>
               <input type="text" value="arthur@pace.com.tw" />
-              <div class="agent_btn_area d_flex">
+              <div
+                class="agent_btn_area d_flex"
+                style="justify-content: space-between"
+              >
                 <button
                   class="f16 grey W140"
                   name="agent"
@@ -353,15 +368,9 @@
               <span>確認儲存</span>
             </a> -->
           </div>
-
-          <hr />
-
-          <div class="family basic_info">
-            <h4 class="title">家庭群組設定</h4>
-          </div>
         </div>
 
-        <div class="content content3 active">
+        <div class="content content3">
           <h4 class="f24 f_b f_pink t_left mb20">－ 會籍資訊</h4>
           <div class="table" style="border-bottom: 1px solid #49c4e5">
             <div class="th d_flex f16">
@@ -624,7 +633,7 @@
       this.value = cc_format(this.value);
     };
 
-    // $(".expire_lb").addClass("open"); // 到期的彈窗先打開
+    $(".expire_lb").addClass("open"); // 到期的彈窗先打開
 
     function cc_format(value) {
       var v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");

@@ -351,6 +351,12 @@ b {
   margin-bottom: 10px;
 }
 
+.mb10_mb {
+  @media screen and (max-width: 599px) {
+    margin-bottom: 10px !important;
+  }
+}
+
 .mt10 {
   margin-top: 10px;
 }

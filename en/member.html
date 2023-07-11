@@ -24,7 +24,11 @@
       type="text/css"
       href="https://demo.iccare.vip/front/css/reset.css"
     />
-    <link rel="stylesheet" type="text/css" href="https://demo.iccare.vip/intlTelInput/css/intlTelInput.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://demo.iccare.vip/intlTelInput/css/intlTelInput.css"
+    />
 
     <link rel="stylesheet" type="text/css" href="/css/init.css" />
     <link
@@ -46,898 +50,1249 @@
 
   <body class="iti-mobile">
     <div id="app">
-        <div id="header">
-    <div class="W1280 d_flex">
-        <a href="https://demo.iccare.vip/en" class="logo"><img src="https://demo.iccare.vip/front/images/logo.png" alt="ICCare"></a>
-        <div class="func d_flex">
+      <div id="header">
+        <div class="W1280 d_flex">
+          <a href="https://demo.iccare.vip/en" class="logo"
+            ><img
+              src="https://demo.iccare.vip/front/images/logo.png"
+              alt="ICCare"
+          /></a>
+          <div class="func d_flex">
             <label class="func_item menu-open-button" for="menu-open">
-                <span class="hamburger hamburger-1"></span>
-                <span class="hamburger hamburger-2"></span>
-                <span class="hamburger hamburger-3"></span>
+              <span class="hamburger hamburger-1"></span>
+              <span class="hamburger hamburger-2"></span>
+              <span class="hamburger hamburger-3"></span>
             </label>
-        </div>
-        <ul class="nav d_flex">
+          </div>
+          <ul class="nav d_flex">
             <li class="redirect">
-                <a href="https://demo.iccare.vip/en">
-                    <p>24HR emergency consultation</p>
-                </a>
-            </li>
-            <li class="redirect">
-                <a href="https://demo.iccare.vip/en/bankbook">
-                    <p>My Health Book</p>
-                </a>
-            </li>
-            <li class="redirect" style="display: none;">
-                <a href="https://intellicentrics.page.link/?link=https://www.iccare.vip?apn%3Dcom.intellicentrics.biobytes%26ibi%3Dcom.intellicentrics.biobytes%26countryCode%3DTWN&amp;apn=com.intellicentrics.biobytes&amp;isi=1534598305&amp;ibi=com.intellicentrics.biobytes&amp;st=BioBytes&amp;st=Redefining+how+we+care+for+our+health+one+byte+at+a+time&amp;si=https://www.biobytes.net/wp-content/uploads/2021/01/BioBytes_color_no_URL.png" target="_blank">
-                    <p>健康數據管理</p>
-                </a>
+              <a href="https://demo.iccare.vip/en">
+                <p>24HR emergency consultation</p>
+              </a>
             </li>
             <li class="redirect">
-                <a href="https://demo.iccare.vip/en/products">
-                    <p>Merchandise</p>
-                </a>
+              <a href="https://demo.iccare.vip/en/bankbook">
+                <p>My Health Book</p>
+              </a>
+            </li>
+            <li class="redirect" style="display: none">
+              <a
+                href="https://intellicentrics.page.link/?link=https://www.iccare.vip?apn%3Dcom.intellicentrics.biobytes%26ibi%3Dcom.intellicentrics.biobytes%26countryCode%3DTWN&amp;apn=com.intellicentrics.biobytes&amp;isi=1534598305&amp;ibi=com.intellicentrics.biobytes&amp;st=BioBytes&amp;st=Redefining+how+we+care+for+our+health+one+byte+at+a+time&amp;si=https://www.biobytes.net/wp-content/uploads/2021/01/BioBytes_color_no_URL.png"
+                target="_blank"
+              >
+                <p>健康數據管理</p>
+              </a>
             </li>
             <li class="redirect">
-                <a href="https://demo.iccare.vip/en/booking/list">
-                    <p>Consultation Record</p>
-                </a>
+              <a href="https://demo.iccare.vip/en/products">
+                <p>Merchandise</p>
+              </a>
             </li>
-                        <li class="redirect">
-                <a href="javascript:;" onclick="openCouponLb();">
-                    <p>Voucher Redemption</p>
-                </a>
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en/booking/list">
+                <p>Consultation Record</p>
+              </a>
             </li>
-                        <li class="redirect">
-                <a href="https://demo.iccare.vip/en/member">
-                    <p>My Account</p>
-                </a>
+            <li class="redirect">
+              <a href="javascript:;" onclick="openCouponLb();">
+                <p>Voucher Redemption</p>
+              </a>
+            </li>
+            <li class="redirect">
+              <a href="https://demo.iccare.vip/en/member">
+                <p>My Account</p>
+              </a>
             </li>
             <li class="open_sub">
-                <p>Language</p>
-                <ul>
-                    <li><a href="https://demo.iccare.vip/zh-TW/member">中文</a></li>
-                    <li><a href="https://demo.iccare.vip/en/member">English</a></li>
-                </ul>
+              <p>Language</p>
+              <ul>
+                <li><a href="https://demo.iccare.vip/zh-TW/member">中文</a></li>
+                <li><a href="https://demo.iccare.vip/en/member">English</a></li>
+              </ul>
             </li>
             <li class="redirect">
-                                <form id="form" action="https://demo.iccare.vip/en/logout" method="post">
-                    <input type="hidden" name="_token" value="J6yH9Il9gAG06sBWekxXtYFiVBvf0SJfWAEWh812">                    <a href="javascript:;" onclick="javascript: $('#form').submit();">
-                        <p>Logout</p>
-                    </a>
-                </form>
-                            </li>
-        </ul>
-    </div>
-</div>
-<div class="lb coupon_lb">
-    <div class="lb_content W520">
-        <label class="close close_lb">
+              <form
+                id="form"
+                action="https://demo.iccare.vip/en/logout"
+                method="post"
+              >
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="J6yH9Il9gAG06sBWekxXtYFiVBvf0SJfWAEWh812"
+                />
+                <a
+                  href="javascript:;"
+                  onclick="javascript: $('#form').submit();"
+                >
+                  <p>Logout</p>
+                </a>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="lb coupon_lb">
+        <div class="lb_content W520">
+          <label class="close close_lb">
             <span class="hamburger hamburger-1"></span>
             <span class="hamburger hamburger-2"></span>
             <span class="hamburger hamburger-3"></span>
-        </label>
-        <div class="W400">
+          </label>
+          <div class="W400">
             <div class="coupon_input">
-                <div class="t_center">
-                    <h3 class="title underline">Please enter voucher code</h3>
-                </div>
-                <input type="text" class="mb10">
-                <div class="errMsg f_red f14 p15 t_center">Redemption failed, please try again</div>
-                <div class="d_flex btn_area mt20">
-                    <button class="light W50 close_lb" type="button" onclick="closeCouponLb();">
-                        <span>Cancel</span>
-                    </button>
-                    <button class="W50 sendCoupon" type="button" onclick="sendCoupon();">
-                        <span>Confirm</span>
-                    </button>
-                </div>
+              <div class="t_center">
+                <h3 class="title underline">Please enter voucher code</h3>
+              </div>
+              <input type="text" class="mb10" />
+              <div class="errMsg f_red f14 p15 t_center">
+                Redemption failed, please try again
+              </div>
+              <div class="d_flex btn_area mt20">
+                <button
+                  class="light W50 close_lb"
+                  type="button"
+                  onclick="closeCouponLb();"
+                >
+                  <span>Cancel</span>
+                </button>
+                <button
+                  class="W50 sendCoupon"
+                  type="button"
+                  onclick="sendCoupon();"
+                >
+                  <span>Confirm</span>
+                </button>
+              </div>
             </div>
             <div class="coupon_sent">
-                <div class="t_center">
-                    <h3 class="title underline">Redemption Success</h3>
-                </div>
-                <p class="credit_code_result f16 f_grey t_center"></p>
-                <div style="width: 200px; margin: 30px auto 10px;">
-                    <button class="W100 close_lb" type="button" onclick="closeCouponLb();">
-                        <span>Confirm</span>
-                    </button>
-                </div>
+              <div class="t_center">
+                <h3 class="title underline">Redemption Success</h3>
+              </div>
+              <p class="credit_code_result f16 f_grey t_center"></p>
+              <div style="width: 200px; margin: 30px auto 10px">
+                <button
+                  class="W100 close_lb"
+                  type="button"
+                  onclick="closeCouponLb();"
+                >
+                  <span>Confirm</span>
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-<script>
-    $(function () {
-        $('body').addClass('en');
-    });
+      </div>
+      <script>
+        $(function () {
+          $("body").addClass("en");
+        });
 
-    function openCouponLb()
-    {
-        $('.coupon_input').show();
-        $('.coupon_input').find('.errMsg').hide();
-        $('.coupon_input').find('input').val('');
-        $('.coupon_sent').hide();
-        $('.coupon_lb').addClass('open');
-    }
-
-    function closeCouponLb()
-    {
-        $('.coupon_lb').removeClass('open');
-        location.reload();
-    }
-
-    function sendCoupon()
-    {
-        var code = $('.coupon_input').find('input').val();
-        if (code.length == 0) {
-            $('.coupon_input').find('.errMsg').text('Please enter voucher code');
-            $('.coupon_input').find('.errMsg').show();
-            return false;
+        function openCouponLb() {
+          $(".coupon_input").show();
+          $(".coupon_input").find(".errMsg").hide();
+          $(".coupon_input").find("input").val("");
+          $(".coupon_sent").hide();
+          $(".coupon_lb").addClass("open");
         }
 
-        var formData = new FormData();
-        formData.append('code', code);
+        function closeCouponLb() {
+          $(".coupon_lb").removeClass("open");
+          location.reload();
+        }
 
-        $.ajax({
-            url: 'https://demo.iccare.vip/en/credit/code/verify',
-            method: 'POST',
+        function sendCoupon() {
+          var code = $(".coupon_input").find("input").val();
+          if (code.length == 0) {
+            $(".coupon_input")
+              .find(".errMsg")
+              .text("Please enter voucher code");
+            $(".coupon_input").find(".errMsg").show();
+            return false;
+          }
+
+          var formData = new FormData();
+          formData.append("code", code);
+
+          $.ajax({
+            url: "https://demo.iccare.vip/en/credit/code/verify",
+            method: "POST",
             data: formData,
-            dataType: 'json',
+            dataType: "json",
             contentType: false,
             processData: false,
             headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-            }
-        }).done(function (res) {
+              "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+            },
+          }).done(function (res) {
             if (res.error) {
-                $('.coupon_input').find('.errMsg').text(res.error.msg);
-                $('.coupon_input').find('.errMsg').show();
-                return false;
+              $(".coupon_input").find(".errMsg").text(res.error.msg);
+              $(".coupon_input").find(".errMsg").show();
+              return false;
             }
 
-            $('.coupon_input').hide();
-            $('.credit_code_result').text(res.data.msg);
-            $('.coupon_sent').show();
-        });
-    }
-</script>        <div class="member W1280 bg_white">
-            <ul class="tab d_flex f19 W100">
-                <li class="active" data-tab="content1"><h6>Basic Info</h6></li>
-                                <li  data-tab="content2"><h6>Subaccount Settings</h6></li>
-                            </ul>
-            <div class="content content1 active">
-                <div class="basic_info">
-                    <h4 class="title must_filled">Basic Info</h4>
-                    <div class="d_flex">
-                        <span class="filled">User ID</span><input type="text" value="29" disabled="">
-                    </div>
-                    <div class="d_flex">
-                        <span class="filled">Membership plan</span>
-                                                                            <input type="text" value="付費會員" disabled="">
-                                                                        </div>
-                    <div class="d_flex">
-                        <span class="filled">Account</span><input type="text" value="Arthur1" disabled="">
-                    </div>
-                    <div class="d_flex">
-                        <span>Reset Password</span><input type="text" name="password">
-                    </div>
-                    <div class="d_flex">
-                        <span class="filled">Full Name</span><input id="name" type="text" value="Bard">
-                    </div>
-                    <div class="d_flex">
-                        <span class="filled">Sexuality</span>
-                        <select name="sex" id="sex">
-                            <option value="1" selected="">Male</option>
-                            <option value="2">Female</option>
-                        </select>
-                    </div>
-                    <div class="d_flex">
-                        <span class="filled">Phone number</span>
-                        <div class="multi_input d_flex has_btn">
-                            <input type="hidden" id="country_code_number" name="country_code_number" value="886">
-                            <input type="hidden" id="country_code" name="country_code" value="tw">
-                            <div class="iti iti--allow-dropdown iti--separate-dial-code"><div class="iti__flag-container"><div class="iti__selected-flag" role="combobox" aria-controls="iti-0__country-listbox" aria-owns="iti-0__country-listbox" aria-expanded="false" tabindex="0" title="Taiwan (台灣): +886" aria-activedescendant="iti-0__item-tw"><div class="iti__flag iti__tw"></div><div class="iti__selected-dial-code">+886</div><div class="iti__arrow"></div></div></div><input type="tel" name="cellphone" id="cellphone" value="980989038" autocomplete="off" data-intl-tel-input-id="0" style="padding-left: 76px;" placeholder="912 345 678"></div>
-                                                        <button disabled="">Verified</button>
-                                                    </div>
-                    </div>
-                    <div class="lb phone-check-lb">
-                        <div class="lb_content W1060">
-                            <label class="close">
-                                <span class="hamburger hamburger-1"></span>
-                                <span class="hamburger hamburger-2"></span>
-                                <span class="hamburger hamburger-3"></span>
-                            </label>
-                            <div class="t_center">
-                                <h3 class="title underline">Verify phone</h3>
-                            </div>
-                            <p style="margin-bottom: 30px;">Verify code sent</p>
-                            <input id="phone-check-code" type="tel" autocomplete="one-time-code" required="" placeholder="Please enter verify code">
-                            <div class="d_flex btn_area">
-                                <button class="W100">
-                                    <a id="phone-check-code-verify" href="javascript:;" onclick="phoneCheckCodeVerify();">Verify</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d_flex">
-                        <span class="filled">Birthday</span>
-                        <div class="birthday">
-                            <input type="tel" class="b_year" id="b_year" name="b_year" placeholder="Year of Birth" maxlength="4" value="1987">
-                            <select class="b_month" id="b_month" name="b_month">
-                                <option value="0" disabled="">Month of Birth</option>
-                                                                <option value="1">01</option>
-                                                                <option value="2" selected="">02</option>
-                                                                <option value="3">03</option>
-                                                                <option value="4">04</option>
-                                                                <option value="5">05</option>
-                                                                <option value="6">06</option>
-                                                                <option value="7">07</option>
-                                                                <option value="8">08</option>
-                                                                <option value="9">09</option>
-                                                                <option value="10">10</option>
-                                                                <option value="11">11</option>
-                                                                <option value="12">12</option>
-                                                            </select>
-                            <input type="tel" class="b_day" id="b_day" name="b_day" placeholder="Date of Birth" maxlength="2" value="18">
-                        </div>
-                    </div>
-                    <div class="d_flex">
-                        <span class="filled">Document number</span>
-                        <div class="multi_input d_flex">
-                            <select name="document_type" id="document_type" class="m3">
-                                <option value="1">Identity card</option>
-                                <option value="2">Resident certificate</option>
-                                <option value="3">Passport</option>
-                            </select>
-                            <input type="text" class="m4" placeholder="Document number" name="docoument_number" id="document_number" value="">
-                        </div>
-                    </div>
-                    <div class="d_flex">
-                        <span>Email</span>
-                        <input type="text" id="email" name="email" value="arthur@gmail.com">
-                    </div>
-                    <div class="d_flex">
-                        <span>National Health Insurance (NHI) number <font class="f_blue">※Non-Taiwan citizens can skip this field</font></span>
-                        <input type="text" name="card_number" id="card" value="112245789876">
-                    </div>
-                    <div class="d_flex">
-                        <span>Country</span>
-                        <input type="text" name="country" id="country" value="">
-                    </div>
-                    <div class="d_flex">
-                        <span>City</span>
-                        <input type="text" name="city" id="city" value="">
-                    </div>
-                    <div class="d_flex">
-                        <span>State/Province/District</span>
-                        <input type="text" name="state" id="state" value="">
-                    </div>
-                    <div class="d_flex">
-                        <span>Postal code</span>
-                        <input type="text" name="zip_code" id="zip_code" value="">
-                    </div>
-                    <div class="d_flex">
-                        <span>Address</span>
-                        <input type="text" name="addr" id="addr" value="">
-                    </div>
-                    <a href="javascript:;" class="btn" onclick="updateMember();">
-                        <span>Confirm saved</span>
-                    </a>
-                </div>
-                <hr>
-                <div class="social_binding W300">
-                    <h4 class="title">Bind Social Account</h4>
-                    <p>Regularly provide promotional message</p>
-                    <div class="d_flex">
-                        <a href="https://demo.iccare.vip/en/login/google/auth"><img src="https://demo.iccare.vip/front/images/ic-google-color.png"></a>
-                        <a href="https://demo.iccare.vip/en/login/line/auth"><img src="https://demo.iccare.vip/front/images/ic-line-color.png"></a>
-                        <a href="https://demo.iccare.vip/en/login/fb/auth"><img src="https://demo.iccare.vip/front/images/ic-fb-color.png"></a>
-                    </div>
-                </div>
+            $(".coupon_input").hide();
+            $(".credit_code_result").text(res.data.msg);
+            $(".coupon_sent").show();
+          });
+        }
+      </script>
+      <div class="member W1280 bg_white">
+        <ul class="tab d_flex f19 W100">
+          <li class="active" data-tab="content1"><h6>Basic Info</h6></li>
+          <li data-tab="content2"><h6>Subaccount Settings</h6></li>
+        </ul>
+        <div class="content content1 active">
+          <div class="basic_info">
+            <h4 class="title must_filled">Basic Info</h4>
+            <div class="d_flex">
+              <span class="filled">User ID</span
+              ><input type="text" value="29" disabled="" />
             </div>
-            <div class="content content2">
-                <div class="sub_account">
-                    <h4 class="title">Subaccount Settings</h4>
-                                        <button name="create_new" type="button" onclick="showAddSubUser();">新增子帳號</button>
-                                        <div class="d_flex account_item">
-                        <span class="sm">Full Name</span>
-                        <input type="text" class="sm" placeholder="Full Name" value="Bard" readonly="">
-                        <span class="p15">Account</span>
-                        <input type="text" placeholder="Account" value="Arthur1" readonly="">
-                        <div class="agent_btn_area d_flex">
-                            <button class="f16 grey W140" name="agent" onclick="showAgent(29);">Agent Settings</button>
-                        </div>
-                    </div>
-                                        <div class="d_flex account_item">
-                        <span class="sm">Full Name</span>
-                        <input type="text" class="sm" placeholder="Full Name" value="江志峰" readonly="">
-                        <span class="p15">Account</span>
-                        <input type="text" placeholder="Account" value="arthur8065" readonly="">
-                        <div class="agent_btn_area d_flex">
-                            <button class="f16 grey W140" name="agent" onclick="showAgent(134);">Agent Settings</button>
-                            <button class="f16 grey W85" name="edit" onclick="showEditSubUser(134);">Edit</button>
-                            <button class="f16 light_grey W85" onclick="submemberDelete(134);">Delete</button>
-                        </div>
-                    </div>
-                                        <div class="d_flex account_item">
-                        <span class="sm">Full Name</span>
-                        <input type="text" class="sm" placeholder="Full Name" value="Arthur" readonly="">
-                        <span class="p15">Account</span>
-                        <input type="text" placeholder="Account" value="Arthur091901" readonly="">
-                        <div class="agent_btn_area d_flex">
-                            <button class="f16 grey W140" name="agent" onclick="showAgent(163);">Agent Settings</button>
-                            <button class="f16 grey W85" name="edit" onclick="showEditSubUser(163);">Edit</button>
-                            <button class="f16 light_grey W85" onclick="submemberDelete(163);">Delete</button>
-                        </div>
-                    </div>
-                                        <div class="d_flex account_item">
-                        <span class="sm">Full Name</span>
-                        <input type="text" class="sm" placeholder="Full Name" value="志峰2" readonly="">
-                        <span class="p15">Account</span>
-                        <input type="text" placeholder="Account" value="Arthur091902" readonly="">
-                        <div class="agent_btn_area d_flex">
-                            <button class="f16 grey W140" name="agent" onclick="showAgent(164);">Agent Settings</button>
-                            <button class="f16 grey W85" name="edit" onclick="showEditSubUser(164);">Edit</button>
-                            <button class="f16 light_grey W85" onclick="submemberDelete(164);">Delete</button>
-                        </div>
-                    </div>
-                                    </div>
-                <div class="lb submember-lb">
-                    <div class="lb_content W1060">
-                        <label class="close">
-                            <span class="hamburger hamburger-1"></span>
-                            <span class="hamburger hamburger-2"></span>
-                            <span class="hamburger hamburger-3"></span>
-                        </label>
-                        <div class="t_center">
-                            <h3 id="lb-title" class="title underline">Add subaccount</h3>
-                        </div>
-                        <input type="text" placeholder="Account(Required. For login, please remember)" id="subUserAccount">
-                        <input type="password" autocomplete="new-password" placeholder="Password (Required. Must have at least 8 characters including uppercase letters, lowercase letters, and numbers)" id="subUserPassword">
-                        <input type="password" autocomplete="new-password" placeholder="Confirm Password (Required)" id="subUserPassword2">
-                        <input type="text" placeholder="Full Name (Required)" id="subUserName">
-                        <select id="subUserSex">
-                            <option value="0" disabled="" selected="">Sexuality (Required)</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                        </select>
-                        <div class="multi_input d_flex">
-                            <input type="hidden" id="subUserCountryCodeNumber">
-                            <input type="hidden" id="subUserCountryCode">
-                            <input type="tel" placeholder="Phone number" id="subUserCellphone">
-                        </div>
-                        <div class="birthday">
-                            <input type="tel" class="b_year" id="sub_b_year" name="sub_b_year" placeholder="Year of Birth" maxlength="4" value="1987">
-                            <select class="b_month" id="sub_b_month" name="sub_b_month">
-                                <option value="0" disabled="">Month of Birth</option>
-                                                                <option value="1">01</option>
-                                                                <option value="2" selected="">02</option>
-                                                                <option value="3">03</option>
-                                                                <option value="4">04</option>
-                                                                <option value="5">05</option>
-                                                                <option value="6">06</option>
-                                                                <option value="7">07</option>
-                                                                <option value="8">08</option>
-                                                                <option value="9">09</option>
-                                                                <option value="10">10</option>
-                                                                <option value="11">11</option>
-                                                                <option value="12">12</option>
-                                                            </select>
-                            <input type="tel" class="b_day" id="sub_b_day" name="sub_b_day" placeholder="Date of Birth" maxlength="2" value="18">
-                        </div>
-                        <input type="text" placeholder="National Health Insurance (NHI) number (※Non-Taiwan citizens can skip this field)" id="subUserCardNumber">
-                        <div class="d_flex btn_area">
-                            <button class="W100">
-                                <span><a id="lb-btn-submit" href="javascript:;" onclick="addSubUser();">Confirm submission</a></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="lb agent-lb">
-                    <input type="hidden" id="agent-id">
-                    <div class="lb_content W1060">
-                        <label class="close">
-                            <span class="hamburger hamburger-1"></span>
-                            <span class="hamburger hamburger-2"></span>
-                            <span class="hamburger hamburger-3"></span>
-                        </label>
-                        <div class="t_center">
-                            <h3 class="title underline">Agent Settings</h3>
-                        </div>
-                        <p id="agent-message"></p>
-                        <div>
-                            <ul style="margin-top: 10px;" class="agent-list"></ul>
-                        </div>
-                        <div class="d_flex btn_area">
-                            <button class="W50">
-                                <span><a id="agent-lb-cancel" href="javascript:;" onclick="closeAgentLb();">Cancel</a></span>
-                            </button>
-                            <button class="W50">
-                                <span><a id="agent-lb-save" href="javascript:;" onclick="agentSave();">Confirm saved</a></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                                                                <hr>
-                <div class="sub_account">
-                    <h4 class="title">Family Group Settings</h4>
-                    <div class="W400 f_grey">
-                        <b class="f_black mb20 d_block">Family Admin</b>
-                        <div class="d_flex mb40">
-                            <span>Full Name</span>
-                            <input type="text" class="name_input f_black" readonly="" value="Bard">
-                        </div>
-                                                                        <b class="f_black mb20 d_block">I am the Agent</b>
-                        <p class="mb20 f16">You are the agent for the following account. You can make an emergency consultation appointment and  view their records for them.</p>
-                                                <div class="d_flex">
-                            <span>Full Name1</span>
-                            <input type="text" class="name_input f_black" readonly="" value="江志峰">
-                        </div>
-                                                <div class="d_flex">
-                            <span>Full Name2</span>
-                            <input type="text" class="name_input f_black" readonly="" value="Arthur">
-                        </div>
-                                                <div class="d_flex">
-                            <span>Full Name3</span>
-                            <input type="text" class="name_input f_black" readonly="" value="志峰2">
-                        </div>
-                                                <div class="d_flex">
-                            <span>Full Name4</span>
-                            <input type="text" class="name_input f_black" readonly="" value="志峰3">
-                        </div>
-                                                                    </div>
-                </div>
+            <div class="d_flex">
+              <span class="filled">Membership plan</span>
+              <input type="text" value="付費會員" disabled="" />
             </div>
+            <div class="d_flex">
+              <span class="filled">Account</span
+              ><input type="text" value="Arthur1" disabled="" />
+            </div>
+            <div class="d_flex">
+              <span>Reset Password</span><input type="text" name="password" />
+            </div>
+            <div class="d_flex">
+              <span class="filled">Full Name</span
+              ><input id="name" type="text" value="Bard" />
+            </div>
+            <div class="d_flex">
+              <span class="filled">Sexuality</span>
+              <select name="sex" id="sex">
+                <option value="1" selected="">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+            <div class="d_flex">
+              <span class="filled">Phone number</span>
+              <div class="multi_input d_flex has_btn">
+                <input
+                  type="hidden"
+                  id="country_code_number"
+                  name="country_code_number"
+                  value="886"
+                />
+                <input
+                  type="hidden"
+                  id="country_code"
+                  name="country_code"
+                  value="tw"
+                />
+                <div class="iti iti--allow-dropdown iti--separate-dial-code">
+                  <div class="iti__flag-container">
+                    <div
+                      class="iti__selected-flag"
+                      role="combobox"
+                      aria-controls="iti-0__country-listbox"
+                      aria-owns="iti-0__country-listbox"
+                      aria-expanded="false"
+                      tabindex="0"
+                      title="Taiwan (台灣): +886"
+                      aria-activedescendant="iti-0__item-tw"
+                    >
+                      <div class="iti__flag iti__tw"></div>
+                      <div class="iti__selected-dial-code">+886</div>
+                      <div class="iti__arrow"></div>
                     </div>
-        <div id="footer">
-    <div class="footer_detail f16">
-        <img src="https://demo.iccare.vip/front/images/logo_black.png">
-        <p>
+                  </div>
+                  <input
+                    type="tel"
+                    name="cellphone"
+                    id="cellphone"
+                    value="980989038"
+                    autocomplete="off"
+                    data-intl-tel-input-id="0"
+                    style="padding-left: 76px"
+                    placeholder="912 345 678"
+                  />
+                </div>
+                <button disabled="">Verified</button>
+              </div>
+            </div>
+            <div class="lb phone-check-lb">
+              <div class="lb_content W1060">
+                <label class="close">
+                  <span class="hamburger hamburger-1"></span>
+                  <span class="hamburger hamburger-2"></span>
+                  <span class="hamburger hamburger-3"></span>
+                </label>
+                <div class="t_center">
+                  <h3 class="title underline">Verify phone</h3>
+                </div>
+                <p style="margin-bottom: 30px">Verify code sent</p>
+                <input
+                  id="phone-check-code"
+                  type="tel"
+                  autocomplete="one-time-code"
+                  required=""
+                  placeholder="Please enter verify code"
+                />
+                <div class="d_flex btn_area">
+                  <button class="W100">
+                    <a
+                      id="phone-check-code-verify"
+                      href="javascript:;"
+                      onclick="phoneCheckCodeVerify();"
+                      >Verify</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="d_flex">
+              <span class="filled">Birthday</span>
+              <div class="birthday">
+                <input
+                  type="tel"
+                  class="b_year"
+                  id="b_year"
+                  name="b_year"
+                  placeholder="Year of Birth"
+                  maxlength="4"
+                  value="1987"
+                />
+                <select class="b_month" id="b_month" name="b_month">
+                  <option value="0" disabled="">Month of Birth</option>
+                  <option value="1">01</option>
+                  <option value="2" selected="">02</option>
+                  <option value="3">03</option>
+                  <option value="4">04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <input
+                  type="tel"
+                  class="b_day"
+                  id="b_day"
+                  name="b_day"
+                  placeholder="Date of Birth"
+                  maxlength="2"
+                  value="18"
+                />
+              </div>
+            </div>
+            <div class="d_flex">
+              <span class="filled">Document number</span>
+              <div class="multi_input d_flex">
+                <select name="document_type" id="document_type" class="m3">
+                  <option value="1">Identity card</option>
+                  <option value="2">Resident certificate</option>
+                  <option value="3">Passport</option>
+                </select>
+                <input
+                  type="text"
+                  class="m4"
+                  placeholder="Document number"
+                  name="docoument_number"
+                  id="document_number"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="d_flex">
+              <span>Email</span>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value="arthur@gmail.com"
+              />
+            </div>
+            <div class="d_flex">
+              <span
+                >National Health Insurance (NHI) number
+                <font class="f_blue"
+                  >※Non-Taiwan citizens can skip this field</font
+                ></span
+              >
+              <input
+                type="text"
+                name="card_number"
+                id="card"
+                value="112245789876"
+              />
+            </div>
+            <div class="d_flex">
+              <span>Country</span>
+              <input type="text" name="country" id="country" value="" />
+            </div>
+            <div class="d_flex">
+              <span>City</span>
+              <input type="text" name="city" id="city" value="" />
+            </div>
+            <div class="d_flex">
+              <span>State/Province/District</span>
+              <input type="text" name="state" id="state" value="" />
+            </div>
+            <div class="d_flex">
+              <span>Postal code</span>
+              <input type="text" name="zip_code" id="zip_code" value="" />
+            </div>
+            <div class="d_flex">
+              <span>Address</span>
+              <input type="text" name="addr" id="addr" value="" />
+            </div>
+            <a href="javascript:;" class="btn" onclick="updateMember();">
+              <span>Confirm saved</span>
+            </a>
+          </div>
+          <hr />
+          <div class="social_binding W300">
+            <h4 class="title">Bind Social Account</h4>
+            <p>Regularly provide promotional message</p>
+            <div class="d_flex">
+              <a href="https://demo.iccare.vip/en/login/google/auth"
+                ><img
+                  src="https://demo.iccare.vip/front/images/ic-google-color.png"
+              /></a>
+              <a href="https://demo.iccare.vip/en/login/line/auth"
+                ><img
+                  src="https://demo.iccare.vip/front/images/ic-line-color.png"
+              /></a>
+              <a href="https://demo.iccare.vip/en/login/fb/auth"
+                ><img
+                  src="https://demo.iccare.vip/front/images/ic-fb-color.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="content content2">
+          <div class="sub_account">
+            <h4 class="title">Subaccount Settings</h4>
+            <button name="create_new" type="button" onclick="showAddSubUser();">
+              新增子帳號
+            </button>
+            <div class="d_flex account_item">
+              <span class="sm">Full Name</span>
+              <input
+                type="text"
+                class="sm"
+                placeholder="Full Name"
+                value="Bard"
+                readonly=""
+              />
+              <span class="p15">Account</span>
+              <input
+                type="text"
+                placeholder="Account"
+                value="Arthur1"
+                readonly=""
+              />
+              <div
+                class="agent_btn_area d_flex"
+                style="justify-content: space-between"
+              >
+                <button
+                  class="f16 grey W140"
+                  name="agent"
+                  onclick="showAgent(29);"
+                >
+                  Agent Settings
+                </button>
+              </div>
+            </div>
+            <div class="d_flex account_item">
+              <span class="sm">Full Name</span>
+              <input
+                type="text"
+                class="sm"
+                placeholder="Full Name"
+                value="江志峰"
+                readonly=""
+              />
+              <span class="p15">Account</span>
+              <input
+                type="text"
+                placeholder="Account"
+                value="arthur8065"
+                readonly=""
+              />
+              <div
+                class="agent_btn_area d_flex"
+                style="justify-content: space-between"
+              >
+                <button
+                  class="f16 grey W140"
+                  name="agent"
+                  onclick="showAgent(134);"
+                >
+                  Agent Settings
+                </button>
+                <button
+                  class="f16 grey W85"
+                  name="edit"
+                  onclick="showEditSubUser(134);"
+                >
+                  Edit
+                </button>
+                <button
+                  class="f16 light_grey W85"
+                  onclick="submemberDelete(134);"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+            <div class="d_flex account_item">
+              <span class="sm">Full Name</span>
+              <input
+                type="text"
+                class="sm"
+                placeholder="Full Name"
+                value="Arthur"
+                readonly=""
+              />
+              <span class="p15">Account</span>
+              <input
+                type="text"
+                placeholder="Account"
+                value="Arthur091901"
+                readonly=""
+              />
+              <div
+                class="agent_btn_area d_flex"
+                style="justify-content: space-between"
+              >
+                <button
+                  class="f16 grey W140"
+                  name="agent"
+                  onclick="showAgent(163);"
+                >
+                  Agent Settings
+                </button>
+                <button
+                  class="f16 grey W85"
+                  name="edit"
+                  onclick="showEditSubUser(163);"
+                >
+                  Edit
+                </button>
+                <button
+                  class="f16 light_grey W85"
+                  onclick="submemberDelete(163);"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+            <div class="d_flex account_item">
+              <span class="sm">Full Name</span>
+              <input
+                type="text"
+                class="sm"
+                placeholder="Full Name"
+                value="志峰2"
+                readonly=""
+              />
+              <span class="p15">Account</span>
+              <input
+                type="text"
+                placeholder="Account"
+                value="Arthur091902"
+                readonly=""
+              />
+              <div
+                class="agent_btn_area d_flex"
+                style="justify-content: space-between"
+              >
+                <button
+                  class="f16 grey W140"
+                  name="agent"
+                  onclick="showAgent(164);"
+                >
+                  Agent Settings
+                </button>
+                <button
+                  class="f16 grey W85"
+                  name="edit"
+                  onclick="showEditSubUser(164);"
+                >
+                  Edit
+                </button>
+                <button
+                  class="f16 light_grey W85"
+                  onclick="submemberDelete(164);"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="lb submember-lb">
+            <div class="lb_content W1060">
+              <label class="close">
+                <span class="hamburger hamburger-1"></span>
+                <span class="hamburger hamburger-2"></span>
+                <span class="hamburger hamburger-3"></span>
+              </label>
+              <div class="t_center">
+                <h3 id="lb-title" class="title underline">Add subaccount</h3>
+              </div>
+              <input
+                type="text"
+                placeholder="Account(Required. For login, please remember)"
+                id="subUserAccount"
+              />
+              <input
+                type="password"
+                autocomplete="new-password"
+                placeholder="Password (Required. Must have at least 8 characters including uppercase letters, lowercase letters, and numbers)"
+                id="subUserPassword"
+              />
+              <input
+                type="password"
+                autocomplete="new-password"
+                placeholder="Confirm Password (Required)"
+                id="subUserPassword2"
+              />
+              <input
+                type="text"
+                placeholder="Full Name (Required)"
+                id="subUserName"
+              />
+              <select id="subUserSex">
+                <option value="0" disabled="" selected="">
+                  Sexuality (Required)
+                </option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+              <div class="multi_input d_flex">
+                <input type="hidden" id="subUserCountryCodeNumber" />
+                <input type="hidden" id="subUserCountryCode" />
+                <input
+                  type="tel"
+                  placeholder="Phone number"
+                  id="subUserCellphone"
+                />
+              </div>
+              <div class="birthday">
+                <input
+                  type="tel"
+                  class="b_year"
+                  id="sub_b_year"
+                  name="sub_b_year"
+                  placeholder="Year of Birth"
+                  maxlength="4"
+                  value="1987"
+                />
+                <select class="b_month" id="sub_b_month" name="sub_b_month">
+                  <option value="0" disabled="">Month of Birth</option>
+                  <option value="1">01</option>
+                  <option value="2" selected="">02</option>
+                  <option value="3">03</option>
+                  <option value="4">04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <input
+                  type="tel"
+                  class="b_day"
+                  id="sub_b_day"
+                  name="sub_b_day"
+                  placeholder="Date of Birth"
+                  maxlength="2"
+                  value="18"
+                />
+              </div>
+              <input
+                type="text"
+                placeholder="National Health Insurance (NHI) number (※Non-Taiwan citizens can skip this field)"
+                id="subUserCardNumber"
+              />
+              <div class="d_flex btn_area">
+                <button class="W100">
+                  <span
+                    ><a
+                      id="lb-btn-submit"
+                      href="javascript:;"
+                      onclick="addSubUser();"
+                      >Confirm submission</a
+                    ></span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="lb agent-lb">
+            <input type="hidden" id="agent-id" />
+            <div class="lb_content W1060">
+              <label class="close">
+                <span class="hamburger hamburger-1"></span>
+                <span class="hamburger hamburger-2"></span>
+                <span class="hamburger hamburger-3"></span>
+              </label>
+              <div class="t_center">
+                <h3 class="title underline">Agent Settings</h3>
+              </div>
+              <p id="agent-message"></p>
+              <div>
+                <ul style="margin-top: 10px" class="agent-list"></ul>
+              </div>
+              <div class="d_flex btn_area">
+                <button class="W50">
+                  <span
+                    ><a
+                      id="agent-lb-cancel"
+                      href="javascript:;"
+                      onclick="closeAgentLb();"
+                      >Cancel</a
+                    ></span
+                  >
+                </button>
+                <button class="W50">
+                  <span
+                    ><a
+                      id="agent-lb-save"
+                      href="javascript:;"
+                      onclick="agentSave();"
+                      >Confirm saved</a
+                    ></span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="sub_account">
+            <h4 class="title">Family Group Settings</h4>
+            <div class="W400 f_grey">
+              <b class="f_black mb20 d_block">Family Admin</b>
+              <div class="d_flex mb40">
+                <span>Full Name</span>
+                <input
+                  type="text"
+                  class="name_input f_black"
+                  readonly=""
+                  value="Bard"
+                />
+              </div>
+              <b class="f_black mb20 d_block">I am the Agent</b>
+              <p class="mb20 f16">
+                You are the agent for the following account. You can make an
+                emergency consultation appointment and view their records for
+                them.
+              </p>
+              <div class="d_flex">
+                <span>Full Name1</span>
+                <input
+                  type="text"
+                  class="name_input f_black"
+                  readonly=""
+                  value="江志峰"
+                />
+              </div>
+              <div class="d_flex">
+                <span>Full Name2</span>
+                <input
+                  type="text"
+                  class="name_input f_black"
+                  readonly=""
+                  value="Arthur"
+                />
+              </div>
+              <div class="d_flex">
+                <span>Full Name3</span>
+                <input
+                  type="text"
+                  class="name_input f_black"
+                  readonly=""
+                  value="志峰2"
+                />
+              </div>
+              <div class="d_flex">
+                <span>Full Name4</span>
+                <input
+                  type="text"
+                  class="name_input f_black"
+                  readonly=""
+                  value="志峰3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footer_detail f16">
+          <img src="https://demo.iccare.vip/front/images/logo_black.png" />
+          <p>
             IntelliCentrics introduces trust into organizational
             decision-making, enabling our customers to make more informed
             decisions, reduce risk, and improve operational efficiencies.
-        </p>
-        <a href="https://demo.iccare.vip/files/隱私權條款.pdf" target="_blank" style="display: unset;">隱私權條款</a> | <a href="https://demo.iccare.vip/files/使用條款.pdf" target="_blank" style="display: unset;">使用條款</a>
+          </p>
+          <a
+            href="https://demo.iccare.vip/files/隱私權條款.pdf"
+            target="_blank"
+            style="display: unset"
+            >隱私權條款</a
+          >
+          |
+          <a
+            href="https://demo.iccare.vip/files/使用條款.pdf"
+            target="_blank"
+            style="display: unset"
+            >使用條款</a
+          >
+        </div>
+      </div>
     </div>
-</div>    </div>
     <script type="text/javascript" src="/js/init.js"></script>
     <script>
-        var iti;
-        var iti2;
+      var iti;
+      var iti2;
 
-        $(function () {
-            var input = document.querySelector('#cellphone');
-            iti = window.intlTelInput(input, {
-                initialCountry: $('#country_code').val(),
-                utilsScript: 'https://demo.iccare.vip/intlTelInput/js/utils.js',
-                separateDialCode: true,
-            });
-            input.addEventListener('countrychange', function () {
-                var data = iti.getSelectedCountryData();
-                $('[name=country_code]').val(data.iso2);
-                $('[name=country_code_number]').val(data.dialCode);
-            });
-
-            $('.lb .close').on('click', function () {
-                $('.lb').removeClass('open');
-            });
-
-            $('.tab').on('click', 'li', function () {
-                var tab = $(this).data('tab');
-                $('.tab li, .content').removeClass('active');
-                $(this).addClass('active');
-                $('.' + tab).addClass('active');
-            });
+      $(function () {
+        var input = document.querySelector("#cellphone");
+        iti = window.intlTelInput(input, {
+          initialCountry: $("#country_code").val(),
+          utilsScript: "https://demo.iccare.vip/intlTelInput/js/utils.js",
+          separateDialCode: true,
+        });
+        input.addEventListener("countrychange", function () {
+          var data = iti.getSelectedCountryData();
+          $("[name=country_code]").val(data.iso2);
+          $("[name=country_code_number]").val(data.dialCode);
         });
 
-        function updateMember()
-        {
-            var formData = new FormData();
-            formData.append('name', $('#name').val());
-            formData.append('sex', $('#sex').val());
-            formData.append('countryCodeNumber', $('#country_code_number').val());
-            formData.append('countryCode', $('#country_code').val());
-            formData.append('cellphone', $('#cellphone').val());
-            formData.append('b_year', $('#b_year').val());
-            formData.append('b_month', $('#b_month').val());
-            formData.append('b_day', $('#b_day').val());
-            formData.append('documentType', $('#document_type').val());
-            formData.append('documentNumber', $('#document_number').val());
-            formData.append('email', $('#email').val());
-            formData.append('cardNumber', $('#card').val());
-            formData.append('country', $('#country').val());
-            formData.append('city', $('#city').val());
-            formData.append('state', $('#state').val());
-            formData.append('zipCode', $('#zip_code').val());
-            formData.append('addr', $('#addr').val());
-            formData.append('password', $('[name=password]').val());
+        $(".lb .close").on("click", function () {
+          $(".lb").removeClass("open");
+        });
 
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/member/update',
-                method: 'POST',
-                data: formData,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                if (res.error != undefined) {
-                    alert(res.error.msg);
-                    return false;
-                }
-                alert('更新成功');
-            });
-        }
+        $(".tab").on("click", "li", function () {
+          var tab = $(this).data("tab");
+          $(".tab li, .content").removeClass("active");
+          $(this).addClass("active");
+          $("." + tab).addClass("active");
+        });
+      });
 
-        function showAddSubUser()
-        {
-            $('.submember-lb').addClass('open');
-            $('#lb-btn-submit').attr('onclick', 'addSubUser();');
-            $('#subUserAccount').removeAttr('disabled');
-            $('#subUserAccount').removeAttr('readonly');
-            $('#subUserAccount').val('');
-            $('#subUserName').val('');
-            $('#subUserSex').val(0);
-            $('#subUserCountryCodeNumber').val('');
-            $('#subUserCountryCode').val('');
-            $('#subUserCellphone').val('');
-            $('#sub_b_year').val('');
-            $('#sub_b_month').val(0);
-            $('#sub_b_day').val('');
-            $('#subUserCardNumber').val('')
-            $('#lb-title').text('新增子帳號');
+      function updateMember() {
+        var formData = new FormData();
+        formData.append("name", $("#name").val());
+        formData.append("sex", $("#sex").val());
+        formData.append("countryCodeNumber", $("#country_code_number").val());
+        formData.append("countryCode", $("#country_code").val());
+        formData.append("cellphone", $("#cellphone").val());
+        formData.append("b_year", $("#b_year").val());
+        formData.append("b_month", $("#b_month").val());
+        formData.append("b_day", $("#b_day").val());
+        formData.append("documentType", $("#document_type").val());
+        formData.append("documentNumber", $("#document_number").val());
+        formData.append("email", $("#email").val());
+        formData.append("cardNumber", $("#card").val());
+        formData.append("country", $("#country").val());
+        formData.append("city", $("#city").val());
+        formData.append("state", $("#state").val());
+        formData.append("zipCode", $("#zip_code").val());
+        formData.append("addr", $("#addr").val());
+        formData.append("password", $("[name=password]").val());
 
-            var input2 = document.querySelector('#subUserCellphone');
-            iti2 = window.intlTelInput(input2, {
-                initialCountry: 'auto',
-                separateDialCode: true,
-                geoIpLookup: function (success, failure) {
-                    $.get('https://ipinfo.io', function () {}, 'jsonp').always(function (resp) {
-                        var countryCode = (resp && resp.country) ? resp.country : "us";
-                        success(countryCode);
-                    });
-                },
-                utilsScript: 'https://demo.iccare.vip/intlTelInput/js/utils.js',
-            });
-            input2.addEventListener('countrychange', function () {
-                var data = iti2.getSelectedCountryData();
-                $('#subUserCountryCode').val(data.iso2);
-                $('#subUserCountryCodeNumber').val(data.dialCode);
-            });
-        }
+        $.ajax({
+          url: "https://demo.iccare.vip/en/member/update",
+          method: "POST",
+          data: formData,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          if (res.error != undefined) {
+            alert(res.error.msg);
+            return false;
+          }
+          alert("更新成功");
+        });
+      }
 
-        function showEditSubUser(id)
-        {
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/submember/data?id=' + id,
-                method: 'GET',
-                dataType: 'json',
-            }).done(function (res) {
-                if (res.error) {
-                    alert(res.error.msg);
-                    return false;
-                }
+      function showAddSubUser() {
+        $(".submember-lb").addClass("open");
+        $("#lb-btn-submit").attr("onclick", "addSubUser();");
+        $("#subUserAccount").removeAttr("disabled");
+        $("#subUserAccount").removeAttr("readonly");
+        $("#subUserAccount").val("");
+        $("#subUserName").val("");
+        $("#subUserSex").val(0);
+        $("#subUserCountryCodeNumber").val("");
+        $("#subUserCountryCode").val("");
+        $("#subUserCellphone").val("");
+        $("#sub_b_year").val("");
+        $("#sub_b_month").val(0);
+        $("#sub_b_day").val("");
+        $("#subUserCardNumber").val("");
+        $("#lb-title").text("新增子帳號");
 
-                $('.submember-lb').addClass('open');
-                $('#lb-btn-submit').attr('onclick', 'editSubUser(' + id + ');');
-                $('#lb-title').text('編輯子帳號');
-                $('#subUserAccount').attr('disabled', '');
-                $('#subUserAccount').attr('readonly', '');
-                $('#subUserAccount').val(res.data.account);
-                $('#subUserName').val(res.data.name);
-                $('#subUserSex').val(res.data.sex);
-                $('#subUserCountryCodeNumber').val(res.data.countryCodeNumber);
-                $('#subUserCountryCode').val(res.data.countryCode);
-                $('#subUserCellphone').val(res.data.cellphone);
-                $('#sub_b_year').val(res.data.birthdayYear);
-                $('#sub_b_month').val(res.data.birthdayMonth);
-                $('#sub_b_day').val(res.data.birthdayDay);
-                $('#subUserCardNumber').val(res.data.cardNumber);
-            });
-        }
+        var input2 = document.querySelector("#subUserCellphone");
+        iti2 = window.intlTelInput(input2, {
+          initialCountry: "auto",
+          separateDialCode: true,
+          geoIpLookup: function (success, failure) {
+            $.get("https://ipinfo.io", function () {}, "jsonp").always(
+              function (resp) {
+                var countryCode = resp && resp.country ? resp.country : "us";
+                success(countryCode);
+              }
+            );
+          },
+          utilsScript: "https://demo.iccare.vip/intlTelInput/js/utils.js",
+        });
+        input2.addEventListener("countrychange", function () {
+          var data = iti2.getSelectedCountryData();
+          $("#subUserCountryCode").val(data.iso2);
+          $("#subUserCountryCodeNumber").val(data.dialCode);
+        });
+      }
 
-        function addSubUser()
-        {
-            var account = $('#subUserAccount').val();
-            var password = $('#subUserPassword').val();
-            var password2 = $('#subUserPassword2').val();
-            var name = $('#subUserName').val();
-            var sex = $('#subUserSex').val();
-            var countryCode = $('#subUserCountryCode').val();
-            var countryCodeNumber = $('#subUserCountryCodeNumber').val();
-            var cellphone = $('#subUserCellphone').val();
-            var birthdayYear = $('#sub_b_year').val();
-            var birthdayMonth = $('#sub_b_month').val();
-            var birthdayDay = $('#sub_b_day').val();
-            var cardNumber = $('#subUserCardNumber').val();
-            var formData = new FormData();
-            formData.append('account', account);
-            formData.append('password', password);
-            formData.append('password2', password2);
-            formData.append('name', name);
-            formData.append('sex', sex);
-            formData.append('countryCode', countryCode);
-            formData.append('countryCodeNumber', countryCodeNumber);
-            formData.append('cellphone', cellphone);
-            formData.append('b_year', birthdayYear);
-            formData.append('b_month', birthdayMonth);
-            formData.append('b_day', birthdayDay);
-            formData.append('cardNumber', cardNumber);
+      function showEditSubUser(id) {
+        $.ajax({
+          url: "https://demo.iccare.vip/en/submember/data?id=" + id,
+          method: "GET",
+          dataType: "json",
+        }).done(function (res) {
+          if (res.error) {
+            alert(res.error.msg);
+            return false;
+          }
 
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/submember/add',
-                method: 'POST',
-                data: formData,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                if (res.error != undefined) {
-                    alert(res.error.msg);
-                    return false;
-                }
-                alert('新增成功');
-                location.reload();
-            });
-        }
+          $(".submember-lb").addClass("open");
+          $("#lb-btn-submit").attr("onclick", "editSubUser(" + id + ");");
+          $("#lb-title").text("編輯子帳號");
+          $("#subUserAccount").attr("disabled", "");
+          $("#subUserAccount").attr("readonly", "");
+          $("#subUserAccount").val(res.data.account);
+          $("#subUserName").val(res.data.name);
+          $("#subUserSex").val(res.data.sex);
+          $("#subUserCountryCodeNumber").val(res.data.countryCodeNumber);
+          $("#subUserCountryCode").val(res.data.countryCode);
+          $("#subUserCellphone").val(res.data.cellphone);
+          $("#sub_b_year").val(res.data.birthdayYear);
+          $("#sub_b_month").val(res.data.birthdayMonth);
+          $("#sub_b_day").val(res.data.birthdayDay);
+          $("#subUserCardNumber").val(res.data.cardNumber);
+        });
+      }
 
-        function editSubUser(id)
-        {
-            var password = $('#subUserPassword').val();
-            var password2 = $('#subUserPassword2').val();
-            var name = $('#subUserName').val();
-            var sex = $('#subUserSex').val();
-            var countryCode = $('#subUserCountryCode').val();
-            var countryCodeNumber = $('#subUserCountryCodeNumber').val();
-            var cellphone = $('#subUserCellphone').val();
-            var birthdayYear = $('#sub_b_year').val();
-            var birthdayMonth = $('#sub_b_month').val();
-            var birthdayDay = $('#sub_b_day').val();
-            var cardNumber = $('#subUserCardNumber').val();
-            var formData = new FormData();
-            formData.append('id', id);
-            formData.append('password', password);
-            formData.append('password2', password2);
-            formData.append('name', name);
-            formData.append('sex', sex);
-            formData.append('countryCode', countryCode);
-            formData.append('countryCodeNumber', countryCodeNumber);
-            formData.append('cellphone', cellphone);
-            formData.append('b_year', birthdayYear);
-            formData.append('b_month', birthdayMonth);
-            formData.append('b_day', birthdayDay);
-            formData.append('cardNumber', cardNumber);
+      function addSubUser() {
+        var account = $("#subUserAccount").val();
+        var password = $("#subUserPassword").val();
+        var password2 = $("#subUserPassword2").val();
+        var name = $("#subUserName").val();
+        var sex = $("#subUserSex").val();
+        var countryCode = $("#subUserCountryCode").val();
+        var countryCodeNumber = $("#subUserCountryCodeNumber").val();
+        var cellphone = $("#subUserCellphone").val();
+        var birthdayYear = $("#sub_b_year").val();
+        var birthdayMonth = $("#sub_b_month").val();
+        var birthdayDay = $("#sub_b_day").val();
+        var cardNumber = $("#subUserCardNumber").val();
+        var formData = new FormData();
+        formData.append("account", account);
+        formData.append("password", password);
+        formData.append("password2", password2);
+        formData.append("name", name);
+        formData.append("sex", sex);
+        formData.append("countryCode", countryCode);
+        formData.append("countryCodeNumber", countryCodeNumber);
+        formData.append("cellphone", cellphone);
+        formData.append("b_year", birthdayYear);
+        formData.append("b_month", birthdayMonth);
+        formData.append("b_day", birthdayDay);
+        formData.append("cardNumber", cardNumber);
 
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/submember/edit',
-                method: 'POST',
-                data: formData,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                if (res.error != undefined) {
-                    alert(res.error.msg);
-                    return false;
-                }
-                alert('編輯成功');
-                location.reload();
-            });
-        }
+        $.ajax({
+          url: "https://demo.iccare.vip/en/submember/add",
+          method: "POST",
+          data: formData,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          if (res.error != undefined) {
+            alert(res.error.msg);
+            return false;
+          }
+          alert("新增成功");
+          location.reload();
+        });
+      }
 
-        function submemberCheck(check)
-        {
-            var formData = new FormData();
-            formData.append('check', check);
+      function editSubUser(id) {
+        var password = $("#subUserPassword").val();
+        var password2 = $("#subUserPassword2").val();
+        var name = $("#subUserName").val();
+        var sex = $("#subUserSex").val();
+        var countryCode = $("#subUserCountryCode").val();
+        var countryCodeNumber = $("#subUserCountryCodeNumber").val();
+        var cellphone = $("#subUserCellphone").val();
+        var birthdayYear = $("#sub_b_year").val();
+        var birthdayMonth = $("#sub_b_month").val();
+        var birthdayDay = $("#sub_b_day").val();
+        var cardNumber = $("#subUserCardNumber").val();
+        var formData = new FormData();
+        formData.append("id", id);
+        formData.append("password", password);
+        formData.append("password2", password2);
+        formData.append("name", name);
+        formData.append("sex", sex);
+        formData.append("countryCode", countryCode);
+        formData.append("countryCodeNumber", countryCodeNumber);
+        formData.append("cellphone", cellphone);
+        formData.append("b_year", birthdayYear);
+        formData.append("b_month", birthdayMonth);
+        formData.append("b_day", birthdayDay);
+        formData.append("cardNumber", cardNumber);
 
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/submember/check',
-                method: 'POST',
-                data: formData,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                if (res.error != undefined) {
-                    alert(res.error.msg);
-                    return false;
-                }
-                alert(res.data.msg);
-                location.reload();
-            });
-        }
+        $.ajax({
+          url: "https://demo.iccare.vip/en/submember/edit",
+          method: "POST",
+          data: formData,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          if (res.error != undefined) {
+            alert(res.error.msg);
+            return false;
+          }
+          alert("編輯成功");
+          location.reload();
+        });
+      }
 
-        function submemberDelete(userId)
-        {
-            var formData = new FormData();
-            formData.append('userId', userId);
+      function submemberCheck(check) {
+        var formData = new FormData();
+        formData.append("check", check);
 
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/submember/delete',
-                method: 'POST',
-                data: formData,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                if (res.error != undefined) {
-                    alert(res.error.msg);
-                    return false;
-                }
-                alert('刪除完成');
-                location.reload();
-            });
-        }
+        $.ajax({
+          url: "https://demo.iccare.vip/en/submember/check",
+          method: "POST",
+          data: formData,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          if (res.error != undefined) {
+            alert(res.error.msg);
+            return false;
+          }
+          alert(res.data.msg);
+          location.reload();
+        });
+      }
 
-        function showAgent(id)
-        {
-            $('.agent-lb').addClass('open');
-            $('#agent-id').val(id);
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/agents?id=' + id,
-                method: 'GET',
-                dataType: 'json',
-            }).done(function (res) {
-                var html = '';
-                $.each(res.data.list, function (k, v) {
-                    html += '<li style="margin-top: 10px;"><label><input type="checkbox" class="agent-checkbox" data-id="' + v.id + '" ' + (v.isAgent ? 'checked' : '') + '>' + v.name + '</label></li>';
-                });
+      function submemberDelete(userId) {
+        var formData = new FormData();
+        formData.append("userId", userId);
 
-                $('.agent-list').html(html);
-                $('#agent-message').text(res.data.message);
-            });
-        }
+        $.ajax({
+          url: "https://demo.iccare.vip/en/submember/delete",
+          method: "POST",
+          data: formData,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          if (res.error != undefined) {
+            alert(res.error.msg);
+            return false;
+          }
+          alert("刪除完成");
+          location.reload();
+        });
+      }
 
-        function closeAgentLb()
-        {
-            $('.agent-lb').removeClass('open');
-        }
+      function showAgent(id) {
+        $(".agent-lb").addClass("open");
+        $("#agent-id").val(id);
+        $.ajax({
+          url: "https://demo.iccare.vip/en/agents?id=" + id,
+          method: "GET",
+          dataType: "json",
+        }).done(function (res) {
+          var html = "";
+          $.each(res.data.list, function (k, v) {
+            html +=
+              '<li style="margin-top: 10px;"><label><input type="checkbox" class="agent-checkbox" data-id="' +
+              v.id +
+              '" ' +
+              (v.isAgent ? "checked" : "") +
+              ">" +
+              v.name +
+              "</label></li>";
+          });
 
-        function agentSave()
-        {
-            var list = [];
-            var obj = $('.agent-list');
-            obj.find('.agent-checkbox').each(function (k, v) {
-                var o = $(v);
-                list.push({
-                    id: o.data('id'),
-                    active: o.prop('checked'),
-                });
-            });
+          $(".agent-list").html(html);
+          $("#agent-message").text(res.data.message);
+        });
+      }
 
-            var formData = new FormData();
-            formData.append('agentId', $('#agent-id').val());
-            formData.append('list', JSON.stringify(list));
+      function closeAgentLb() {
+        $(".agent-lb").removeClass("open");
+      }
 
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/agents/save',
-                method: 'POST',
-                data: formData,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                closeAgentLb();
-            });
-        }
+      function agentSave() {
+        var list = [];
+        var obj = $(".agent-list");
+        obj.find(".agent-checkbox").each(function (k, v) {
+          var o = $(v);
+          list.push({
+            id: o.data("id"),
+            active: o.prop("checked"),
+          });
+        });
 
-        function openPhoneCheckLb()
-        {
-            var countryCode = $('#country_code').val();
-            var countryCodeNumber = $('#country_code_number').val();
-            var cellphone = $('#cellphone').val();
-            var formData = new FormData();
-            formData.append('countryCode', countryCode);
-            formData.append('countryCodeNumber', countryCodeNumber);
-            formData.append('cellphone', cellphone);
+        var formData = new FormData();
+        formData.append("agentId", $("#agent-id").val());
+        formData.append("list", JSON.stringify(list));
 
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/member/phone/update',
-                method: 'POST',
-                data: formData,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                if (res.error) {
-                    alert(res.error.msg);
-                    return false;
-                }
+        $.ajax({
+          url: "https://demo.iccare.vip/en/agents/save",
+          method: "POST",
+          data: formData,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          closeAgentLb();
+        });
+      }
 
-                phoneCheckCodeSend();
-            });
-        }
+      function openPhoneCheckLb() {
+        var countryCode = $("#country_code").val();
+        var countryCodeNumber = $("#country_code_number").val();
+        var cellphone = $("#cellphone").val();
+        var formData = new FormData();
+        formData.append("countryCode", countryCode);
+        formData.append("countryCodeNumber", countryCodeNumber);
+        formData.append("cellphone", cellphone);
 
-        function phoneCheckCodeSend()
-        {
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/phone_check_code/send',
-                method: 'POST',
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                $('.phone-check-lb').addClass('open');
-            });
-        }
+        $.ajax({
+          url: "https://demo.iccare.vip/en/member/phone/update",
+          method: "POST",
+          data: formData,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          if (res.error) {
+            alert(res.error.msg);
+            return false;
+          }
 
-        function phoneCheckCodeVerify()
-        {
-            var code = $('#phone-check-code').val();
-            var formData = new FormData();
-            formData.append('code', code);
+          phoneCheckCodeSend();
+        });
+      }
 
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/phone_check_code/verify',
-                method: 'POST',
-                data: formData,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                if (res.error) {
-                    alert(res.error.msg);
-                    return false;
-                }
+      function phoneCheckCodeSend() {
+        $.ajax({
+          url: "https://demo.iccare.vip/en/phone_check_code/send",
+          method: "POST",
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          $(".phone-check-lb").addClass("open");
+        });
+      }
 
-                alert(res.data.msg);
-                location.reload();
-            });
-        }
+      function phoneCheckCodeVerify() {
+        var code = $("#phone-check-code").val();
+        var formData = new FormData();
+        formData.append("code", code);
 
-        function resendPlanCheckMail()
-        {
-            $.ajax({
-                url: 'https://demo.iccare.vip/en/plan/set/check/resend',
-                method: 'POST',
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                }
-            }).done(function (res) {
-                if (res.error) {
-                    alert(res.error.msg);
-                    return false;
-                }
+        $.ajax({
+          url: "https://demo.iccare.vip/en/phone_check_code/verify",
+          method: "POST",
+          data: formData,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          if (res.error) {
+            alert(res.error.msg);
+            return false;
+          }
 
-                alert(res.data.msg);
-            });
-        }
+          alert(res.data.msg);
+          location.reload();
+        });
+      }
 
-        function gotoPlanOnce()
-        {
-            location.href = 'https://demo.iccare.vip/en/plan/once';
-        }
+      function resendPlanCheckMail() {
+        $.ajax({
+          url: "https://demo.iccare.vip/en/plan/set/check/resend",
+          method: "POST",
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          },
+        }).done(function (res) {
+          if (res.error) {
+            alert(res.error.msg);
+            return false;
+          }
+
+          alert(res.data.msg);
+        });
+      }
+
+      function gotoPlanOnce() {
+        location.href = "https://demo.iccare.vip/en/plan/once";
+      }
     </script>
 
-
-<script class="iti-load-utils" async="" src="https://demo.iccare.vip/intlTelInput/js/utils.js"></script></body>
+    <script
+      class="iti-load-utils"
+      async=""
+      src="https://demo.iccare.vip/intlTelInput/js/utils.js"
+    ></script>
+  </body>
 </html>
